@@ -1,0 +1,175 @@
+---
+title: "Econometria - Cheat Sheet"
+author: "Tiago Afonso"
+format: pdf
+toc: true
+---
+
+# Importar dados
+
+## csv
+
+
+```{r}
+#| eval: false
+
+# Carregar biblioteca
+library(readxl)
+
+#importar ficheiro
+
+dados <- read.csv("Nome_do_ficheiro.csv")
+```
+
+## excel
+
+```{r}
+#| eval: false
+
+# Carregar biblioteca
+library(readxl)
+
+#importar ficheiro
+
+dados <- read_xlsx("Nome_do_ficheiro.xlsx")
+```
+
+# Estimar modelo
+
+## Função `lm`
+
+```{r}
+#| eval: false
+
+# Estimar modelo
+modelo <- lm(y~x, dados)
+
+#ver resultados
+summary(modelo)
+```
+
+# Testes de diagnóstico
+
+## Multicolineariedade
+
+#### Teste VIF
+
+```{r}
+#| eval: false
+
+# Carregar biblioteca
+library(car)
+
+# Teste VIF
+vif(modelo)
+
+#ou
+library(performande)
+check_collinearity(modelo)
+```
+
+#### Matriz das correlações
+
+```{r}
+#| eval: false
+cor(dados$x1,dados$x2,dados$x3)
+```
+
+#### Matriz das correlações (gráfico)
+
+```{r}
+#| eval: false
+cor_matrix <- cor(dados$x1,dados$x2,dados$x3)
+
+library(corrplot)
+cor_3 <- corrplot.mixed(cor_matrix)
+```
+
+
+## Heterocedasticidade
+
+```{r}
+#| eval: false
+
+#teste BP
+library(skedastic)
+breusch_pagan(modelo)
+
+#ou
+library(performance)
+check_heteroscedasticity(modelo)
+```
+
+## Autocorrelação
+
+```{r}
+#| eval: false
+
+library(lmtest)
+bftest(modelo))
+
+#ou
+library(performance)
+check_autocorrelation(modelo)
+```
+
+## Normalidade dos Resíduos
+
+```{r}
+#| eval: false
+
+#Shapiro
+shapiro.test(m_reg$residuos)
+
+# Jarque Bera
+library(moments)
+jarque.test(m_reg$residuos)
+
+#OU
+library(performance)
+check_normality(modelo)
+```
+
+## Especificação
+
+
+```{r}
+#| eval: false
+
+library(lmtest)
+resettest(modelo)
+```
+
+## Estabilidade
+
+
+```{r}
+#| eval: false
+
+library(strucchange)
+sctest(modelo, type = "CUSUM")
+plot(efp(modelo, data = dados, type = "Rec-CUSUM"))
+```
+
+## Graficamente
+
+
+```{r}
+#| eval: false
+
+library(performance)
+check_model(modelo, check = "all")
+```
+
+# Comparar modelos
+
+```{r}
+#| eval: false
+
+library(performance)
+modelo1 <- lm(y ~ x1+x2+x3, 
+              data = dados)
+modelo2 <- lm(y ~ x1+x2+x3+x4, 
+              data = dados)
+compare_performance(modelo1, modelo2)
+```
