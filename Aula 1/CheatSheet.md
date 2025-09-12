@@ -101,7 +101,7 @@ check_heteroscedasticity(modelo)
 
 ``` r
 library(lmtest)
-bftest(modelo))
+bftest(modelo)
 
 #ou
 library(performance)
@@ -155,3 +155,4 @@ modelo2 <- lm(y ~ x1+x2+x3+x4,
               data = dados)
 compare_performance(modelo1, modelo2)
 ```
+
