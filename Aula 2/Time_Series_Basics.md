@@ -220,17 +220,21 @@ $$
 
 ## Autoregressive Moving Average (ARMA) Models
 
-ARMA(p, q): $$
+ARMA(p, q):
+
+$$
 y_t = \phi_0 + \sum_{i=1}^{p}\phi_iy_{t-i} + \sum_{j=1}^{q}\theta_j\epsilon_{t-j} + \epsilon_t
 $$
 
 ## Autoregressive Integrated Moving Average (ARIMA) Models
 
-ARIMA(p, d, q): $$
+ARIMA(p, d, q): 
+
+$$
 \Delta^d y_t = \phi_0 + \sum_{i=1}^{p}\phi_iy_{t-i} + \sum_{j=1}^{q}\theta_j\epsilon_{t-j} + \epsilon_t
 $$
 
-Where ( `\Delta`{=tex}\^d ) denotes differencing ( d ) times to achieve
+Where $\Delta`{=tex}\^d$ denotes differencing ( d ) times to achieve
 stationarity.
 
 ## Seasonal ARIMA (SARIMA) Models
@@ -241,7 +245,7 @@ $$
 \Delta^d \Delta_s^D y_t = \phi_0 + \sum_{i=1}^{p}\phi_iy_{t-i} + \sum_{j=1}^{q}\theta_j\epsilon_{t-j} + \sum_{I=1}^{P}\Phi_Iy_{t-Is} + \sum_{J=1}^{Q}\Theta_J\epsilon_{t-Js} + \epsilon_t
 $$
 
-Where ( $\Delta_s^D$ ) denotes seasonal differencing ( D ) times
+Where $\Delta_s^D$ denotes seasonal differencing ( D ) times
 with seasonality ( s ).
 
 ## Vector Autoregression (VAR) Models
@@ -287,3 +291,4 @@ $$
 
 Where $(y_{t-1} - \theta x_{t-1})$ is the error correction
 term representing the long-run relationship.
+
