@@ -1,4 +1,4 @@
-#Pesquisar artigos: https://www.sciencedirect.com/ (VPN ou net da UBI)
+# Pesquisar artigos: https://www.sciencedirect.com/ (VPN ou net da UBI)
 
 Foco nas secções de **Metodologia**, **Dados** e **Resultados**
 
@@ -43,4 +43,5 @@ Estimador de Mínimos Quadrados em Dois Estágios (2SLS)
 - Estimador GMM
     - Estimador System GMM
     - Estimador Difference GMM
+
 
