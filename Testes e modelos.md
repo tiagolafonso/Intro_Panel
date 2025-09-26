@@ -8,7 +8,7 @@
 
 ---
 
-## 📋 Tópicos da Apresentação
+## Tópicos da Apresentação
 
 ## Tópicos da Apresentação
 
@@ -108,3 +108,4 @@
 ---
 
 > **Dica**: Planifiquem a vossa apresentação com antecedência e utilizem os recursos disponíveis para fundamentar teoricamente os vossos tópicos!
+
