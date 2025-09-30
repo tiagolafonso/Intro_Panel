@@ -50,7 +50,7 @@
 - ~~Estimador PMG~~ (Bárbara/Maria)
 - **Estimador DFE**
 - **Estimador MG**
-- **Estimador CCEMG**
+- ~~Estimador CCEMG~~(Bruno, Inês, Hugo, Madalena)
 
 #### Estimador GMM
 - **Estimador System GMM**
