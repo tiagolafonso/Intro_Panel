@@ -44,12 +44,12 @@ I# Instruções para a Apresentação
 - **Estimador de Mínimos Quadrados em Dois Estágios (2SLS)**
 
 #### Estimadores Especializados
-- ~~Estimador de Mínimos Quadrados Generalizados (GLS)~~ (Bruna, Dinis) 
-- **Estimador PCSE**
-- ~~Estimador Driscoll-Kraay~~ (Bea Margarida) 
-- ~~Estimador PMG~~ (Bárbara/Maria)
-- **Estimador DFE**
-- ~~Estimador CCEMG~~(Bruno, Inês, Hugo, Madalena)
+- ~~Estimador de Mínimos Quadrados Generalizados (GLS)~~ (Bruna, Dinis) (20 de Novembro) 
+- **Estimador PCSE** (13 de Novembro) 
+- ~~Estimador Driscoll-Kraay~~ (Bea Margarida) 27 de Novembro
+- ~~Estimador PMG~~ (Bárbara/Maria) - 20 de Novembro
+- **Estimador DFE** (Materno, Mauro, Monteiro) (27 Novembro) 
+- ~~Estimador CCEMG~~(Bruno, Inês, Hugo, Madalena) (4 Dezembro) 
 
 #### Estimador GMM
 - **Estimador System GMM**
