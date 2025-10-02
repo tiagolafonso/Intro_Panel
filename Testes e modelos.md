@@ -44,7 +44,7 @@
 - **Estimador de Mínimos Quadrados em Dois Estágios (2SLS)**
 
 #### Estimadores Especializados
-- **Estimador de Mínimos Quadrados Generalizados (GLS)**
+- ~~Estimador de Mínimos Quadrados Generalizados (GLS)~~ (Bruna, Dinis) 
 - **Estimador PCSE**
 - **Estimador Driscoll-Kraay**
 - ~~Estimador PMG~~ (Bárbara/Maria)
