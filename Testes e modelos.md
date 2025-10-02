@@ -1,4 +1,4 @@
-# Instruções para a Apresentação
+I# Instruções para a Apresentação
 
 ## Informações Gerais
 
@@ -46,7 +46,7 @@
 #### Estimadores Especializados
 - ~~Estimador de Mínimos Quadrados Generalizados (GLS)~~ (Bruna, Dinis) 
 - **Estimador PCSE**
-- **Estimador Driscoll-Kraay**
+- ~~Estimador Driscoll-Kraay~~ (Bea Margarida) 
 - ~~Estimador PMG~~ (Bárbara/Maria)
 - **Estimador DFE**
 - **Estimador MG**
