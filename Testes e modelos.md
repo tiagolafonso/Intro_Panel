@@ -49,7 +49,6 @@ I# Instruções para a Apresentação
 - ~~Estimador Driscoll-Kraay~~ (Bea Margarida) 
 - ~~Estimador PMG~~ (Bárbara/Maria)
 - **Estimador DFE**
-- **Estimador MG**
 - ~~Estimador CCEMG~~(Bruno, Inês, Hugo, Madalena)
 
 #### Estimador GMM
