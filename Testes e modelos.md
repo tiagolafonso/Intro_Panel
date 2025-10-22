@@ -45,10 +45,10 @@
 
 #### Estimadores Especializados
 - ~~Estimador de Mínimos Quadrados Generalizados (GLS)~~ (Bruna, Dinis) (20 de Novembro) 
-- **Estimador PCSE** (13 de Novembro) 
+- ~~**Estimador PCSE**~~ (13 de Novembro) 
 - ~~Estimador Driscoll-Kraay~~ (Bea Margarida) 27 de Novembro
 - ~~Estimador PMG~~ (Bárbara/Maria) - 20 de Novembro
-- **Estimador DFE** (Materno, Mauro, Monteiro) (27 Novembro) 
+- ~~**Estimador DFE**~~ (Materno, Mauro, Monteiro) (27 Novembro) 
 - ~~Estimador CCEMG~~(Bruno, Inês, Hugo, Madalena) (4 Dezembro) 
 
 #### Estimador GMM
@@ -105,3 +105,4 @@
    - Receberão email com instruções de configuração
 
 ---
+
