@@ -1,0 +1,524 @@
+---
+title: "Econometrics System GMM"
+author: "Tiago Afonso"
+date: "`r Sys.Date()`"
+output: 
+    html_document:
+        toc: true
+        toc_depth: 2
+        toc_float: true
+        number_sections: true
+---
+
+# Replication of the paper "How does the digital economy accelerate global energy justice? Mechanism discussion and empirical test" in R
+
+Paper: https://www.sciencedirect.com/science/article/abs/pii/S0140988322004443
+
+
+## Main objective of the paper
+
+To investigate whether the digital economy (everything involving the internet, big data, artificial intelligence, and communication technologies) can help the world achieve a just energy transition, that is, a transition that takes into account the equitable distribution of benefits and burdens associated with the shift to more sustainable energy sources.
+
+
+**The Problem (The Energy Transition)**: The world needs to stop using fossil fuels (such as coal and oil) to combat climate change and switch to clean energy (such as solar or wind)
+
+**The Difficulty (The Need to be "Just")**: This change can lead to the closure of mines or power plants, which causes unemployment and harms certain regions that depended on these industries. A "just transition" means ensuring that this change is made equitably, helping affected workers and communities, and distributing benefits and costs fairly
+
+---
+
+## **Central Question**: 
+
+> ### **Can digitalization help make the transition more just?**
+
+---
+
+- **Indirect Impact** Does the digital economy directly promote a just transition? For example, by helping to create new "green jobs" or by allowing people to participate more in decisions?
+
+- **Impact on different "justices"**: "Justice" has several components. The digital economy specifically affects *distributive justice* (distributing costs and benefits fairly), *procedural justice* (giving everyone a voice in the process), and *restorative justice* (helping those who lost their jobs find another)
+
+- **The Mechanisms (The "How?")**: the authors test whether digitalization helps the just transition indirectly, through two main channels:
+
+    1. Through increased Human Capital: By giving people more access to training and new skills
+    2. Through increased Financial Development: By facilitating investment and the flow of money to new industries and to support communities.
+
+## Data and Methodology
+
+- Panel of 72 countries
+- Period: 2010-2019
+
+
+
+## Methodology
+
+Dynamic panel model estimated through System GMM. A dynamic panel model is appropriate because the dependent variable (just energy transition index) depends on its own lagged value, reflecting the gradual and cumulative nature of the just energy transition over time.
+
+This choice is justified by the ability of SYS-GMM to deal with endogeneity (resulting from dual causality and the inclusion of the lagged dependent variable) and improve estimation accuracy in dynamic panels
+
+$$
+lnJUST_{it} = \beta_0 + \beta_1 lnJUST_{i,t-1} + \beta_2 lnDIG_{it} + \sum \beta_k lnX_{it} + \epsilon_{it}
+$$
+
+where:
+
+- $lnJUST_{it}$: Just Energy Transition Index for country $i$ at time $t$
+- $lnJUST_{i,t-1}$: Lagged value of the just energy transition index
+- $lnDIG_{it}$: Digitalization level of country $i$ at time $t$
+- $lnX_{it}$: Vector of control variables (GDP, population, trade openness, industrial structure)
+
+
+To validate the SYS-GMM model, the authors use standard tests: the Arellano-Bond (A-B) test for autocorrelation (AR(1) and AR(2)) and the Sargan test for the validity of instrumental variables
+
+
+Comparison of GMM-Dif and GMM-Sys
+
+| Characteristic      | **GMM-Difference (GMM-Dif)**                  | **GMM-System (GMM-Sys)**                          |
+|---------------------|-----------------------------------------------|---------------------------------------------------|
+| **Origin**          | Arellano & Bond (1991)                        | Blundell & Bond (1998)                            |
+| **Transformation**   | First differences to eliminate fixed effects | System of equations: first differences **+** levels |
+| **Instruments**    | Lagged variables in levels as instruments for difference equations | Adds lagged variables in differences as instruments for level equations |
+| **Advantage**        | Corrects dynamic endogeneity; avoids Nickell bias | More efficient when variables are persistent; reduces weak instruments bias |
+| **Limitation**       | Weak instruments if variables are very persistent | Can generate excess instruments; requires additional hypothesis of no correlation between differences and fixed effects |
+| **Consistency**    | Requires absence of 2nd order autocorrelation in errors | Same, but also requires validity of additional instruments in levels |
+| **Usual tests**   | AR(1), AR(2), Hansen/Sargan                   | AR(1), AR(2), Hansen/Sargan (attention to number of instruments) |
+| **Typical use**      | Panels with small T and large N, not very persistent variables | Panels with small T and large N, highly persistent variables |
+| **R Implementation** | `plm::pgmm(..., transformation = "d")`        | `plm::pgmm(..., transformation = "ld")`           |
+
+
+### Instrumental Variables
+- What is an instrumental variable?
+
+```{mermaid}
+flowchart LR
+    X["Endogenous explanatory variable (X)"]
+    Y["Dependent variable (Y)"]
+    Z["Instrumental variable (Z)"]
+    U["Unobserved error (U)"]
+
+    Z --> X
+    X --> Y
+    U --> X
+    U --> Y
+
+    style Z fill:#d4f1f9,stroke:#036,stroke-width:2px
+    style X fill:#f9f1d4,stroke:#630,stroke-width:2px
+    style Y fill:#e6f9d4,stroke:#060,stroke-width:2px
+    style U fill:#f9d4d4,stroke:#600,stroke-width:2px
+```
+
+
+An instrumental variable is a variable that is correlated with the endogenous explanatory variable (X), but is not correlated with the unobserved error (U) in the regression equation. This allows us to isolate the exogenous variation in X to obtain consistent estimates of the effect of X on Y.
+
+How it works:
+
+1. We use the instrument (Z) to predict the endogenous variable (X).
+
+2. We use the predicted variation of X (which is exogenous) to estimate the effect of X on Y.
+
+This method is widely used in econometrics to deal with endogeneity problems, where the explanatory variable is correlated with the error term, which can lead to biased and inconsistent estimates. It is known as 2SLS (Two-Stage Least Squares) when applied to simple linear models.
+
+- What is a weak instrument? An instrument is considered weak when it is weakly correlated with the endogenous variable to be instrumented. This can lead to biased and inconsistent estimates, especially in small samples.
+
+
+What is the generalized method of moments (GMM)?
+
+The generalized method of moments (GMM) is a statistical estimation technique that uses moments (such as means and variances) derived from the data to estimate the parameters of a model. It is especially useful when traditional assumptions of linear models, such as normality of errors, are not verified.
+
+
+## Data
+
+The **JUST** index is based on the McCauley and Heffron (2018) framework and aggregates 21 indicators into three sub-indices: distributive justice, procedural justice, and restorative justice.
+
+The DIG index is composed of four dimensions: infrastructure, social impact, digital commerce, and social support.
+
+
+To test the hypotheses of how the digital economy affects the just transition (i.e., indirect effects), the study applies a mediation effect model. It specifically uses human capital ($lnHCI$) and financial development ($lnFD$) as mediating variables.
+
+The significance of mediation effects is confirmed through the Sobel test.
+
+
+| Variables | Definition                                           | Units                       |
+|-----------|-----------------------------------------------------|--------------------------------|
+| lnJUST    | Just transition                                     | –                              |
+| lnDIG     | Digital economy                                     | –                              |
+| lnGDP     | GDP                                                 | Constant 2015 US dollar        |
+| lnPOP     | Population                                          | people                         |
+| lnTRADE   | Imports and exports of goods and services           | % of GDP                       |
+| lnIND     | Ratio of value added by secondary industry to GDP   | % of GDP                       |
+| lnHCI     | Years of education and return on education          | –                              |
+| lnFD      | Domestic credit to the private sector               | % of GDP                       |
+
+## Main Results
+
+Load libraries
+
+```{r}
+#| label: setup
+#| message: false
+#| output: false
+library(tidyverse)
+library(plm)
+library(readxl)
+library(haven)
+library(gtsummary)
+library(modelsummary)
+library(sf)
+library(rnaturalearth)
+library(rnaturalearthdata)
+library(corrplot)
+library(sandwich)
+library(lmtest)
+library(plm)
+library(mediation)
+library(gganimate)
+library(ggblend)
+library(gifski)
+
+```
+
+Import `.dta` file
+
+```{r}
+#| label: data-import
+
+data <- read_dta("data.dta")
+
+# Convert to panel
+pdata <- pdata.frame(data, index = c("country", "year"))
+```
+
+
+View data dimensions
+
+```{r}
+#| label: data-dimensions
+pdim(pdata)
+```
+
+
+72 countries over 10 years (2010-2019), totaling 720 observations.
+
+Calculate descriptive statistics
+
+```{r}
+#| label: descriptive-stats
+# Calculate descriptive statistics: Obs, Mean, Standard Deviation, Minimum, Maximum
+
+pdata %>%
+    as.data.frame() %>%
+    dplyr::select(lnjust, lndig, lngdp, lnpop, lntrade, lnind, lnhci, lnfd) %>%
+    tbl_summary(
+        statistic = list(
+            all_continuous() ~ c("{mean} ({sd}) [{min}, {max}]")
+        ),
+        digits = all_continuous() ~ 2,
+        label = list(
+            lnjust ~ "Just transition",
+            lndig ~ "Digital economy",
+            lngdp ~ "GDP",
+            lnpop ~ "Population",
+            lntrade ~ "Trade",
+            lnind ~ "Industry",
+            lnhci ~ "Human capital",
+            lnfd ~ "Financial development"
+        )
+    ) %>%
+    modify_header(label ~ "**Variable**", stat_0 ~ "**Mean (SD) [Min, Max]**") %>%
+    as_gt()
+```
+
+Create a map with countries and the `lnjust` variable for the year 2019
+```{r}
+#| label: map-just-transition
+
+# Filter data for 2019
+data_2019 <- pdata %>%
+    filter(year == 2019) %>%
+    dplyr::select(country, lnjust)
+
+# Get world map
+world <- ne_countries(scale = "medium", returnclass = "sf")
+
+# Join data
+map_data <- world %>%
+    left_join(data_2019, by = c("name" = "country"))
+
+# Create map
+ggplot(map_data) +
+    geom_sf(aes(fill = lnjust)) +
+    scale_fill_viridis_c(option = "plasma", na.value = "grey90") +
+    theme_minimal() +
+    labs(title = "Just Transition Index by Country (2019)",
+         fill = "Just Transition\nIndex")
+```
+
+
+Scatter plot for the 3 dimensions of the energy transition index.
+
+- `lnjust1` - distribution of costs and benefits.
+
+- `lnjust2` - inclusion and fairness of the decision-making process
+
+- `lnjust3` - impact on people and remediation
+
+```{r}
+#| label: scatter-just-dimensions
+# Scatter plot for the 3 dimensions
+
+pdata %>%
+    dplyr::select(lnjust1, lnjust2, lnjust3, lndig) %>%
+    pivot_longer(cols = starts_with("lnjust"), names_to = "dimension", values_to = "value") %>%
+    ggplot(aes(x = lndig, y = value, color = dimension)) +
+    geom_point(alpha = 0.5) +
+    geom_smooth(method = "lm", se = FALSE) +
+    labs(title = "Scatter Plot of Just Transition Dimensions vs Digital Economy",
+         x = "Digital Economy (lnDIG)",
+         y = "Just Transition Dimensions (lnJUST1, lnJUST2, lnJUST3)") +
+    theme_minimal() +
+    theme(legend.position = "bottom") +
+    scale_color_discrete(name = "Dimension",
+                         labels = c("lnJUST1 - Distribution of costs and benefits",
+                                    "lnJUST2 - Inclusion and justice in decision-making process",
+                                    "lnJUST3 - Impact on people and remediation"))
+```
+
+Create an animated scatter plot of countries over time between `lnjust` and `lndig` with `gganimate` and `ggblend`.
+
+```{r}
+#| label: animated-scatter-just-dig
+#| message: false
+
+# Create animated scatter plot
+animated_scatter <- data %>%
+    as.data.frame() %>%
+    mutate(year = as.integer(as.character(year))) %>%
+    ggplot(aes(x = lndig, y = lnjust, color = country)) +
+    geom_point(size = 4, alpha = 0.8) +
+    ggrepel::geom_text_repel(aes(label = country),
+                             size = 3,
+                             show.legend = FALSE,
+                             max.overlaps = 80,
+                             segment.size = 0.2) +
+    labs(title = "Just Transition vs Digital Economy - Year: {frame_time}",
+         x = "Digital Economy (lnDIG)",
+         y = "Just Transition (lnJUST)") +
+    transition_time(year) +
+    theme_minimal() +
+    theme(legend.position = "none")
+
+animated_scatter
+```
+
+Correlation plot between main variables
+
+```{r}
+#| label: correlation-plot
+#| message: false
+
+# Select main variables
+main_vars <- pdata %>%
+    dplyr::select(lnjust, lndig, lngdp, lnpop, lntrade, lnind, lnhci, lnfd)
+# Correlation plot
+cor_matrix <- cor(main_vars, use = "complete.obs")
+corrplot(cor_matrix, method = "circle", type = "upper",
+         tl.col = "black", tl.srt = 45,
+         title = "Correlation Matrix of Main Variables",
+         mar = c(0,0,1,0))
+```
+
+
+### Model Specification Tests
+
+
+#### Panel Autocorrelation Test
+
+```{r}
+#| label: serial-correlation-test
+
+# Estimate preliminary model to obtain residuals
+prelim_model <- plm(lnjust ~ lag(lnjust, 1) + lndig + lngdp + lnpop + lntrade + lnind,
+                    data = pdata, model = "pooling")
+
+# Estimate within model for BC-LM test
+prelim_model_within <- plm(lnjust ~ lag(lnjust, 1) + lndig + lngdp + lnpop + lntrade + lnind,
+                           data = pdata, model = "within")
+# Arellano-Bond test for autocorrelation
+ab_test <- pbgtest(prelim_model)
+ab_test
+```
+
+- H0: No autocorrelation in panel residuals
+
+#### Test for heteroscedasticity
+
+```{r}
+#| label: heteroscedasticity-test
+#| message: false
+
+# Breusch-Pagan test for heteroscedasticity
+bp_test <- bptest(prelim_model)
+bp_test
+```
+
+- H0: Homoscedasticity (constant variance of errors)
+
+
+#### Test for cross-sectional dependence in variables
+
+# Comparison of Cross-Section Dependence Tests
+
+| Test                        | Authors / Year              | Null Hypothesis (H0)                          | Typical use context                 | Advantages                                   | Limitations |
+|------------------------------|----------------------------|---------------------------------------------|----------------------------------------|---------------------------------------------|------------|
+| **Breusch–Pagan LM**      | Breusch & Pagan (1980)     | No cross-section dependence             | Panels with **large T** and **fixed N**  | Simple to calculate; based on residuals     | Can inflate test size when N grows |
+| **Adjusted LM (Pesaran CDLM)** | Pesaran (2004)             | No cross-section dependence             | Panels with **large N** and **small T** | Corrects bias of classical LM                 | Less efficient if T is large |
+| **Pesaran CD**            | Pesaran (2004)             | No cross-section dependence             | Panels with **large N, small T**     | Widely used in applied economics; robust   | May lose power if T is very small |
+
+# Pesaran test for cross-sectional dependence
+
+```{r}
+#| label: cross-sectional-dependence-test
+
+cd_test_BP <- pcdtest(prelim_model, test = "lm")
+cd_test_LM_adj <- pcdtest(prelim_model, test = "sclm")
+cd_test_CD <- pcdtest(prelim_model, test = "cd")
+
+# Create a table with the results
+data.frame(
+    Test = c("Breusch-Pagan LM", "Pesaran CDLM Adjusted", "Pesaran CD"),
+    Statistic = c(cd_test_BP$statistic, cd_test_LM_adj$statistic, cd_test_CD$statistic),
+    p_value = c(cd_test_BP$p.value, cd_test_LM_adj$p.value, cd_test_CD$p.value)
+)
+
+```
+
+### Estimate Benchmark Models
+
+OLS pooled
+
+```{r}
+#| label: ols-pooled
+#| message: false
+ols_pooled <- plm(lnjust ~ lag(lnjust, 1) + lndig + lngdp + lnpop + lntrade + lnind,
+                  data = pdata, model = "pooling")
+
+
+# Estimate FGLS
+ols_fgls <- plm(lnjust ~ lag(lnjust, 1) + lndig + lngdp + lnpop + lntrade + lnind,
+                  data = pdata, model = "random", random.method = "swar")
+
+# Estimate SYS-GMM
+
+# Estimate the SYS-GMM model
+sys_gmm <- pgmm(lnjust ~ lag(lnjust, 1) + lndig + lngdp + lnpop + lntrade + lnind | lag(lnjust, 2:99),
+                data = pdata, effect = "individual", model = "twosteps")
+
+# Summary of all models
+
+library(modelsummary)
+# Summary of all models
+modelsummary(list("OLS Pooled" = ols_pooled, 
+                  "FGLS" = ols_fgls, 
+                  "SYS-GMM" = sys_gmm),
+            stars = TRUE,
+            gof_map = c("nobs", "r.squared", "adj.r.squared"),
+            add_rows = data.frame(
+                term = c("Sargan test (p-value)", "AR(1) test (p-value)", "AR(2) test (p-value)"),
+                "OLS Pooled" = c("", "", ""),
+                "FGLS" = c("", "", ""),
+                "SYS-GMM" = c(
+                    sprintf("%.3f", summary(sys_gmm)$sargan$p.value),
+                    sprintf("%.3f", summary(sys_gmm)$m1$p.value),
+                    sprintf("%.3f", summary(sys_gmm)$m2$p.value)
+                )
+            ))
+```
+
+- H0 of Sargan test: Instrumental variables are valid.
+
+- H0 of AR(1) test: There is first-order autocorrelation in the residuals.
+
+- H0 of AR(2) test: There is second-order autocorrelation in the residuals.
+
+```{r}
+#| label: sys-gmm-just-dimensions
+#| message: false
+
+# Estimate the SYS-GMM model for each just transition dimension
+sys_gmm_just1 <- pgmm(lnjust1 ~ lag(lnjust1, 1) + lndig + lngdp + lnpop + lntrade + lnind | 
+                     lag(lnjust1, 2:4),
+                     data = pdata, 
+                     effect = "twoways", 
+                     model = "twosteps",
+                     transformation = "ld")
+
+sys_gmm_just2 <- pgmm(lnjust2 ~ lag(lnjust2, 1) + lndig + lngdp + lnpop + lntrade + lnind | 
+                     lag(lnjust2, 2:4),
+                     data = pdata, 
+                     effect = "twoways", 
+                     model = "twosteps",
+                     transformation = "ld")
+
+sys_gmm_just3 <- pgmm(lnjust3 ~ lag(lnjust3, 1) + lndig + lngdp + lnpop + lntrade + lnind | 
+                     lag(lnjust3, 2:4),
+                     data = pdata, 
+                     effect = "twoways", 
+                     model = "twosteps",
+                     transformation = "ld")
+
+# Create comparative table with all models
+
+modelsummary(list("Distributive Justice" = sys_gmm_just1, 
+                  "Procedural Justice" = sys_gmm_just2, 
+                  "Restorative Justice" = sys_gmm_just3),
+            stars = TRUE,
+            gof_map = c("nobs"),
+            add_rows = data.frame(
+                term = c("Sargan test (p-value)", "AR(1) test (p-value)", "AR(2) test (p-value)"),
+                "Distributive Justice" = c(
+                    sprintf("%.3f", summary(sys_gmm_just1)$sargan$p.value),
+                    sprintf("%.3f", summary(sys_gmm_just1)$m1$p.value),
+                    sprintf("%.3f", summary(sys_gmm_just1)$m2$p.value)
+                ),
+                "Procedural Justice" = c(
+                    sprintf("%.3f", summary(sys_gmm_just2)$sargan$p.value),
+                    sprintf("%.3f", summary(sys_gmm_just2)$m1$p.value),
+                    sprintf("%.3f", summary(sys_gmm_just2)$m2$p.value)
+                ),
+                "Restorative Justice" = c(
+                    sprintf("%.3f", summary(sys_gmm_just3)$sargan$p.value),
+                    sprintf("%.3f", summary(sys_gmm_just3)$m1$p.value),
+                    sprintf("%.3f", summary(sys_gmm_just3)$m2$p.value)
+                )
+            ))
+
+
+```
+
+
+
+```{r}
+#| label: mediation-analysis-hci
+#| message: false
+
+# Mediation analysis: Digital Economy -> Human Capital -> Just Transition
+
+# Create a complete dataset for mediation analysis
+pdata_mediation <- pdata %>%
+    mutate(lnjust_lag = lag(lnjust, 1)) %>%
+    as.data.frame() %>%
+    dplyr::select(country, lnjust, lnjust_lag, lndig, lnhci, lngdp, lnpop, lntrade, lnind) %>%
+    na.omit()
+
+# Step 1: Effect of Digital Economy on Human Capital
+model_mediator_hci <- lm(lnhci ~ lndig + lngdp + lnpop + lntrade + lnind,
+                         data = pdata_mediation)
+
+# Step 2: Effect of Human Capital on Just Transition (controlling for Digital Economy)
+model_outcome_hci <- lm(lnjust ~ lnjust_lag + lndig + lnhci + lngdp + lnpop + lntrade + lnind,
+                        data = pdata_mediation)
+
+# Mediation analysis
+mediation_hci <- mediation::mediate(model_mediator_hci, model_outcome_hci,
+                         treat = "lndig", mediator = "lnhci",
+                         boot = TRUE, sims = 500)
+summary(mediation_hci)
+```

@@ -1,0 +1,1061 @@
+{smcl}
+{com}{sf}{ul off}{txt}{.-}
+      name:  {res}<unnamed>
+       {txt}log:  {res}C:\Users\jiand\Desktop\log.smcl
+  {txt}log type:  {res}smcl
+ {txt}opened on:  {res}17 May 2022, 23:09:42
+
+{com}. xtset id year
+{res}{txt}{col 8}panel variable:  {res}id (strongly balanced)
+{txt}{col 9}time variable:  {res}{col 25}year, 2010 to 2019
+{txt}{col 17}delta:  {res}1 unit
+
+{com}. 
+. *******Table 3. Descriptive statistical results.******
+
+. 
+. sum lnjust lndig lngdp lnpop lntrade lnind lnhci lnfd
+
+{txt}    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 6}lnjust {c |}{res}        720   -2.153227    .5323293  -3.245895  -.4416968
+{txt}{space 7}lndig {c |}{res}        720   -1.405545    .5405414  -3.613397  -.4629022
+{txt}{space 7}lngdp {c |}{res}        720    26.39611    1.478727   22.91141   30.62548
+{txt}{space 7}lnpop {c |}{res}        720    16.80862    1.656564   12.66994   21.06525
+{txt}{space 5}lntrade {c |}{res}        720    4.380984    .5623136   3.112903   5.940445
+{txt}{hline 13}{c +}{hline 57}
+{space 7}lnind {c |}{res}        720    3.302558    .3473773   2.301054   4.314981
+{txt}{space 7}lnhci {c |}{res}        680    1.092918    .1819893   .5597804   1.470536
+{txt}{space 8}lnfd {c |}{res}        676    4.224331    .6213512   2.540823    5.54248
+
+{com}. 
+. *******Table 4. Results of the correlation check.******
+
+. 
+. pwcorr  lnjust lndig lngdp lnpop lntrade lnind lnhci lnfd, sig star (0.05)
+
+             {txt}{c |}   lnjust    lndig    lngdp    lnpop  lntrade    lnind    lnhci
+{hline 13}{c +}{hline 63}
+      lnjust {c |} {res}  1.0000 
+             {txt}{c |}
+             {c |}
+       lndig {c |} {res}  0.6464*  1.0000 
+             {txt}{c |}{res}   0.0000
+             {txt}{c |}
+       lngdp {c |} {res}  0.1096*  0.1622*  1.0000 
+             {txt}{c |}{res}   0.0032   0.0000
+             {txt}{c |}
+       lnpop {c |} {res} -0.4333* -0.3115*  0.7601*  1.0000 
+             {txt}{c |}{res}   0.0000   0.0000   0.0000
+             {txt}{c |}
+     lntrade {c |} {res}  0.2633*  0.4926* -0.4933* -0.6506*  1.0000 
+             {txt}{c |}{res}   0.0000   0.0000   0.0000   0.0000
+             {txt}{c |}
+       lnind {c |} {res} -0.4574* -0.2125*  0.0175   0.1701* -0.0376   1.0000 
+             {txt}{c |}{res}   0.0000   0.0000   0.6396   0.0000   0.3140
+             {txt}{c |}
+       lnhci {c |} {res}  0.6719*  0.7242*  0.0750  -0.4074*  0.3454* -0.2751*  1.0000 
+             {txt}{c |}{res}   0.0000   0.0000   0.0507   0.0000   0.0000   0.0000
+             {txt}{c |}
+        lnfd {c |} {res}  0.5848*  0.5391*  0.2764* -0.1129*  0.1684* -0.3144*  0.3870*
+             {txt}{c |}{res}   0.0000   0.0000   0.0000   0.0033   0.0000   0.0000   0.0000
+             {txt}{c |}
+
+             {c |}     lnfd
+{hline 13}{c +}{hline 9}
+        lnfd {c |} {res}  1.0000 
+             {txt}{c |}
+             {c |}
+
+{com}. 
+. ********Table 5. Estimated results of the impact of the digital economy on just transition.*****
+
+. 
+. reg lnjust lndig lngdp lnpop lntrade lnind
+
+{txt}      Source {c |}       SS           df       MS      Number of obs   ={res}       720
+{txt}{hline 13}{c +}{hline 34}   F(5, 714)       = {res}   401.57
+{txt}       Model {c |} {res} 150.299153         5  30.0598306   {txt}Prob > F        ={res}    0.0000
+{txt}    Residual {c |} {res} 53.4470936       714  .074855873   {txt}R-squared       ={res}    0.7377
+{txt}{hline 13}{c +}{hline 34}   Adj R-squared   ={res}    0.7358
+{txt}       Total {c |} {res} 203.746247       719  .283374474   {txt}Root MSE        =   {res}  .2736
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}      lnjust{col 14}{c |}      Coef.{col 26}   Std. Err.{col 38}      t{col 46}   P>|t|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 7}lndig {c |}{col 14}{res}{space 2} .2138219{col 26}{space 2} .0309249{col 37}{space 1}    6.91{col 46}{space 3}0.000{col 54}{space 4} .1531072{col 67}{space 3} .2745365
+{txt}{space 7}lngdp {c |}{col 14}{res}{space 2} .2754161{col 26}{space 2} .0149644{col 37}{space 1}   18.40{col 46}{space 3}0.000{col 54}{space 4} .2460367{col 67}{space 3} .3047956
+{txt}{space 7}lnpop {c |}{col 14}{res}{space 2}-.3129506{col 26}{space 2} .0130553{col 37}{space 1}  -23.97{col 46}{space 3}0.000{col 54}{space 4}-.3385819{col 67}{space 3}-.2873193
+{txt}{space 5}lntrade {c |}{col 14}{res}{space 2}-.1039333{col 26}{space 2}  .028451{col 37}{space 1}   -3.65{col 46}{space 3}0.000{col 54}{space 4}-.1597908{col 67}{space 3}-.0480757
+{txt}{space 7}lnind {c |}{col 14}{res}{space 2}-.4031952{col 26}{space 2} .0307818{col 37}{space 1}  -13.10{col 46}{space 3}0.000{col 54}{space 4}-.4636288{col 67}{space 3}-.3427616
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}-2.075433{col 26}{space 2} .3844124{col 37}{space 1}   -5.40{col 46}{space 3}0.000{col 54}{space 4}-2.830147{col 67}{space 3}-1.320719
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{com}. 
+. 
+. 
+. xtgls lnjust lndig lngdp lnpop lntrade lnind, panels(iid) corr(ar1) igls
+{txt}Iteration 1: tolerance = {res}0
+
+
+{txt}Cross-sectional time-series FGLS regression
+
+Coefficients:  {res}generalized least squares
+{txt}Panels:        {res}homoskedastic
+{txt}Correlation:   {res}common AR(1) coefficient for all panels{txt}  ({res}0.8489{txt})
+
+Estimated covariances{col 28}= {res}        1{txt}{col 49}Number of obs{col 67}= {res}       720
+{txt}Estimated autocorrelations{col 28}= {res}        1{txt}{col 49}Number of groups{col 67}= {res}        72
+{txt}Estimated coefficients{col 28}= {res}        6{txt}{col 49}Time periods{col 67}=  {res}       10
+{txt}{col 49}Wald chi2({res}5{txt}){col 67}=  {res}   876.09
+{txt}{col 49}Prob > chi2{col 67}= {res}    0.0000
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}      lnjust{col 14}{c |}      Coef.{col 26}   Std. Err.{col 38}      z{col 46}   P>|z|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 7}lndig {c |}{col 14}{res}{space 2} .1498382{col 26}{space 2} .0319523{col 37}{space 1}    4.69{col 46}{space 3}0.000{col 54}{space 4} .0872129{col 67}{space 3} .2124636
+{txt}{space 7}lngdp {c |}{col 14}{res}{space 2} .3133121{col 26}{space 2} .0196172{col 37}{space 1}   15.97{col 46}{space 3}0.000{col 54}{space 4}  .274863{col 67}{space 3} .3517611
+{txt}{space 7}lnpop {c |}{col 14}{res}{space 2}-.3245274{col 26}{space 2} .0180857{col 37}{space 1}  -17.94{col 46}{space 3}0.000{col 54}{space 4}-.3599747{col 67}{space 3}-.2890801
+{txt}{space 5}lntrade {c |}{col 14}{res}{space 2}-.0042806{col 26}{space 2} .0342743{col 37}{space 1}   -0.12{col 46}{space 3}0.901{col 54}{space 4} -.071457{col 67}{space 3} .0628958
+{txt}{space 7}lnind {c |}{col 14}{res}{space 2}-.2569179{col 26}{space 2} .0363103{col 37}{space 1}   -7.08{col 46}{space 3}0.000{col 54}{space 4}-.3280847{col 67}{space 3}-.1857512
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}-3.893589{col 26}{space 2} .4658771{col 37}{space 1}   -8.36{col 46}{space 3}0.000{col 54}{space 4}-4.806691{col 67}{space 3}-2.980486
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+
+{com}. 
+. xttest3
+
+{txt}Modified Wald test for groupwise heteroskedasticity
+in cross-sectional time-series FGLS regression model
+
+{res}H0: sigma(i)^2 = sigma^2 for all i
+
+{txt}chi2 (72)  =   {res}43370.33
+{txt}Prob>chi2 =    {res}  0.0000
+
+
+{com}. 
+. 
+. 
+. xtserial lnjust lndig lngdp lnpop lntrade lnind, output 
+
+{txt}Linear regression                               Number of obs     = {res}       648
+                                                {txt}F(5, 71)          =  {res}    19.11
+                                                {txt}Prob > F          = {res}    0.0000
+                                                {txt}R-squared         = {res}    0.1235
+                                                {txt}Root MSE          =    {res} .07182
+
+{txt}{ralign 78:(Std. Err. adjusted for {res:72} clusters in id)}
+{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 14}{c |}{col 26}    Robust
+{col 1}    D.lnjust{col 14}{c |}      Coef.{col 26}   Std. Err.{col 38}      t{col 46}   P>|t|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 7}lndig {c |}
+{space 9}D1. {c |}{col 14}{res}{space 2} .0235477{col 26}{space 2} .0369905{col 37}{space 1}    0.64{col 46}{space 3}0.526{col 54}{space 4}-.0502093{col 67}{space 3} .0973047
+{txt}{space 12} {c |}
+{space 7}lngdp {c |}
+{space 9}D1. {c |}{col 14}{res}{space 2} .4649649{col 26}{space 2} .1066349{col 37}{space 1}    4.36{col 46}{space 3}0.000{col 54}{space 4} .2523408{col 67}{space 3} .6775889
+{txt}{space 12} {c |}
+{space 7}lnpop {c |}
+{space 9}D1. {c |}{col 14}{res}{space 2} .5148536{col 26}{space 2} .2681958{col 37}{space 1}    1.92{col 46}{space 3}0.059{col 54}{space 4}-.0199137{col 67}{space 3} 1.049621
+{txt}{space 12} {c |}
+{space 5}lntrade {c |}
+{space 9}D1. {c |}{col 14}{res}{space 2} .1728588{col 26}{space 2} .0401675{col 37}{space 1}    4.30{col 46}{space 3}0.000{col 54}{space 4} .0927672{col 67}{space 3} .2529505
+{txt}{space 12} {c |}
+{space 7}lnind {c |}
+{space 9}D1. {c |}{col 14}{res}{space 2}  -.14313{col 26}{space 2} .0241588{col 37}{space 1}   -5.92{col 46}{space 3}0.000{col 54}{space 4}-.1913012{col 67}{space 3}-.0949587
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Wooldridge test for autocorrelation in panel data
+H0: no first-order autocorrelation
+{col 5}F(  1,      71) = {res}    47.199
+{txt}{col 12}Prob > F = {res}     0.0000
+
+{com}. 
+. tab id, gen (id)
+
+{txt}group(count {c |}
+        ry) {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          1 {c |}{res}         10        1.39        1.39
+{txt}          2 {c |}{res}         10        1.39        2.78
+{txt}          3 {c |}{res}         10        1.39        4.17
+{txt}          4 {c |}{res}         10        1.39        5.56
+{txt}          5 {c |}{res}         10        1.39        6.94
+{txt}          6 {c |}{res}         10        1.39        8.33
+{txt}          7 {c |}{res}         10        1.39        9.72
+{txt}          8 {c |}{res}         10        1.39       11.11
+{txt}          9 {c |}{res}         10        1.39       12.50
+{txt}         10 {c |}{res}         10        1.39       13.89
+{txt}         11 {c |}{res}         10        1.39       15.28
+{txt}         12 {c |}{res}         10        1.39       16.67
+{txt}         13 {c |}{res}         10        1.39       18.06
+{txt}         14 {c |}{res}         10        1.39       19.44
+{txt}         15 {c |}{res}         10        1.39       20.83
+{txt}         16 {c |}{res}         10        1.39       22.22
+{txt}         17 {c |}{res}         10        1.39       23.61
+{txt}         18 {c |}{res}         10        1.39       25.00
+{txt}         19 {c |}{res}         10        1.39       26.39
+{txt}         20 {c |}{res}         10        1.39       27.78
+{txt}         21 {c |}{res}         10        1.39       29.17
+{txt}         22 {c |}{res}         10        1.39       30.56
+{txt}         23 {c |}{res}         10        1.39       31.94
+{txt}         24 {c |}{res}         10        1.39       33.33
+{txt}         25 {c |}{res}         10        1.39       34.72
+{txt}         26 {c |}{res}         10        1.39       36.11
+{txt}         27 {c |}{res}         10        1.39       37.50
+{txt}         28 {c |}{res}         10        1.39       38.89
+{txt}         29 {c |}{res}         10        1.39       40.28
+{txt}         30 {c |}{res}         10        1.39       41.67
+{txt}         31 {c |}{res}         10        1.39       43.06
+{txt}         32 {c |}{res}         10        1.39       44.44
+{txt}         33 {c |}{res}         10        1.39       45.83
+{txt}         34 {c |}{res}         10        1.39       47.22
+{txt}         35 {c |}{res}         10        1.39       48.61
+{txt}         36 {c |}{res}         10        1.39       50.00
+{txt}         37 {c |}{res}         10        1.39       51.39
+{txt}         38 {c |}{res}         10        1.39       52.78
+{txt}         39 {c |}{res}         10        1.39       54.17
+{txt}         40 {c |}{res}         10        1.39       55.56
+{txt}         41 {c |}{res}         10        1.39       56.94
+{txt}         42 {c |}{res}         10        1.39       58.33
+{txt}         43 {c |}{res}         10        1.39       59.72
+{txt}         44 {c |}{res}         10        1.39       61.11
+{txt}         45 {c |}{res}         10        1.39       62.50
+{txt}         46 {c |}{res}         10        1.39       63.89
+{txt}         47 {c |}{res}         10        1.39       65.28
+{txt}         48 {c |}{res}         10        1.39       66.67
+{txt}         49 {c |}{res}         10        1.39       68.06
+{txt}         50 {c |}{res}         10        1.39       69.44
+{txt}         51 {c |}{res}         10        1.39       70.83
+{txt}         52 {c |}{res}         10        1.39       72.22
+{txt}         53 {c |}{res}         10        1.39       73.61
+{txt}         54 {c |}{res}         10        1.39       75.00
+{txt}         55 {c |}{res}         10        1.39       76.39
+{txt}         56 {c |}{res}         10        1.39       77.78
+{txt}         57 {c |}{res}         10        1.39       79.17
+{txt}         58 {c |}{res}         10        1.39       80.56
+{txt}         59 {c |}{res}         10        1.39       81.94
+{txt}         60 {c |}{res}         10        1.39       83.33
+{txt}         61 {c |}{res}         10        1.39       84.72
+{txt}         62 {c |}{res}         10        1.39       86.11
+{txt}         63 {c |}{res}         10        1.39       87.50
+{txt}         64 {c |}{res}         10        1.39       88.89
+{txt}         65 {c |}{res}         10        1.39       90.28
+{txt}         66 {c |}{res}         10        1.39       91.67
+{txt}         67 {c |}{res}         10        1.39       93.06
+{txt}         68 {c |}{res}         10        1.39       94.44
+{txt}         69 {c |}{res}         10        1.39       95.83
+{txt}         70 {c |}{res}         10        1.39       97.22
+{txt}         71 {c |}{res}         10        1.39       98.61
+{txt}         72 {c |}{res}         10        1.39      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        720      100.00
+
+{com}. 
+. xtserial lnjust lndig lngdp lnpop lntrade lnind id2-id72 year
+
+{txt}Wooldridge test for autocorrelation in panel data
+H0: no first-order autocorrelation
+{col 5}F(  1,      71) = {res}    29.923
+{txt}{col 12}Prob > F = {res}     0.0000
+
+{com}. 
+. 
+. 
+. qui xtreg lnjust lndig lngdp lnpop lntrade lnind year, fe
+
+. 
+. xtcsd, pes
+{res} 
+ 
+{txt}Pesaran's test of cross sectional independence = {res}    4.499{txt}, Pr = {res}0.0000
+
+{com}. 
+. 
+. 
+. xtdpdsys lnjust lndig lngdp lnpop lntrade lnind, lags(1) maxldep (4) twostep
+{res}
+{txt}System dynamic panel-data estimation{col 49}Number of obs{col 67}= {res}       648
+{txt}Group variable: {res}id{txt}{col 49}{txt}Number of groups{col 67}= {res}        72
+{txt}Time variable: {res}year
+{txt}{col 49}Obs per group:
+{col 63}min{col 67}= {res}         9
+{txt}{col 63}avg{col 67}=  {res}        9
+{txt}{col 63}max{col 67}= {res}         9
+
+{txt}Number of instruments =  {res}   40{txt}{col 49}Wald chi2({res}6{txt}){col 67}=  {res}  6563.45
+{txt}{col 49}Prob > chi2{col 67}={col 73}{res}0.0000
+{txt}Two-step results
+{res}{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}      lnjust{col 14}{c |}      Coef.{col 26}   Std. Err.{col 38}      z{col 46}   P>|z|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 6}lnjust {c |}
+{space 9}L1. {c |}{col 14}{res}{space 2} .8272559{col 26}{space 2} .0339401{col 37}{space 1}   24.37{col 46}{space 3}0.000{col 54}{space 4} .7607345{col 67}{space 3} .8937772
+{txt}{space 12} {c |}
+{space 7}lndig {c |}{col 14}{res}{space 2} .0533364{col 26}{space 2} .0202419{col 37}{space 1}    2.63{col 46}{space 3}0.008{col 54}{space 4}  .013663{col 67}{space 3} .0930099
+{txt}{space 7}lngdp {c |}{col 14}{res}{space 2} .0392321{col 26}{space 2}  .018443{col 37}{space 1}    2.13{col 46}{space 3}0.033{col 54}{space 4} .0030846{col 67}{space 3} .0753797
+{txt}{space 7}lnpop {c |}{col 14}{res}{space 2}-.0118355{col 26}{space 2} .0165017{col 37}{space 1}   -0.72{col 46}{space 3}0.473{col 54}{space 4}-.0441782{col 67}{space 3} .0205071
+{txt}{space 5}lntrade {c |}{col 14}{res}{space 2} .0838786{col 26}{space 2} .0248776{col 37}{space 1}    3.37{col 46}{space 3}0.001{col 54}{space 4} .0351194{col 67}{space 3} .1326377
+{txt}{space 7}lnind {c |}{col 14}{res}{space 2}-.0781062{col 26}{space 2} .0309829{col 37}{space 1}   -2.52{col 46}{space 3}0.012{col 54}{space 4}-.1388316{col 67}{space 3}-.0173808
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}-1.207564{col 26}{space 2} .3135452{col 37}{space 1}   -3.85{col 46}{space 3}0.000{col 54}{space 4}-1.822101{col 67}{space 3}-.5930265
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{txt}Warning: gmm two-step standard errors are biased; robust standard 
+{col 10}errors are recommended.
+{txt}Instruments for differenced equation
+{p 8 18 11}{txt}GMM-type: {res}L(2/5).lnjust{p_end}
+{p 8 18 11}{txt}Standard: {res}D.lndig D.lngdp D.lnpop D.lntrade D.lnind{p_end}
+{txt}Instruments for level equation
+{p 8 18 11}{txt}GMM-type: {res}LD.lnjust{p_end}
+{p 8 18 11}{txt}Standard: {res}_cons{p_end}
+
+{com}. 
+. estat abond
+{res}
+{txt}{p}Arellano-Bond test for zero autocorrelation in first-differenced errors{p_end}
+{res}{col 3}{text}{c TLC}{hline 6}{c TT}{hline 8}{hline 8}{c TRC}
+{col 3}{text}{c |}Order{col 10}{c |}  z    {col 19}Prob > z{col 27}{c |}
+{res}{col 3}{text}{c LT}{hline 6}{c +}{hline 8}{hline 8}{c RT}
+{col 3}{text}{c |}   1{col 10}{c |}{result} -5.511{col 19}{space 1}0.0000{col 27}{text}{c |}
+{res}{col 3}{text}{c |}   2{col 10}{c |}{result} 1.1805{col 19}{space 1}0.2378{col 27}{text}{c |}
+{res}{col 3}{text}{c BLC}{hline 6}{c BT}{hline 8}{hline 8}{c BRC}
+{txt}{col 4}H0: no autocorrelation 
+{res}
+{com}. 
+. estat sargan
+{txt}Sargan test of overidentifying restrictions
+{txt}{col 9}H0: overidentifying restrictions are valid
+{res}
+{txt}{col 9}chi2({res}33{txt}){col 22}={res}  40.96366
+{txt}{col 9}Prob > chi2  = {res}   0.1607
+
+{com}. 
+. ******Table 6. Estimated results of the impact of the digital economy on distributional, procedural, and restorative justice.****
+
+. 
+. xtdpdsys lnjust1 lndig lngdp lnpop lntrade lnind, lags(1) maxldep (7) twostep
+{res}
+{txt}System dynamic panel-data estimation{col 49}Number of obs{col 67}= {res}       648
+{txt}Group variable: {res}id{txt}{col 49}{txt}Number of groups{col 67}= {res}        72
+{txt}Time variable: {res}year
+{txt}{col 49}Obs per group:
+{col 63}min{col 67}= {res}         9
+{txt}{col 63}avg{col 67}=  {res}        9
+{txt}{col 63}max{col 67}= {res}         9
+
+{txt}Number of instruments =  {res}   49{txt}{col 49}Wald chi2({res}6{txt}){col 67}=  {res}   209.03
+{txt}{col 49}Prob > chi2{col 67}={col 73}{res}0.0000
+{txt}Two-step results
+{res}{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}     lnjust1{col 14}{c |}      Coef.{col 26}   Std. Err.{col 38}      z{col 46}   P>|z|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 5}lnjust1 {c |}
+{space 9}L1. {c |}{col 14}{res}{space 2}-.0760241{col 26}{space 2} .0261111{col 37}{space 1}   -2.91{col 46}{space 3}0.004{col 54}{space 4} -.127201{col 67}{space 3}-.0248473
+{txt}{space 12} {c |}
+{space 7}lndig {c |}{col 14}{res}{space 2} .1359674{col 26}{space 2} .0306538{col 37}{space 1}    4.44{col 46}{space 3}0.000{col 54}{space 4}  .075887{col 67}{space 3} .1960478
+{txt}{space 7}lngdp {c |}{col 14}{res}{space 2} .0997994{col 26}{space 2} .0241546{col 37}{space 1}    4.13{col 46}{space 3}0.000{col 54}{space 4} .0524572{col 67}{space 3} .1471415
+{txt}{space 7}lnpop {c |}{col 14}{res}{space 2}-.0766683{col 26}{space 2} .0191515{col 37}{space 1}   -4.00{col 46}{space 3}0.000{col 54}{space 4}-.1142046{col 67}{space 3}-.0391321
+{txt}{space 5}lntrade {c |}{col 14}{res}{space 2} .0700259{col 26}{space 2} .0375587{col 37}{space 1}    1.86{col 46}{space 3}0.062{col 54}{space 4}-.0035878{col 67}{space 3} .1436396
+{txt}{space 7}lnind {c |}{col 14}{res}{space 2}-.0983439{col 26}{space 2}   .04338{col 37}{space 1}   -2.27{col 46}{space 3}0.023{col 54}{space 4}-.1833671{col 67}{space 3}-.0133207
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}-1.606296{col 26}{space 2} .7124386{col 37}{space 1}   -2.25{col 46}{space 3}0.024{col 54}{space 4} -3.00265{col 67}{space 3}-.2099417
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{txt}Warning: gmm two-step standard errors are biased; robust standard 
+{col 10}errors are recommended.
+{txt}Instruments for differenced equation
+{p 8 18 11}{txt}GMM-type: {res}L(2/8).lnjust1{p_end}
+{p 8 18 11}{txt}Standard: {res}D.lndig D.lngdp D.lnpop D.lntrade D.lnind{p_end}
+{txt}Instruments for level equation
+{p 8 18 11}{txt}GMM-type: {res}LD.lnjust1{p_end}
+{p 8 18 11}{txt}Standard: {res}_cons{p_end}
+
+{com}. 
+. estat abond
+{res}
+{txt}{p}Arellano-Bond test for zero autocorrelation in first-differenced errors{p_end}
+{res}{col 3}{text}{c TLC}{hline 6}{c TT}{hline 8}{hline 8}{c TRC}
+{col 3}{text}{c |}Order{col 10}{c |}  z    {col 19}Prob > z{col 27}{c |}
+{res}{col 3}{text}{c LT}{hline 6}{c +}{hline 8}{hline 8}{c RT}
+{col 3}{text}{c |}   1{col 10}{c |}{result}-5.6349{col 19}{space 1}0.0000{col 27}{text}{c |}
+{res}{col 3}{text}{c |}   2{col 10}{c |}{result}-.78156{col 19}{space 1}0.4345{col 27}{text}{c |}
+{res}{col 3}{text}{c BLC}{hline 6}{c BT}{hline 8}{hline 8}{c BRC}
+{txt}{col 4}H0: no autocorrelation 
+{res}
+{com}. 
+. estat sargan
+{txt}Sargan test of overidentifying restrictions
+{txt}{col 9}H0: overidentifying restrictions are valid
+{res}
+{txt}{col 9}chi2({res}42{txt}){col 22}={res}   52.9766
+{txt}{col 9}Prob > chi2  = {res}   0.1194
+
+{com}. 
+. 
+. 
+. xtdpdsys lnjust2 lndig lngdp lnpop lntrade lnind, lags(1) maxldep (8) twostep
+{res}
+{txt}System dynamic panel-data estimation{col 49}Number of obs{col 67}= {res}       648
+{txt}Group variable: {res}id{txt}{col 49}{txt}Number of groups{col 67}= {res}        72
+{txt}Time variable: {res}year
+{txt}{col 49}Obs per group:
+{col 63}min{col 67}= {res}         9
+{txt}{col 63}avg{col 67}=  {res}        9
+{txt}{col 63}max{col 67}= {res}         9
+
+{txt}Number of instruments =  {res}   50{txt}{col 49}Wald chi2({res}6{txt}){col 67}=  {res}  3241.20
+{txt}{col 49}Prob > chi2{col 67}={col 73}{res}0.0000
+{txt}Two-step results
+{res}{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}     lnjust2{col 14}{c |}      Coef.{col 26}   Std. Err.{col 38}      z{col 46}   P>|z|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 5}lnjust2 {c |}
+{space 9}L1. {c |}{col 14}{res}{space 2} .8512601{col 26}{space 2}  .027306{col 37}{space 1}   31.17{col 46}{space 3}0.000{col 54}{space 4} .7977413{col 67}{space 3} .9047788
+{txt}{space 12} {c |}
+{space 7}lndig {c |}{col 14}{res}{space 2} .0102319{col 26}{space 2} .0055552{col 37}{space 1}    1.84{col 46}{space 3}0.065{col 54}{space 4}-.0006561{col 67}{space 3} .0211199
+{txt}{space 7}lngdp {c |}{col 14}{res}{space 2} -.005219{col 26}{space 2} .0113196{col 37}{space 1}   -0.46{col 46}{space 3}0.645{col 54}{space 4} -.027405{col 67}{space 3} .0169671
+{txt}{space 7}lnpop {c |}{col 14}{res}{space 2}-.0322809{col 26}{space 2} .0095025{col 37}{space 1}   -3.40{col 46}{space 3}0.001{col 54}{space 4}-.0509054{col 67}{space 3}-.0136563
+{txt}{space 5}lntrade {c |}{col 14}{res}{space 2} .0046344{col 26}{space 2} .0091086{col 37}{space 1}    0.51{col 46}{space 3}0.611{col 54}{space 4}-.0132181{col 67}{space 3} .0224868
+{txt}{space 7}lnind {c |}{col 14}{res}{space 2}-.0405004{col 26}{space 2} .0130494{col 37}{space 1}   -3.10{col 46}{space 3}0.002{col 54}{space 4}-.0660767{col 67}{space 3}-.0149241
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} .6675307{col 26}{space 2} .2700196{col 37}{space 1}    2.47{col 46}{space 3}0.013{col 54}{space 4} .1383019{col 67}{space 3} 1.196759
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{txt}Warning: gmm two-step standard errors are biased; robust standard 
+{col 10}errors are recommended.
+{txt}Instruments for differenced equation
+{p 8 18 11}{txt}GMM-type: {res}L(2/9).lnjust2{p_end}
+{p 8 18 11}{txt}Standard: {res}D.lndig D.lngdp D.lnpop D.lntrade D.lnind{p_end}
+{txt}Instruments for level equation
+{p 8 18 11}{txt}GMM-type: {res}LD.lnjust2{p_end}
+{p 8 18 11}{txt}Standard: {res}_cons{p_end}
+
+{com}. 
+. estat abond
+{res}
+{txt}{p}Arellano-Bond test for zero autocorrelation in first-differenced errors{p_end}
+{res}{col 3}{text}{c TLC}{hline 6}{c TT}{hline 8}{hline 8}{c TRC}
+{col 3}{text}{c |}Order{col 10}{c |}  z    {col 19}Prob > z{col 27}{c |}
+{res}{col 3}{text}{c LT}{hline 6}{c +}{hline 8}{hline 8}{c RT}
+{col 3}{text}{c |}   1{col 10}{c |}{result}-3.9367{col 19}{space 1}0.0001{col 27}{text}{c |}
+{res}{col 3}{text}{c |}   2{col 10}{c |}{result} .47866{col 19}{space 1}0.6322{col 27}{text}{c |}
+{res}{col 3}{text}{c BLC}{hline 6}{c BT}{hline 8}{hline 8}{c BRC}
+{txt}{col 4}H0: no autocorrelation 
+{res}
+{com}. 
+. estat sargan
+{txt}Sargan test of overidentifying restrictions
+{txt}{col 9}H0: overidentifying restrictions are valid
+{res}
+{txt}{col 9}chi2({res}43{txt}){col 22}={res}  49.63291
+{txt}{col 9}Prob > chi2  = {res}   0.2259
+
+{com}. 
+. 
+. 
+. xtdpdsys lnjust3 lndig lngdp lnpop lntrade lnind, lags(1) maxldep (4) twostep
+{res}
+{txt}System dynamic panel-data estimation{col 49}Number of obs{col 67}= {res}       648
+{txt}Group variable: {res}id{txt}{col 49}{txt}Number of groups{col 67}= {res}        72
+{txt}Time variable: {res}year
+{txt}{col 49}Obs per group:
+{col 63}min{col 67}= {res}         9
+{txt}{col 63}avg{col 67}=  {res}        9
+{txt}{col 63}max{col 67}= {res}         9
+
+{txt}Number of instruments =  {res}   40{txt}{col 49}Wald chi2({res}6{txt}){col 67}=  {res}  5184.66
+{txt}{col 49}Prob > chi2{col 67}={col 73}{res}0.0000
+{txt}Two-step results
+{res}{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}     lnjust3{col 14}{c |}      Coef.{col 26}   Std. Err.{col 38}      z{col 46}   P>|z|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 5}lnjust3 {c |}
+{space 9}L1. {c |}{col 14}{res}{space 2} .8616757{col 26}{space 2} .0262169{col 37}{space 1}   32.87{col 46}{space 3}0.000{col 54}{space 4} .8102916{col 67}{space 3} .9130598
+{txt}{space 12} {c |}
+{space 7}lndig {c |}{col 14}{res}{space 2} .0660307{col 26}{space 2} .0321133{col 37}{space 1}    2.06{col 46}{space 3}0.040{col 54}{space 4} .0030897{col 67}{space 3} .1289717
+{txt}{space 7}lngdp {c |}{col 14}{res}{space 2}  .327013{col 26}{space 2} .0522517{col 37}{space 1}    6.26{col 46}{space 3}0.000{col 54}{space 4} .2246015{col 67}{space 3} .4294244
+{txt}{space 7}lnpop {c |}{col 14}{res}{space 2}-.1460943{col 26}{space 2} .0496976{col 37}{space 1}   -2.94{col 46}{space 3}0.003{col 54}{space 4}-.2434999{col 67}{space 3}-.0486887
+{txt}{space 5}lntrade {c |}{col 14}{res}{space 2} .0705184{col 26}{space 2}  .039309{col 37}{space 1}    1.79{col 46}{space 3}0.073{col 54}{space 4}-.0065259{col 67}{space 3} .1475627
+{txt}{space 7}lnind {c |}{col 14}{res}{space 2}-.2166469{col 26}{space 2} .0472685{col 37}{space 1}   -4.58{col 46}{space 3}0.000{col 54}{space 4}-.3092914{col 67}{space 3}-.1240024
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}-6.033997{col 26}{space 2} .8525131{col 37}{space 1}   -7.08{col 46}{space 3}0.000{col 54}{space 4}-7.704892{col 67}{space 3}-4.363102
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{txt}Warning: gmm two-step standard errors are biased; robust standard 
+{col 10}errors are recommended.
+{txt}Instruments for differenced equation
+{p 8 18 11}{txt}GMM-type: {res}L(2/5).lnjust3{p_end}
+{p 8 18 11}{txt}Standard: {res}D.lndig D.lngdp D.lnpop D.lntrade D.lnind{p_end}
+{txt}Instruments for level equation
+{p 8 18 11}{txt}GMM-type: {res}LD.lnjust3{p_end}
+{p 8 18 11}{txt}Standard: {res}_cons{p_end}
+
+{com}. 
+. estat abond
+{res}
+{txt}{p}Arellano-Bond test for zero autocorrelation in first-differenced errors{p_end}
+{res}{col 3}{text}{c TLC}{hline 6}{c TT}{hline 8}{hline 8}{c TRC}
+{col 3}{text}{c |}Order{col 10}{c |}  z    {col 19}Prob > z{col 27}{c |}
+{res}{col 3}{text}{c LT}{hline 6}{c +}{hline 8}{hline 8}{c RT}
+{col 3}{text}{c |}   1{col 10}{c |}{result}-4.0962{col 19}{space 1}0.0000{col 27}{text}{c |}
+{res}{col 3}{text}{c |}   2{col 10}{c |}{result}-.75224{col 19}{space 1}0.4519{col 27}{text}{c |}
+{res}{col 3}{text}{c BLC}{hline 6}{c BT}{hline 8}{hline 8}{c BRC}
+{txt}{col 4}H0: no autocorrelation 
+{res}
+{com}. 
+. estat sargan
+{txt}Sargan test of overidentifying restrictions
+{txt}{col 9}H0: overidentifying restrictions are valid
+{res}
+{txt}{col 9}chi2({res}33{txt}){col 22}={res}  40.28262
+{txt}{col 9}Prob > chi2  = {res}   0.1791
+
+{com}. 
+. *****Table 7. Estimated results of the impact of three aspects of the digital economy on just transition.*****
+
+. 
+. xtdpdsys lnjust lndig1 lngdp lnpop lntrade lnind, lags(1) maxldep (1) twostep
+{res}
+{txt}System dynamic panel-data estimation{col 49}Number of obs{col 67}= {res}       648
+{txt}Group variable: {res}id{txt}{col 49}{txt}Number of groups{col 67}= {res}        72
+{txt}Time variable: {res}year
+{txt}{col 49}Obs per group:
+{col 63}min{col 67}= {res}         9
+{txt}{col 63}avg{col 67}=  {res}        9
+{txt}{col 63}max{col 67}= {res}         9
+
+{txt}Number of instruments =  {res}   22{txt}{col 49}Wald chi2({res}6{txt}){col 67}=  {res}  2726.80
+{txt}{col 49}Prob > chi2{col 67}={col 73}{res}0.0000
+{txt}Two-step results
+{res}{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}      lnjust{col 14}{c |}      Coef.{col 26}   Std. Err.{col 38}      z{col 46}   P>|z|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 6}lnjust {c |}
+{space 9}L1. {c |}{col 14}{res}{space 2} .8576452{col 26}{space 2} .0461817{col 37}{space 1}   18.57{col 46}{space 3}0.000{col 54}{space 4} .7671308{col 67}{space 3} .9481597
+{txt}{space 12} {c |}
+{space 6}lndig1 {c |}{col 14}{res}{space 2} .0680064{col 26}{space 2} .0270366{col 37}{space 1}    2.52{col 46}{space 3}0.012{col 54}{space 4} .0150157{col 67}{space 3} .1209971
+{txt}{space 7}lngdp {c |}{col 14}{res}{space 2} .0413461{col 26}{space 2} .0266129{col 37}{space 1}    1.55{col 46}{space 3}0.120{col 54}{space 4}-.0108143{col 67}{space 3} .0935065
+{txt}{space 7}lnpop {c |}{col 14}{res}{space 2}-.0262612{col 26}{space 2} .0271346{col 37}{space 1}   -0.97{col 46}{space 3}0.333{col 54}{space 4}-.0794441{col 67}{space 3} .0269217
+{txt}{space 5}lntrade {c |}{col 14}{res}{space 2} .0476559{col 26}{space 2} .0375859{col 37}{space 1}    1.27{col 46}{space 3}0.205{col 54}{space 4}-.0260111{col 67}{space 3} .1213229
+{txt}{space 7}lnind {c |}{col 14}{res}{space 2}-.0091975{col 26}{space 2} .0440176{col 37}{space 1}   -0.21{col 46}{space 3}0.834{col 54}{space 4}-.0954703{col 67}{space 3} .0770754
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}-1.029824{col 26}{space 2} .4928378{col 37}{space 1}   -2.09{col 46}{space 3}0.037{col 54}{space 4}-1.995768{col 67}{space 3}-.0638794
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{txt}Warning: gmm two-step standard errors are biased; robust standard 
+{col 10}errors are recommended.
+{txt}Instruments for differenced equation
+{p 8 18 11}{txt}GMM-type: {res}L(2/2).lnjust{p_end}
+{p 8 18 11}{txt}Standard: {res}D.lndig1 D.lngdp D.lnpop D.lntrade D.lnind{p_end}
+{txt}Instruments for level equation
+{p 8 18 11}{txt}GMM-type: {res}LD.lnjust{p_end}
+{p 8 18 11}{txt}Standard: {res}_cons{p_end}
+
+{com}. 
+. estat abond
+{res}
+{txt}{p}Arellano-Bond test for zero autocorrelation in first-differenced errors{p_end}
+{res}{col 3}{text}{c TLC}{hline 6}{c TT}{hline 8}{hline 8}{c TRC}
+{col 3}{text}{c |}Order{col 10}{c |}  z    {col 19}Prob > z{col 27}{c |}
+{res}{col 3}{text}{c LT}{hline 6}{c +}{hline 8}{hline 8}{c RT}
+{col 3}{text}{c |}   1{col 10}{c |}{result}-5.5346{col 19}{space 1}0.0000{col 27}{text}{c |}
+{res}{col 3}{text}{c |}   2{col 10}{c |}{result} 1.1202{col 19}{space 1}0.2626{col 27}{text}{c |}
+{res}{col 3}{text}{c BLC}{hline 6}{c BT}{hline 8}{hline 8}{c BRC}
+{txt}{col 4}H0: no autocorrelation 
+{res}
+{com}. 
+. estat sargan
+{txt}Sargan test of overidentifying restrictions
+{txt}{col 9}H0: overidentifying restrictions are valid
+{res}
+{txt}{col 9}chi2({res}15{txt}){col 22}={res}  15.88893
+{txt}{col 9}Prob > chi2  = {res}   0.3895
+
+{com}. 
+. 
+. 
+. xtdpdsys lnjust lndig2 lngdp lnpop lntrade lnind, lags(1) maxldep (4) twostep
+{res}
+{txt}System dynamic panel-data estimation{col 49}Number of obs{col 67}= {res}       648
+{txt}Group variable: {res}id{txt}{col 49}{txt}Number of groups{col 67}= {res}        72
+{txt}Time variable: {res}year
+{txt}{col 49}Obs per group:
+{col 63}min{col 67}= {res}         9
+{txt}{col 63}avg{col 67}=  {res}        9
+{txt}{col 63}max{col 67}= {res}         9
+
+{txt}Number of instruments =  {res}   40{txt}{col 49}Wald chi2({res}6{txt}){col 67}=  {res}  5139.47
+{txt}{col 49}Prob > chi2{col 67}={col 73}{res}0.0000
+{txt}Two-step results
+{res}{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}      lnjust{col 14}{c |}      Coef.{col 26}   Std. Err.{col 38}      z{col 46}   P>|z|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 6}lnjust {c |}
+{space 9}L1. {c |}{col 14}{res}{space 2} .8269839{col 26}{space 2} .0319112{col 37}{space 1}   25.92{col 46}{space 3}0.000{col 54}{space 4} .7644392{col 67}{space 3} .8895286
+{txt}{space 12} {c |}
+{space 6}lndig2 {c |}{col 14}{res}{space 2} .0274665{col 26}{space 2} .0105853{col 37}{space 1}    2.59{col 46}{space 3}0.009{col 54}{space 4} .0067198{col 67}{space 3} .0482132
+{txt}{space 7}lngdp {c |}{col 14}{res}{space 2} .0541184{col 26}{space 2} .0177081{col 37}{space 1}    3.06{col 46}{space 3}0.002{col 54}{space 4} .0194111{col 67}{space 3} .0888258
+{txt}{space 7}lnpop {c |}{col 14}{res}{space 2}-.0274828{col 26}{space 2} .0155857{col 37}{space 1}   -1.76{col 46}{space 3}0.078{col 54}{space 4}-.0580301{col 67}{space 3} .0030645
+{txt}{space 5}lntrade {c |}{col 14}{res}{space 2} .0796983{col 26}{space 2} .0242563{col 37}{space 1}    3.29{col 46}{space 3}0.001{col 54}{space 4}  .032157{col 67}{space 3} .1272397
+{txt}{space 7}lnind {c |}{col 14}{res}{space 2} -.076949{col 26}{space 2} .0296496{col 37}{space 1}   -2.60{col 46}{space 3}0.009{col 54}{space 4}-.1350612{col 67}{space 3}-.0188367
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}-1.379046{col 26}{space 2} .3184555{col 37}{space 1}   -4.33{col 46}{space 3}0.000{col 54}{space 4}-2.003207{col 67}{space 3}-.7548848
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{txt}Warning: gmm two-step standard errors are biased; robust standard 
+{col 10}errors are recommended.
+{txt}Instruments for differenced equation
+{p 8 18 11}{txt}GMM-type: {res}L(2/5).lnjust{p_end}
+{p 8 18 11}{txt}Standard: {res}D.lndig2 D.lngdp D.lnpop D.lntrade D.lnind{p_end}
+{txt}Instruments for level equation
+{p 8 18 11}{txt}GMM-type: {res}LD.lnjust{p_end}
+{p 8 18 11}{txt}Standard: {res}_cons{p_end}
+
+{com}. 
+. estat abond
+{res}
+{txt}{p}Arellano-Bond test for zero autocorrelation in first-differenced errors{p_end}
+{res}{col 3}{text}{c TLC}{hline 6}{c TT}{hline 8}{hline 8}{c TRC}
+{col 3}{text}{c |}Order{col 10}{c |}  z    {col 19}Prob > z{col 27}{c |}
+{res}{col 3}{text}{c LT}{hline 6}{c +}{hline 8}{hline 8}{c RT}
+{col 3}{text}{c |}   1{col 10}{c |}{result}-5.5247{col 19}{space 1}0.0000{col 27}{text}{c |}
+{res}{col 3}{text}{c |}   2{col 10}{c |}{result} 1.1467{col 19}{space 1}0.2515{col 27}{text}{c |}
+{res}{col 3}{text}{c BLC}{hline 6}{c BT}{hline 8}{hline 8}{c BRC}
+{txt}{col 4}H0: no autocorrelation 
+{res}
+{com}. 
+. estat sargan
+{txt}Sargan test of overidentifying restrictions
+{txt}{col 9}H0: overidentifying restrictions are valid
+{res}
+{txt}{col 9}chi2({res}33{txt}){col 22}={res}  41.98353
+{txt}{col 9}Prob > chi2  = {res}   0.1358
+
+{com}. 
+. 
+. 
+. xtdpdsys lnjust lndig3 lngdp lnpop lntrade lnind, lags(1) maxldep (2) twostep
+{res}
+{txt}System dynamic panel-data estimation{col 49}Number of obs{col 67}= {res}       648
+{txt}Group variable: {res}id{txt}{col 49}{txt}Number of groups{col 67}= {res}        72
+{txt}Time variable: {res}year
+{txt}{col 49}Obs per group:
+{col 63}min{col 67}= {res}         9
+{txt}{col 63}avg{col 67}=  {res}        9
+{txt}{col 63}max{col 67}= {res}         9
+
+{txt}Number of instruments =  {res}   29{txt}{col 49}Wald chi2({res}6{txt}){col 67}=  {res}  4526.33
+{txt}{col 49}Prob > chi2{col 67}={col 73}{res}0.0000
+{txt}Two-step results
+{res}{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}      lnjust{col 14}{c |}      Coef.{col 26}   Std. Err.{col 38}      z{col 46}   P>|z|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 6}lnjust {c |}
+{space 9}L1. {c |}{col 14}{res}{space 2} .8937346{col 26}{space 2} .0388676{col 37}{space 1}   22.99{col 46}{space 3}0.000{col 54}{space 4} .8175555{col 67}{space 3} .9699138
+{txt}{space 12} {c |}
+{space 6}lndig3 {c |}{col 14}{res}{space 2}-.0074559{col 26}{space 2} .0019428{col 37}{space 1}   -3.84{col 46}{space 3}0.000{col 54}{space 4}-.0112637{col 67}{space 3}-.0036481
+{txt}{space 7}lngdp {c |}{col 14}{res}{space 2} .0486013{col 26}{space 2}  .019434{col 37}{space 1}    2.50{col 46}{space 3}0.012{col 54}{space 4} .0105114{col 67}{space 3} .0866912
+{txt}{space 7}lnpop {c |}{col 14}{res}{space 2}-.0174823{col 26}{space 2} .0196349{col 37}{space 1}   -0.89{col 46}{space 3}0.373{col 54}{space 4}-.0559659{col 67}{space 3} .0210013
+{txt}{space 5}lntrade {c |}{col 14}{res}{space 2} .0781144{col 26}{space 2}  .034016{col 37}{space 1}    2.30{col 46}{space 3}0.022{col 54}{space 4} .0114443{col 67}{space 3} .1447845
+{txt}{space 7}lnind {c |}{col 14}{res}{space 2}-.0621572{col 26}{space 2} .0349987{col 37}{space 1}   -1.78{col 46}{space 3}0.076{col 54}{space 4}-.1307534{col 67}{space 3}  .006439
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}-1.334309{col 26}{space 2} .4369789{col 37}{space 1}   -3.05{col 46}{space 3}0.002{col 54}{space 4}-2.190772{col 67}{space 3}-.4778458
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{txt}Warning: gmm two-step standard errors are biased; robust standard 
+{col 10}errors are recommended.
+{txt}Instruments for differenced equation
+{p 8 18 11}{txt}GMM-type: {res}L(2/3).lnjust{p_end}
+{p 8 18 11}{txt}Standard: {res}D.lndig3 D.lngdp D.lnpop D.lntrade D.lnind{p_end}
+{txt}Instruments for level equation
+{p 8 18 11}{txt}GMM-type: {res}LD.lnjust{p_end}
+{p 8 18 11}{txt}Standard: {res}_cons{p_end}
+
+{com}. 
+. estat abond
+{res}
+{txt}{p}Arellano-Bond test for zero autocorrelation in first-differenced errors{p_end}
+{res}{col 3}{text}{c TLC}{hline 6}{c TT}{hline 8}{hline 8}{c TRC}
+{col 3}{text}{c |}Order{col 10}{c |}  z    {col 19}Prob > z{col 27}{c |}
+{res}{col 3}{text}{c LT}{hline 6}{c +}{hline 8}{hline 8}{c RT}
+{col 3}{text}{c |}   1{col 10}{c |}{result}-5.6073{col 19}{space 1}0.0000{col 27}{text}{c |}
+{res}{col 3}{text}{c |}   2{col 10}{c |}{result} 1.0952{col 19}{space 1}0.2734{col 27}{text}{c |}
+{res}{col 3}{text}{c BLC}{hline 6}{c BT}{hline 8}{hline 8}{c BRC}
+{txt}{col 4}H0: no autocorrelation 
+{res}
+{com}. 
+. estat sargan
+{txt}Sargan test of overidentifying restrictions
+{txt}{col 9}H0: overidentifying restrictions are valid
+{res}
+{txt}{col 9}chi2({res}22{txt}){col 22}={res}  28.83227
+{txt}{col 9}Prob > chi2  = {res}   0.1497
+
+{com}. 
+. ******Table 8. Estimated results of the robustness check.******
+
+. 
+. xtdpdsys lnjust lndig lnpgdp lnpop lntrade lnind, lags(1) maxldep (4) twostep
+{res}
+{txt}System dynamic panel-data estimation{col 49}Number of obs{col 67}= {res}       648
+{txt}Group variable: {res}id{txt}{col 49}{txt}Number of groups{col 67}= {res}        72
+{txt}Time variable: {res}year
+{txt}{col 49}Obs per group:
+{col 63}min{col 67}= {res}         9
+{txt}{col 63}avg{col 67}=  {res}        9
+{txt}{col 63}max{col 67}= {res}         9
+
+{txt}Number of instruments =  {res}   40{txt}{col 49}Wald chi2({res}6{txt}){col 67}=  {res}  6563.68
+{txt}{col 49}Prob > chi2{col 67}={col 73}{res}0.0000
+{txt}Two-step results
+{res}{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}      lnjust{col 14}{c |}      Coef.{col 26}   Std. Err.{col 38}      z{col 46}   P>|z|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 6}lnjust {c |}
+{space 9}L1. {c |}{col 14}{res}{space 2}  .827262{col 26}{space 2} .0339401{col 37}{space 1}   24.37{col 46}{space 3}0.000{col 54}{space 4} .7607407{col 67}{space 3} .8937833
+{txt}{space 12} {c |}
+{space 7}lndig {c |}{col 14}{res}{space 2} .0533355{col 26}{space 2}  .020242{col 37}{space 1}    2.63{col 46}{space 3}0.008{col 54}{space 4}  .013662{col 67}{space 3} .0930091
+{txt}{space 6}lnpgdp {c |}{col 14}{res}{space 2} .0392293{col 26}{space 2} .0184429{col 37}{space 1}    2.13{col 46}{space 3}0.033{col 54}{space 4} .0030819{col 67}{space 3} .0753767
+{txt}{space 7}lnpop {c |}{col 14}{res}{space 2} .0273955{col 26}{space 2} .0089967{col 37}{space 1}    3.05{col 46}{space 3}0.002{col 54}{space 4} .0097624{col 67}{space 3} .0450286
+{txt}{space 5}lntrade {c |}{col 14}{res}{space 2} .0838775{col 26}{space 2} .0248776{col 37}{space 1}    3.37{col 46}{space 3}0.001{col 54}{space 4} .0351182{col 67}{space 3} .1326367
+{txt}{space 7}lnind {c |}{col 14}{res}{space 2}-.0781024{col 26}{space 2} .0309827{col 37}{space 1}   -2.52{col 46}{space 3}0.012{col 54}{space 4}-.1388273{col 67}{space 3}-.0173775
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}-1.207514{col 26}{space 2} .3135438{col 37}{space 1}   -3.85{col 46}{space 3}0.000{col 54}{space 4}-1.822048{col 67}{space 3}-.5929794
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{txt}Warning: gmm two-step standard errors are biased; robust standard 
+{col 10}errors are recommended.
+{txt}Instruments for differenced equation
+{p 8 18 11}{txt}GMM-type: {res}L(2/5).lnjust{p_end}
+{p 8 18 11}{txt}Standard: {res}D.lndig D.lnpgdp D.lnpop D.lntrade D.lnind{p_end}
+{txt}Instruments for level equation
+{p 8 18 11}{txt}GMM-type: {res}LD.lnjust{p_end}
+{p 8 18 11}{txt}Standard: {res}_cons{p_end}
+
+{com}. 
+. estat abond
+{res}
+{txt}{p}Arellano-Bond test for zero autocorrelation in first-differenced errors{p_end}
+{res}{col 3}{text}{c TLC}{hline 6}{c TT}{hline 8}{hline 8}{c TRC}
+{col 3}{text}{c |}Order{col 10}{c |}  z    {col 19}Prob > z{col 27}{c |}
+{res}{col 3}{text}{c LT}{hline 6}{c +}{hline 8}{hline 8}{c RT}
+{col 3}{text}{c |}   1{col 10}{c |}{result} -5.511{col 19}{space 1}0.0000{col 27}{text}{c |}
+{res}{col 3}{text}{c |}   2{col 10}{c |}{result} 1.1805{col 19}{space 1}0.2378{col 27}{text}{c |}
+{res}{col 3}{text}{c BLC}{hline 6}{c BT}{hline 8}{hline 8}{c BRC}
+{txt}{col 4}H0: no autocorrelation 
+{res}
+{com}. 
+. estat sargan
+{txt}Sargan test of overidentifying restrictions
+{txt}{col 9}H0: overidentifying restrictions are valid
+{res}
+{txt}{col 9}chi2({res}33{txt}){col 22}={res}  40.96375
+{txt}{col 9}Prob > chi2  = {res}   0.1607
+
+{com}. 
+. 
+. 
+. ivreg2h lnjust lndig lngdp lnpop lntrade lnind (lndig= ),small robust gmm2s
+
+{res}Too few excluded instruments: standard IV model not estimable
+
+IV with Generated Instruments only
+ 
+Instruments created from Z:
+lndig lngdp lnpop lntrade lnind
+{txt}Warning - duplicate variables detected
+Duplicates:{col 21}lndig
+Warning - collinearities detected
+Vars dropped:{col 21}__00000A __00000B __00000C __00000D __00000E
+{res}{txt}Warning - duplicate variables detected
+Duplicates:{col 16}lndig
+Warning - collinearities detected
+Vars dropped:{col 16}lndig_lndig_g lndig_lngdp_g lndig_lnpop_g lndig_lntrade_g
+{col 16}lndig_lnind_g
+
+2-Step GMM estimation
+{hline 21}
+
+Estimates efficient for arbitrary heteroskedasticity
+Statistics robust to heteroskedasticity
+
+{col 55}Number of obs = {res}     720
+{txt}{col 55}F(  5,   714) = {res}  403.80
+{txt}{col 55}Prob > F      = {res}  0.0000
+{txt}Total (centered) SS     = {res} 203.7462467{txt}{col 55}Centered R2   = {res}  0.7377
+{txt}Total (uncentered) SS   = {res} 3541.943509{txt}{col 55}Uncentered R2 = {res}  0.9849
+{txt}Residual SS             = {res}  53.4470936{txt}{col 55}Root MSE      = {res}   .2736
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 14}{c |}{col 26}    Robust
+{col 1}      lnjust{col 14}{c |}      Coef.{col 26}   Std. Err.{col 38}      t{col 46}   P>|t|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 7}lndig {c |}{col 14}{res}{space 2} .2138219{col 26}{space 2} .0295843{col 37}{space 1}    7.23{col 46}{space 3}0.000{col 54}{space 4} .1557392{col 67}{space 3} .2719046
+{txt}{space 7}lngdp {c |}{col 14}{res}{space 2} .2754161{col 26}{space 2} .0148822{col 37}{space 1}   18.51{col 46}{space 3}0.000{col 54}{space 4}  .246198{col 67}{space 3} .3046343
+{txt}{space 7}lnpop {c |}{col 14}{res}{space 2}-.3129506{col 26}{space 2} .0153268{col 37}{space 1}  -20.42{col 46}{space 3}0.000{col 54}{space 4}-.3430417{col 67}{space 3}-.2828595
+{txt}{space 5}lntrade {c |}{col 14}{res}{space 2}-.1039333{col 26}{space 2} .0381447{col 37}{space 1}   -2.72{col 46}{space 3}0.007{col 54}{space 4}-.1788225{col 67}{space 3} -.029044
+{txt}{space 7}lnind {c |}{col 14}{res}{space 2}-.4031952{col 26}{space 2} .0322972{col 37}{space 1}  -12.48{col 46}{space 3}0.000{col 54}{space 4} -.466604{col 67}{space 3}-.3397864
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}-2.075433{col 26}{space 2} .5067971{col 37}{space 1}   -4.10{col 46}{space 3}0.000{col 54}{space 4}-3.070424{col 67}{space 3}-1.080442
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{help ivreg2##overidtests:Hansen J statistic} (overidentification test of all instruments):{res}{col 71}   0.000
+{txt}{col 50}(equation exactly identified)
+{hline 78}
+Included instruments:{col 23}lndig lngdp lnpop lntrade lnind
+Duplicates:{col 23}lndig
+Dropped collinear:{col 23}lndig_lndig_g lndig_lngdp_g lndig_lnpop_g lndig_lntrade_g
+{col 23}lndig_lnind_g
+{hline 78}
+
+{err}Warning: variables have been centered
+
+Warning: variables have been centered
+{res}
+{txt}{hline 12}{c -}{c TT}{c -}{hline 12}{c -}{c -}
+{ralign 12:Variable} {c |} {center 12:GenInst} {space 1}
+{hline 12}{c -}{c +}{c -}{hline 12}{c -}{c -}
+{res}{txt}{space 7}lndig {c |}{res} {ralign 12:.2138}{txt} {space 1}
+{res}{txt}{space 12} {c |}{res} {ralign 12:.0296}{txt} {space 1}
+{res}{txt}{space 7}lngdp {c |}{res} {ralign 12:.2754}{txt} {space 1}
+{res}{txt}{space 12} {c |}{res} {ralign 12:.0149}{txt} {space 1}
+{res}{txt}{space 7}lnpop {c |}{res} {ralign 12:-.313}{txt} {space 1}
+{res}{txt}{space 12} {c |}{res} {ralign 12:.0153}{txt} {space 1}
+{res}{txt}{space 5}lntrade {c |}{res} {ralign 12:-.1039}{txt} {space 1}
+{res}{txt}{space 12} {c |}{res} {ralign 12:.0381}{txt} {space 1}
+{res}{txt}{space 7}lnind {c |}{res} {ralign 12:-.4032}{txt} {space 1}
+{res}{txt}{space 12} {c |}{res} {ralign 12:.0323}{txt} {space 1}
+{res}{txt}{space 7}_cons {c |}{res} {ralign 12:-2.075}{txt} {space 1}
+{res}{txt}{space 12} {c |}{res} {ralign 12:.507}{txt} {space 1}
+{res}{txt}{hline 12}{c -}{c +}{c -}{hline 12}{c -}{c -}
+{ralign 12:N} {c |}{res} {ralign 12:720}{txt} {space 1}
+{res}{txt}{ralign 12:rmse} {c |}{res} {ralign 12:.274}{txt} {space 1}
+{res}{txt}{ralign 12:j} {c |}{res} {ralign 12:0}{txt} {space 1}
+{res}{txt}{ralign 12:jdf} {c |}{res} {ralign 12:0}{txt} {space 1}
+{res}{txt}{ralign 12:jp} {c |}{res} {ralign 12:}{txt} {space 1}
+{res}{txt}{hline 12}{c -}{c BT}{c -}{hline 12}{c -}{c -}
+{ralign 29:legend: b/se}
+{res}Warning - duplicate variables detected
+Duplicates:{txt}{col 16}lndig
+{res}Warning - collinearities detected
+Vars dropped:{txt}{col 16}lndig_lndig_g lndig_lngdp_g lndig_lnpop_g lndig_lntrade_g
+{col 16}lndig_lnind_g
+
+{com}. 
+. 
+. 
+. xtdpdsys lnjust lndigf lngdp lnpop lntrade lnind, lags(1) maxldep (4) twostep
+{res}
+{txt}System dynamic panel-data estimation{col 49}Number of obs{col 67}= {res}       648
+{txt}Group variable: {res}id{txt}{col 49}{txt}Number of groups{col 67}= {res}        72
+{txt}Time variable: {res}year
+{txt}{col 49}Obs per group:
+{col 63}min{col 67}= {res}         9
+{txt}{col 63}avg{col 67}=  {res}        9
+{txt}{col 63}max{col 67}= {res}         9
+
+{txt}Number of instruments =  {res}   40{txt}{col 49}Wald chi2({res}6{txt}){col 67}=  {res}  5773.54
+{txt}{col 49}Prob > chi2{col 67}={col 73}{res}0.0000
+{txt}Two-step results
+{res}{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}      lnjust{col 14}{c |}      Coef.{col 26}   Std. Err.{col 38}      z{col 46}   P>|z|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 6}lnjust {c |}
+{space 9}L1. {c |}{col 14}{res}{space 2} .8111161{col 26}{space 2} .0342558{col 37}{space 1}   23.68{col 46}{space 3}0.000{col 54}{space 4} .7439759{col 67}{space 3} .8782563
+{txt}{space 12} {c |}
+{space 6}lndigf {c |}{col 14}{res}{space 2} .0365616{col 26}{space 2} .0111519{col 37}{space 1}    3.28{col 46}{space 3}0.001{col 54}{space 4} .0147042{col 67}{space 3} .0584189
+{txt}{space 7}lngdp {c |}{col 14}{res}{space 2} .0396882{col 26}{space 2} .0194949{col 37}{space 1}    2.04{col 46}{space 3}0.042{col 54}{space 4}  .001479{col 67}{space 3} .0778975
+{txt}{space 7}lnpop {c |}{col 14}{res}{space 2}-.0126417{col 26}{space 2} .0172666{col 37}{space 1}   -0.73{col 46}{space 3}0.464{col 54}{space 4}-.0464837{col 67}{space 3} .0212002
+{txt}{space 5}lntrade {c |}{col 14}{res}{space 2} .0833125{col 26}{space 2} .0254729{col 37}{space 1}    3.27{col 46}{space 3}0.001{col 54}{space 4} .0333866{col 67}{space 3} .1332385
+{txt}{space 7}lnind {c |}{col 14}{res}{space 2}-.0683906{col 26}{space 2} .0300138{col 37}{space 1}   -2.28{col 46}{space 3}0.023{col 54}{space 4}-.1272167{col 67}{space 3}-.0095646
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}-1.309188{col 26}{space 2} .3465764{col 37}{space 1}   -3.78{col 46}{space 3}0.000{col 54}{space 4}-1.988465{col 67}{space 3}-.6299109
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{txt}Warning: gmm two-step standard errors are biased; robust standard 
+{col 10}errors are recommended.
+{txt}Instruments for differenced equation
+{p 8 18 11}{txt}GMM-type: {res}L(2/5).lnjust{p_end}
+{p 8 18 11}{txt}Standard: {res}D.lndigf D.lngdp D.lnpop D.lntrade D.lnind{p_end}
+{txt}Instruments for level equation
+{p 8 18 11}{txt}GMM-type: {res}LD.lnjust{p_end}
+{p 8 18 11}{txt}Standard: {res}_cons{p_end}
+
+{com}. 
+. estat abond
+{res}
+{txt}{p}Arellano-Bond test for zero autocorrelation in first-differenced errors{p_end}
+{res}{col 3}{text}{c TLC}{hline 6}{c TT}{hline 8}{hline 8}{c TRC}
+{col 3}{text}{c |}Order{col 10}{c |}  z    {col 19}Prob > z{col 27}{c |}
+{res}{col 3}{text}{c LT}{hline 6}{c +}{hline 8}{hline 8}{c RT}
+{col 3}{text}{c |}   1{col 10}{c |}{result}-5.5028{col 19}{space 1}0.0000{col 27}{text}{c |}
+{res}{col 3}{text}{c |}   2{col 10}{c |}{result} 1.1588{col 19}{space 1}0.2465{col 27}{text}{c |}
+{res}{col 3}{text}{c BLC}{hline 6}{c BT}{hline 8}{hline 8}{c BRC}
+{txt}{col 4}H0: no autocorrelation 
+{res}
+{com}. 
+. estat sargan
+{txt}Sargan test of overidentifying restrictions
+{txt}{col 9}H0: overidentifying restrictions are valid
+{res}
+{txt}{col 9}chi2({res}33{txt}){col 22}={res}  43.07196
+{txt}{col 9}Prob > chi2  = {res}   0.1127
+
+{com}. 
+. 
+. 
+. ******Table 9. Estimated results of the mediating effects.*****
+
+. 
+. sgmediation lnjust, mv(lnhci) iv(lndig) cv(lngdp lnpop lntrade lnind)
+
+{txt}Model with dv regressed on iv (path c)
+
+      Source {c |}       SS           df       MS      Number of obs   ={res}       680
+{txt}{hline 13}{c +}{hline 34}   F(5, 674)       = {res}   360.85
+{txt}       Model {c |} {res} 142.670446         5  28.5340893   {txt}Prob > F        ={res}    0.0000
+{txt}    Residual {c |} {res}  53.295802       674   .07907389   {txt}R-squared       ={res}    0.7280
+{txt}{hline 13}{c +}{hline 34}   Adj R-squared   ={res}    0.7260
+{txt}       Total {c |} {res} 195.966248       679  .288610086   {txt}Root MSE        =   {res}  .2812
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}      lnjust{col 14}{c |}      Coef.{col 26}   Std. Err.{col 38}      t{col 46}   P>|t|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 7}lndig {c |}{col 14}{res}{space 2} .2123805{col 26}{space 2} .0324229{col 37}{space 1}    6.55{col 46}{space 3}0.000{col 54}{space 4} .1487184{col 67}{space 3} .2760425
+{txt}{space 7}lngdp {c |}{col 14}{res}{space 2} .2754287{col 26}{space 2} .0159956{col 37}{space 1}   17.22{col 46}{space 3}0.000{col 54}{space 4} .2440215{col 67}{space 3} .3068359
+{txt}{space 7}lnpop {c |}{col 14}{res}{space 2} -.314243{col 26}{space 2} .0137995{col 37}{space 1}  -22.77{col 46}{space 3}0.000{col 54}{space 4}-.3413382{col 67}{space 3}-.2871478
+{txt}{space 5}lntrade {c |}{col 14}{res}{space 2}-.1049827{col 26}{space 2} .0294481{col 37}{space 1}   -3.57{col 46}{space 3}0.000{col 54}{space 4}-.1628038{col 67}{space 3}-.0471616
+{txt}{space 7}lnind {c |}{col 14}{res}{space 2}-.3993556{col 26}{space 2} .0340856{col 37}{space 1}  -11.72{col 46}{space 3}0.000{col 54}{space 4}-.4662823{col 67}{space 3}-.3324288
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}-2.063055{col 26}{space 2} .4068909{col 37}{space 1}   -5.07{col 46}{space 3}0.000{col 54}{space 4}-2.861981{col 67}{space 3}-1.264128
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+Model with mediator regressed on iv (path a)
+
+{txt}      Source {c |}       SS           df       MS      Number of obs   ={res}       680
+{txt}{hline 13}{c +}{hline 34}   F(5, 674)       = {res}   220.93
+{txt}       Model {c |} {res} 13.9668443         5  2.79336885   {txt}Prob > F        ={res}    0.0000
+{txt}    Residual {c |} {res} 8.52170643       674  .012643481   {txt}R-squared       ={res}    0.6211
+{txt}{hline 13}{c +}{hline 34}   Adj R-squared   ={res}    0.6183
+{txt}       Total {c |} {res} 22.4885507       679  .033120104   {txt}Root MSE        =   {res} .11244
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}       lnhci{col 14}{c |}      Coef.{col 26}   Std. Err.{col 38}      t{col 46}   P>|t|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 7}lndig {c |}{col 14}{res}{space 2} .1662631{col 26}{space 2} .0129649{col 37}{space 1}   12.82{col 46}{space 3}0.000{col 54}{space 4} .1408067{col 67}{space 3} .1917195
+{txt}{space 7}lngdp {c |}{col 14}{res}{space 2} .0530188{col 26}{space 2} .0063961{col 37}{space 1}    8.29{col 46}{space 3}0.000{col 54}{space 4}   .04046{col 67}{space 3} .0655775
+{txt}{space 7}lnpop {c |}{col 14}{res}{space 2}-.0628727{col 26}{space 2}  .005518{col 37}{space 1}  -11.39{col 46}{space 3}0.000{col 54}{space 4}-.0737072{col 67}{space 3}-.0520382
+{txt}{space 5}lntrade {c |}{col 14}{res}{space 2}-.0285006{col 26}{space 2} .0117754{col 37}{space 1}   -2.42{col 46}{space 3}0.016{col 54}{space 4}-.0516214{col 67}{space 3}-.0053797
+{txt}{space 7}lnind {c |}{col 14}{res}{space 2}-.0525237{col 26}{space 2} .0136297{col 37}{space 1}   -3.85{col 46}{space 3}0.000{col 54}{space 4}-.0792856{col 67}{space 3}-.0257618
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} 1.275799{col 26}{space 2} .1627027{col 37}{space 1}    7.84{col 46}{space 3}0.000{col 54}{space 4} .9563342{col 67}{space 3} 1.595264
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+Model with dv regressed on mediator and iv (paths b and c')
+
+{txt}      Source {c |}       SS           df       MS      Number of obs   ={res}       680
+{txt}{hline 13}{c +}{hline 34}   F(6, 673)       = {res}   305.32
+{txt}       Model {c |} {res} 143.315241         6  23.8858735   {txt}Prob > F        ={res}    0.0000
+{txt}    Residual {c |} {res} 52.6510076       673  .078233295   {txt}R-squared       ={res}    0.7313
+{txt}{hline 13}{c +}{hline 34}   Adj R-squared   ={res}    0.7289
+{txt}       Total {c |} {res} 195.966248       679  .288610086   {txt}Root MSE        =   {res}  .2797
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}      lnjust{col 14}{c |}      Coef.{col 26}   Std. Err.{col 38}      t{col 46}   P>|t|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 7}lnhci {c |}{col 14}{res}{space 2} .2750726{col 26}{space 2} .0958148{col 37}{space 1}    2.87{col 46}{space 3}0.004{col 54}{space 4} .0869408{col 67}{space 3} .4632045
+{txt}{space 7}lndig {c |}{col 14}{res}{space 2}  .166646{col 26}{space 2} .0359701{col 37}{space 1}    4.63{col 46}{space 3}0.000{col 54}{space 4} .0960189{col 67}{space 3} .2372732
+{txt}{space 7}lngdp {c |}{col 14}{res}{space 2} .2608447{col 26}{space 2} .0167017{col 37}{space 1}   15.62{col 46}{space 3}0.000{col 54}{space 4}  .228051{col 67}{space 3} .2936383
+{txt}{space 7}lnpop {c |}{col 14}{res}{space 2}-.2969484{col 26}{space 2} .0149897{col 37}{space 1}  -19.81{col 46}{space 3}0.000{col 54}{space 4}-.3263807{col 67}{space 3}-.2675162
+{txt}{space 5}lntrade {c |}{col 14}{res}{space 2} -.097143{col 26}{space 2} .0294182{col 37}{space 1}   -3.30{col 46}{space 3}0.001{col 54}{space 4}-.1549055{col 67}{space 3}-.0393805
+{txt}{space 7}lnind {c |}{col 14}{res}{space 2}-.3849078{col 26}{space 2} .0342754{col 37}{space 1}  -11.23{col 46}{space 3}0.000{col 54}{space 4}-.4522074{col 67}{space 3}-.3176081
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}-2.413992{col 26}{space 2}   .42278{col 37}{space 1}   -5.71{col 46}{space 3}0.000{col 54}{space 4}-3.244119{col 67}{space 3}-1.583866
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Sobel-Goodman Mediation Tests
+
+                     Coef         Std Err     Z           P>|Z|
+Sobel               {res}.04573443    .01632477   2.802      .00508599
+{txt}Goodman-1 (Aroian)  {res}.04573443    .01637196   2.793      .00521474
+{txt}Goodman-2           {res}.04573443    .01627744    2.81      .00495904
+
+{txt}{col 21}Coef{col 31}Std Err{col 42}Z{col 53}P>|Z|
+a coefficient   = {res} .166263   .012965   12.8241{col 50}       0
+{txt}b coefficient   = {res} .275073   .095815   2.87088{col 50} .004093
+{txt}Indirect effect = {res} .045734   .016325   2.80154{col 50} .005086
+{txt}  Direct effect = {res} .166646    .03597    4.6329{col 50} 3.6e-06
+{txt}   Total effect = {res}  .21238   .032423   6.55032{col 50} 5.7e-11
+
+{txt}Proportion of total effect that is mediated:  {res}.21534198
+{txt}Ratio of indirect to direct effect:           {res}.27444055
+{txt}Ratio of total to direct effect:              {res}1.2744406
+
+{com}. 
+. sgmediation lnjust, mv(lnfd) iv(lndig) cv(lngdp lnpop lntrade lnind)
+
+{txt}Model with dv regressed on iv (path c)
+
+      Source {c |}       SS           df       MS      Number of obs   ={res}       676
+{txt}{hline 13}{c +}{hline 34}   F(5, 670)       = {res}   362.43
+{txt}       Model {c |} {res} 139.450456         5  27.8900912   {txt}Prob > F        ={res}    0.0000
+{txt}    Residual {c |} {res} 51.5581853       670  .076952515   {txt}R-squared       ={res}    0.7301
+{txt}{hline 13}{c +}{hline 34}   Adj R-squared   ={res}    0.7281
+{txt}       Total {c |} {res} 191.008641       675  .282975765   {txt}Root MSE        =   {res}  .2774
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}      lnjust{col 14}{c |}      Coef.{col 26}   Std. Err.{col 38}      t{col 46}   P>|t|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 7}lndig {c |}{col 14}{res}{space 2} .2149166{col 26}{space 2} .0315768{col 37}{space 1}    6.81{col 46}{space 3}0.000{col 54}{space 4} .1529153{col 67}{space 3}  .276918
+{txt}{space 7}lngdp {c |}{col 14}{res}{space 2}  .271878{col 26}{space 2} .0154648{col 37}{space 1}   17.58{col 46}{space 3}0.000{col 54}{space 4} .2415128{col 67}{space 3} .3022433
+{txt}{space 7}lnpop {c |}{col 14}{res}{space 2}-.3118636{col 26}{space 2} .0134245{col 37}{space 1}  -23.23{col 46}{space 3}0.000{col 54}{space 4}-.3382227{col 67}{space 3}-.2855045
+{txt}{space 5}lntrade {c |}{col 14}{res}{space 2}-.1026123{col 26}{space 2} .0294317{col 37}{space 1}   -3.49{col 46}{space 3}0.001{col 54}{space 4}-.1604019{col 67}{space 3}-.0448228
+{txt}{space 7}lnind {c |}{col 14}{res}{space 2}-.3812372{col 26}{space 2} .0328557{col 37}{space 1}  -11.60{col 46}{space 3}0.000{col 54}{space 4}-.4457497{col 67}{space 3}-.3167246
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}-2.075569{col 26}{space 2} .3991907{col 37}{space 1}   -5.20{col 46}{space 3}0.000{col 54}{space 4}-2.859384{col 67}{space 3}-1.291753
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+Model with mediator regressed on iv (path a)
+
+{txt}      Source {c |}       SS           df       MS      Number of obs   ={res}       676
+{txt}{hline 13}{c +}{hline 34}   F(5, 670)       = {res}    96.94
+{txt}       Model {c |} {res} 109.390002         5  21.8780004   {txt}Prob > F        ={res}    0.0000
+{txt}    Residual {c |} {res} 151.212172       670  .225689809   {txt}R-squared       ={res}    0.4198
+{txt}{hline 13}{c +}{hline 34}   Adj R-squared   ={res}    0.4154
+{txt}       Total {c |} {res} 260.602174       675  .386077295   {txt}Root MSE        =   {res} .47507
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}        lnfd{col 14}{c |}      Coef.{col 26}   Std. Err.{col 38}      t{col 46}   P>|t|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 7}lndig {c |}{col 14}{res}{space 2} .2896467{col 26}{space 2}  .054077{col 37}{space 1}    5.36{col 46}{space 3}0.000{col 54}{space 4}  .183466{col 67}{space 3} .3958274
+{txt}{space 7}lngdp {c |}{col 14}{res}{space 2} .2458143{col 26}{space 2} .0264843{col 37}{space 1}    9.28{col 46}{space 3}0.000{col 54}{space 4} .1938121{col 67}{space 3} .2978165
+{txt}{space 7}lnpop {c |}{col 14}{res}{space 2}-.1463714{col 26}{space 2} .0229901{col 37}{space 1}   -6.37{col 46}{space 3}0.000{col 54}{space 4}-.1915128{col 67}{space 3}  -.10123
+{txt}{space 5}lntrade {c |}{col 14}{res}{space 2} .0711812{col 26}{space 2} .0504035{col 37}{space 1}    1.41{col 46}{space 3}0.158{col 54}{space 4}-.0277866{col 67}{space 3}  .170149
+{txt}{space 7}lnind {c |}{col 14}{res}{space 2}-.3706556{col 26}{space 2} .0562672{col 37}{space 1}   -6.59{col 46}{space 3}0.000{col 54}{space 4}-.4811369{col 67}{space 3}-.2601743
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} 1.513439{col 26}{space 2} .6836361{col 37}{space 1}    2.21{col 46}{space 3}0.027{col 54}{space 4} .1711115{col 67}{space 3} 2.855766
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+Model with dv regressed on mediator and iv (paths b and c')
+
+{txt}      Source {c |}       SS           df       MS      Number of obs   ={res}       676
+{txt}{hline 13}{c +}{hline 34}   F(6, 669)       = {res}   321.89
+{txt}       Model {c |} {res} 141.867366         6   23.644561   {txt}Prob > F        ={res}    0.0000
+{txt}    Residual {c |} {res} 49.1412756       669  .073454822   {txt}R-squared       ={res}    0.7427
+{txt}{hline 13}{c +}{hline 34}   Adj R-squared   ={res}    0.7404
+{txt}       Total {c |} {res} 191.008641       675  .282975765   {txt}Root MSE        =   {res} .27103
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}      lnjust{col 14}{c |}      Coef.{col 26}   Std. Err.{col 38}      t{col 46}   P>|t|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 8}lnfd {c |}{col 14}{res}{space 2} .1264261{col 26}{space 2} .0220403{col 37}{space 1}    5.74{col 46}{space 3}0.000{col 54}{space 4} .0831497{col 67}{space 3} .1697025
+{txt}{space 7}lndig {c |}{col 14}{res}{space 2} .1782977{col 26}{space 2} .0315044{col 37}{space 1}    5.66{col 46}{space 3}0.000{col 54}{space 4} .1164383{col 67}{space 3} .2401571
+{txt}{space 7}lngdp {c |}{col 14}{res}{space 2} .2408007{col 26}{space 2} .0160512{col 37}{space 1}   15.00{col 46}{space 3}0.000{col 54}{space 4} .2092838{col 67}{space 3} .2723175
+{txt}{space 7}lnpop {c |}{col 14}{res}{space 2}-.2933584{col 26}{space 2} .0135068{col 37}{space 1}  -21.72{col 46}{space 3}0.000{col 54}{space 4}-.3198792{col 67}{space 3}-.2668377
+{txt}{space 5}lntrade {c |}{col 14}{res}{space 2}-.1116115{col 26}{space 2} .0287979{col 37}{space 1}   -3.88{col 46}{space 3}0.000{col 54}{space 4}-.1681566{col 67}{space 3}-.0550664
+{txt}{space 7}lnind {c |}{col 14}{res}{space 2}-.3343766{col 26}{space 2} .0331236{col 37}{space 1}  -10.09{col 46}{space 3}0.000{col 54}{space 4}-.3994153{col 67}{space 3} -.269338
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}-2.266907{col 26}{space 2} .3914369{col 37}{space 1}   -5.79{col 46}{space 3}0.000{col 54}{space 4}  -3.0355{col 67}{space 3}-1.498314
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Sobel-Goodman Mediation Tests
+
+                     Coef         Std Err     Z           P>|Z|
+Sobel               {res}.03661891    .00935388   3.915      .00009047
+{txt}Goodman-1 (Aroian)  {res}.03661891    .00942951   3.883      .00010299
+{txt}Goodman-2           {res}.03661891    .00927764   3.947      .00007913
+
+{txt}{col 21}Coef{col 31}Std Err{col 42}Z{col 53}P>|Z|
+a coefficient   = {res} .289647   .054077   5.35619{col 50} 8.5e-08
+{txt}b coefficient   = {res} .126426    .02204   5.73614{col 50} 9.7e-09
+{txt}Indirect effect = {res} .036619   .009354   3.91484{col 50}  .00009
+{txt}  Direct effect = {res} .178298   .031504   5.65946{col 50} 1.5e-08
+{txt}   Total effect = {res} .214917   .031577   6.80616{col 50} 1.0e-11
+
+{txt}Proportion of total effect that is mediated:  {res}.17038659
+{txt}Ratio of indirect to direct effect:           {res}.2053807
+{txt}Ratio of total to direct effect:              {res}1.2053807
+
+{com}. log close
+      {txt}name:  {res}<unnamed>
+       {txt}log:  {res}C:\Users\jiand\Desktop\log.smcl
+  {txt}log type:  {res}smcl
+ {txt}closed on:  {res}17 May 2022, 23:09:57
+{txt}{.-}
+{smcl}
+{txt}{sf}{ul off}
