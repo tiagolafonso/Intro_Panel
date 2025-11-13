@@ -53,7 +53,7 @@
 
 #### Estimador GMM
 - **Estimador System GMM**
-- **Estimador Difference GMM**
+- **Estimador Difference GMM** ( Fabian +) 27 de Novembro 
 
 
 ---
