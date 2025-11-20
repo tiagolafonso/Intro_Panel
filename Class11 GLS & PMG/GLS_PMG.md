@@ -742,13 +742,13 @@ Dependence Test Results</th>
 <tr>
 <th
 
-data-quarto-table-cell-role="th" scope="col">Variable</th>
+Variable</th>
 <th
 
-data-quarto-table-cell-role="th" scope="col">CD Statistic</th>
+CD Statistic</th>
 <th
 
-data-quarto-table-cell-role="th" scope="col">P-Value</th>
+P-Value</th>
 </tr>
 </thead>
 <tbody>
@@ -820,13 +820,13 @@ Dependence Tests on FE model</th>
 </tr>
 <tr>
 <th
-data-quarto-table-cell-role="th" scope="col">Test</th>
+Test</th>
 <th
 
-data-quarto-table-cell-role="th" scope="col">Statistic</th>
+Statistic</th>
 <th
 
-data-quarto-table-cell-role="th" scope="col">P-Value</th>
+P-Value</th>
 </tr>
 </thead>
 <tbody>
@@ -885,13 +885,13 @@ Unit Root Test Results</th>
 <tr>
 <th
 
-data-quarto-table-cell-role="th" scope="col">Variable</th>
+Variable</th>
 <th
 
-data-quarto-table-cell-role="th" scope="col">Test Statistic</th>
+Test Statistic</th>
 <th
 
-data-quarto-table-cell-role="th" scope="col">P-Value</th>
+P-Value</th>
 </tr>
 </thead>
 <tbody>
@@ -967,13 +967,13 @@ Root Test Results</th>
 <tr>
 <th
 
-data-quarto-table-cell-role="th" scope="col">Variable</th>
+Variable</th>
 <th
 
-data-quarto-table-cell-role="th" scope="col">Test Statistic</th>
+Test Statistic</th>
 <th
 
-data-quarto-table-cell-role="th" scope="col">P-Value</th>
+P-Value</th>
 </tr>
 </thead>
 <tbody>
@@ -1685,6 +1685,7 @@ summary(pmg_model)
 </tr>
 </tfoot>
 &#10;</table>
+
 
 
 
