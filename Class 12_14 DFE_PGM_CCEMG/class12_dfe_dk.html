@@ -1,0 +1,3235 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.25">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Tiago Afonso">
+<meta name="dcterms.date" content="2025-12-04">
+
+<title>Class12 - DFE e DK</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="class12_dfe_dk_files/libs/clipboard/clipboard.min.js"></script>
+<script src="class12_dfe_dk_files/libs/quarto-html/quarto.js" type="module"></script>
+<script src="class12_dfe_dk_files/libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="class12_dfe_dk_files/libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="class12_dfe_dk_files/libs/quarto-html/popper.min.js"></script>
+<script src="class12_dfe_dk_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="class12_dfe_dk_files/libs/quarto-html/anchor.min.js"></script>
+<link href="class12_dfe_dk_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="class12_dfe_dk_files/libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="class12_dfe_dk_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="class12_dfe_dk_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="class12_dfe_dk_files/libs/bootstrap/bootstrap-9e3ffae467580fdb927a41352e75a2e0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="fullcontent quarto-light">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Class12 - DFE e DK</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Tiago Afonso </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">December 4, 2025</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="goal-apply-dfe-and-dk-iusing-r" class="level1">
+<h1>Goal: Apply DFE and DK iusing R</h1>
+<p>Dynamic Fixed Effects (DFE) or Panel Autoregressive Distributed Lag (PARDL) models.</p>
+<p>Driscol and Kraay (2000) estimator,</p>
+<section id="load-libraries" class="level2">
+<h2 class="anchored" data-anchor-id="load-libraries">Load libraries</h2>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(lfe)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(lmtest)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(sandwich)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(stargazer)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(plm)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ARDL)</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(broom)</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(car)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
+<section id="load-data" class="level2">
+<h2 class="anchored" data-anchor-id="load-data">Load data</h2>
+<p>Data from Excel <code>wdi_class5.xlsx</code></p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>wdi <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">"wdi_class5.xlsx"</span>)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co"># summarise data</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>wdi <span class="sc">%&gt;%</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">summary</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>   country               time           gdp                 gfcf          
+ Length:456         Min.   :2000   Min.   :1.398e+10   Min.   :2.555e+09  
+ Class :character   1st Qu.:2006   1st Qu.:6.466e+10   1st Qu.:1.230e+10  
+ Mode  :character   Median :2012   Median :2.321e+11   Median :5.170e+10  
+                    Mean   :2012   Mean   :6.489e+11   Mean   :1.352e+11  
+                    3rd Qu.:2017   3rd Qu.:6.983e+11   3rd Qu.:1.404e+11  
+                    Max.   :2023   Max.   :3.702e+12   Max.   :7.618e+11  
+      pop               trade             agri                ser           
+ Min.   :  436300   Min.   : 45.14   Min.   :1.097e+08   Min.   :8.607e+09  
+ 1st Qu.: 4880378   1st Qu.: 69.05   1st Qu.:2.232e+09   1st Qu.:5.103e+10  
+ Median :10508278   Median : 92.21   Median :4.689e+09   Median :1.428e+11  
+ Mean   :21189549   Mean   :114.25   Mean   :1.027e+10   Mean   :4.204e+11  
+ 3rd Qu.:37971253   3rd Qu.:143.34   3rd Qu.:1.277e+10   3rd Qu.:4.696e+11  
+ Max.   :83901923   Max.   :412.18   Max.   :3.810e+10   Max.   :2.389e+12  
+      ind           
+ Min.   :1.966e+09  
+ 1st Qu.:1.304e+10  
+ Median :6.202e+10  
+ Mean   :1.477e+11  
+ 3rd Qu.:1.493e+11  
+ Max.   :9.608e+11  </code></pre>
+</div>
+</div>
+</section>
+<section id="prepare-data" class="level2">
+<h2 class="anchored" data-anchor-id="prepare-data">Prepare data</h2>
+<p><strong>Per capita values</strong> and <strong>LN’s</strong></p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>wdi <span class="ot">&lt;-</span> wdi <span class="sc">|&gt;</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>(</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>        <span class="at">gdp_pc =</span> gdp <span class="sc">/</span> pop,</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>        <span class="at">gfcf_pc =</span> gfcf <span class="sc">/</span> pop</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Generate log variables for better interpretation:</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>wdi <span class="ot">&lt;-</span> wdi <span class="sc">|&gt;</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>(</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>        <span class="at">log_gdp =</span> <span class="fu">log</span>(gdp),</span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>        <span class="at">log_gfcf =</span> <span class="fu">log</span>(gfcf),</span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>        <span class="at">log_pop =</span> <span class="fu">log</span>(pop),</span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>        <span class="at">log_trade =</span> <span class="fu">log</span>(trade),</span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>        <span class="at">log_agri =</span> <span class="fu">log</span>(agri),</span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>        <span class="at">log_ser =</span> <span class="fu">log</span>(ser),</span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>        <span class="at">log_ind =</span> <span class="fu">log</span>(ind),</span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>        <span class="at">log_gdp_pc =</span> <span class="fu">log</span>(gdp_pc),</span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>        <span class="at">log_gfcf_pc =</span> <span class="fu">log</span>(gfcf_pc)</span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>    )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>Delare panel data and check panel structure</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>pwdi <span class="ot">&lt;-</span> <span class="fu">pdata.frame</span>(wdi, <span class="at">index =</span> <span class="fu">c</span>(<span class="st">"country"</span>, <span class="st">"time"</span>))</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="co"># check panel structure</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="fu">pdim</span>(pwdi)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Balanced Panel: n = 19, T = 24, N = 456</code></pre>
+</div>
+</div>
+</section>
+<section id="estimate-pooled-ols-fixed-effects-random-effects" class="level2">
+<h2 class="anchored" data-anchor-id="estimate-pooled-ols-fixed-effects-random-effects">Estimate Pooled OLS | Fixed Effects | Random Effects</h2>
+<p>Pooled model with <code>plm()</code> function</p>
+<p><span class="math display">\[
+{log_gdp_pc}_{it} = \beta_0 + \beta_1 {log_gfcf_pc}_{it} + \beta_2 {log_pop}_{it} + \beta_3 {log_trade}_{it} + \beta_4 {log_agri}_{it} + \beta_5 {log_ser}_{it} + \beta_6 {log_ind}_{it} + u_{it}
+\]</span></p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># pooled OLS</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>pooled_ols <span class="ot">&lt;-</span> <span class="fu">plm</span>(log_gdp_pc <span class="sc">~</span> log_gfcf_pc <span class="sc">+</span> log_pop <span class="sc">+</span> log_trade <span class="sc">+</span> log_agri <span class="sc">+</span> log_ser <span class="sc">+</span> log_ind, <span class="at">data =</span> pwdi, <span class="at">model =</span> <span class="st">"pooling"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>Fixed effects model</p>
+<p><span class="math display">\[
+{log_gdp_pc}_{it} = \alpha_i + \beta_1 {log_gfcf_pc}_{it} + \beta_2 {log_pop}_{it} + \beta_3 {log_trade}_{it} + \beta_4 {log_agri}_{it} + \beta_5 {log_ser}_{it} + \beta_6 {log_ind}_{it} + u_{it}
+\]</span></p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># fixed effects</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>fe <span class="ot">&lt;-</span> <span class="fu">plm</span>(log_gdp_pc <span class="sc">~</span> log_gfcf_pc <span class="sc">+</span> log_pop <span class="sc">+</span> log_trade <span class="sc">+</span> log_agri <span class="sc">+</span> log_ser <span class="sc">+</span> log_ind, <span class="at">data =</span> pwdi, <span class="at">model =</span> <span class="st">"within"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>Random effects model</p>
+<p><span class="math display">\[
+{log_gdp_pc}_{it} = \beta_0 + \beta_1 {log_gfcf_pc}_{it} + \beta_2 {log_pop}_{it} + \beta_3 {log_trade}_{it} + \beta_4 {log_agri}_{it} + \beta_5 {log_ser}_{it} + \beta_6 {log_ind}_{it} + u_{i} + \epsilon_{it}
+\]</span></p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># random effects</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>re <span class="ot">&lt;-</span> <span class="fu">plm</span>(log_gdp_pc <span class="sc">~</span> log_gfcf_pc <span class="sc">+</span> log_pop <span class="sc">+</span> log_trade <span class="sc">+</span> log_agri <span class="sc">+</span> log_ser <span class="sc">+</span> log_ind, <span class="at">data =</span> pwdi, <span class="at">model =</span> <span class="st">"random"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>Compare all models</p>
+<div class="cell">
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: package 'modelsummary' was built under R version 4.5.2</code></pre>
+</div>
+<div class="cell-output-display">
+<!-- preamble start -->
+
+    <script src="https://cdn.jsdelivr.net/gh/vincentarelbundock/tinytable@main/inst/tinytable.js"></script>
+
+    <script>
+      // Create table-specific functions using external factory
+      const tableFns_vyx97fcxrv0fgxc38dhn = TinyTable.createTableFunctions("tinytable_vyx97fcxrv0fgxc38dhn");
+      // tinytable span after
+      window.addEventListener('load', function () {
+          var cellsToStyle = [
+            // tinytable style arrays after
+          { positions: [ { i: '20', j: 2 }, { i: '20', j: 3 }, { i: '20', j: 4 } ], css_id: 'tinytable_css_0n53dvwpfk6vl9mrwyph',}, 
+          { positions: [ { i: '14', j: 2 }, { i: '14', j: 3 }, { i: '14', j: 4 } ], css_id: 'tinytable_css_4n0rtdrx4oyusxop365f',}, 
+          { positions: [ { i: '1', j: 2 }, { i: '2', j: 2 }, { i: '3', j: 2 }, { i: '4', j: 2 }, { i: '5', j: 2 }, { i: '6', j: 2 }, { i: '7', j: 2 }, { i: '8', j: 2 }, { i: '9', j: 2 }, { i: '10', j: 2 }, { i: '11', j: 2 }, { i: '12', j: 2 }, { i: '13', j: 2 }, { i: '15', j: 2 }, { i: '16', j: 2 }, { i: '17', j: 2 }, { i: '18', j: 2 }, { i: '19', j: 2 }, { i: '1', j: 3 }, { i: '2', j: 3 }, { i: '3', j: 3 }, { i: '4', j: 3 }, { i: '5', j: 3 }, { i: '6', j: 3 }, { i: '7', j: 3 }, { i: '8', j: 3 }, { i: '9', j: 3 }, { i: '10', j: 3 }, { i: '11', j: 3 }, { i: '12', j: 3 }, { i: '13', j: 3 }, { i: '15', j: 3 }, { i: '16', j: 3 }, { i: '17', j: 3 }, { i: '18', j: 3 }, { i: '19', j: 3 }, { i: '1', j: 4 }, { i: '2', j: 4 }, { i: '3', j: 4 }, { i: '4', j: 4 }, { i: '5', j: 4 }, { i: '6', j: 4 }, { i: '7', j: 4 }, { i: '8', j: 4 }, { i: '9', j: 4 }, { i: '10', j: 4 }, { i: '11', j: 4 }, { i: '12', j: 4 }, { i: '13', j: 4 }, { i: '15', j: 4 }, { i: '16', j: 4 }, { i: '17', j: 4 }, { i: '18', j: 4 }, { i: '19', j: 4 } ], css_id: 'tinytable_css_j6pwwzzeyrnokla25ofo',}, 
+          { positions: [ { i: '0', j: 2 }, { i: '0', j: 3 }, { i: '0', j: 4 } ], css_id: 'tinytable_css_n9hmsx4g404tje2pbzz0',}, 
+          { positions: [ { i: '20', j: 1 } ], css_id: 'tinytable_css_yple0cnaa1quqb580ew2',}, 
+          { positions: [ { i: '14', j: 1 } ], css_id: 'tinytable_css_rczeruo6k6zzjiykr7lk',}, 
+          { positions: [ { i: '1', j: 1 }, { i: '2', j: 1 }, { i: '3', j: 1 }, { i: '4', j: 1 }, { i: '5', j: 1 }, { i: '6', j: 1 }, { i: '7', j: 1 }, { i: '8', j: 1 }, { i: '9', j: 1 }, { i: '10', j: 1 }, { i: '11', j: 1 }, { i: '12', j: 1 }, { i: '13', j: 1 }, { i: '15', j: 1 }, { i: '16', j: 1 }, { i: '17', j: 1 }, { i: '18', j: 1 }, { i: '19', j: 1 } ], css_id: 'tinytable_css_v7w9p7mho9fzbmjlmvxq',}, 
+          { positions: [ { i: '0', j: 1 } ], css_id: 'tinytable_css_7b00dn47oaeoch11j9l1',}, 
+          ];
+
+          // Loop over the arrays to style the cells
+          cellsToStyle.forEach(function (group) {
+              group.positions.forEach(function (cell) {
+                  tableFns_vyx97fcxrv0fgxc38dhn.styleCell(cell.i, cell.j, group.css_id);
+              });
+          });
+      });
+    </script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/vincentarelbundock/tinytable@main/inst/tinytable.css">
+    <style>
+    /* tinytable css entries after */
+    #tinytable_vyx97fcxrv0fgxc38dhn td.tinytable_css_0n53dvwpfk6vl9mrwyph, #tinytable_vyx97fcxrv0fgxc38dhn th.tinytable_css_0n53dvwpfk6vl9mrwyph {  position: relative; --border-bottom: 1; --border-left: 0; --border-right: 0; --border-top: 0; --line-color-bottom: black; --line-color-left: black; --line-color-right: black; --line-color-top: black; --line-width-bottom: 0.1em; --line-width-left: 0.1em; --line-width-right: 0.1em; --line-width-top: 0.1em; --trim-bottom-left: 0%; --trim-bottom-right: 0%; --trim-left-bottom: 0%; --trim-left-top: 0%; --trim-right-bottom: 0%; --trim-right-top: 0%; --trim-top-left: 0%; --trim-top-right: 0%; ; text-align: center }
+    #tinytable_vyx97fcxrv0fgxc38dhn td.tinytable_css_4n0rtdrx4oyusxop365f, #tinytable_vyx97fcxrv0fgxc38dhn th.tinytable_css_4n0rtdrx4oyusxop365f {  position: relative; --border-bottom: 1; --border-left: 0; --border-right: 0; --border-top: 0; --line-color-bottom: black; --line-color-left: black; --line-color-right: black; --line-color-top: black; --line-width-bottom: 0.05em; --line-width-left: 0.1em; --line-width-right: 0.1em; --line-width-top: 0.1em; --trim-bottom-left: 0%; --trim-bottom-right: 0%; --trim-left-bottom: 0%; --trim-left-top: 0%; --trim-right-bottom: 0%; --trim-right-top: 0%; --trim-top-left: 0%; --trim-top-right: 0%; ; text-align: center }
+    #tinytable_vyx97fcxrv0fgxc38dhn td.tinytable_css_j6pwwzzeyrnokla25ofo, #tinytable_vyx97fcxrv0fgxc38dhn th.tinytable_css_j6pwwzzeyrnokla25ofo { text-align: center }
+    #tinytable_vyx97fcxrv0fgxc38dhn td.tinytable_css_n9hmsx4g404tje2pbzz0, #tinytable_vyx97fcxrv0fgxc38dhn th.tinytable_css_n9hmsx4g404tje2pbzz0 {  position: relative; --border-bottom: 1; --border-left: 0; --border-right: 0; --border-top: 1; --line-color-bottom: black; --line-color-left: black; --line-color-right: black; --line-color-top: black; --line-width-bottom: 0.05em; --line-width-left: 0.1em; --line-width-right: 0.1em; --line-width-top: 0.1em; --trim-bottom-left: 0%; --trim-bottom-right: 0%; --trim-left-bottom: 0%; --trim-left-top: 0%; --trim-right-bottom: 0%; --trim-right-top: 0%; --trim-top-left: 0%; --trim-top-right: 0%; ; text-align: center }
+    #tinytable_vyx97fcxrv0fgxc38dhn td.tinytable_css_yple0cnaa1quqb580ew2, #tinytable_vyx97fcxrv0fgxc38dhn th.tinytable_css_yple0cnaa1quqb580ew2 {  position: relative; --border-bottom: 1; --border-left: 0; --border-right: 0; --border-top: 0; --line-color-bottom: black; --line-color-left: black; --line-color-right: black; --line-color-top: black; --line-width-bottom: 0.1em; --line-width-left: 0.1em; --line-width-right: 0.1em; --line-width-top: 0.1em; --trim-bottom-left: 0%; --trim-bottom-right: 0%; --trim-left-bottom: 0%; --trim-left-top: 0%; --trim-right-bottom: 0%; --trim-right-top: 0%; --trim-top-left: 0%; --trim-top-right: 0%; ; text-align: left }
+    #tinytable_vyx97fcxrv0fgxc38dhn td.tinytable_css_rczeruo6k6zzjiykr7lk, #tinytable_vyx97fcxrv0fgxc38dhn th.tinytable_css_rczeruo6k6zzjiykr7lk {  position: relative; --border-bottom: 1; --border-left: 0; --border-right: 0; --border-top: 0; --line-color-bottom: black; --line-color-left: black; --line-color-right: black; --line-color-top: black; --line-width-bottom: 0.05em; --line-width-left: 0.1em; --line-width-right: 0.1em; --line-width-top: 0.1em; --trim-bottom-left: 0%; --trim-bottom-right: 0%; --trim-left-bottom: 0%; --trim-left-top: 0%; --trim-right-bottom: 0%; --trim-right-top: 0%; --trim-top-left: 0%; --trim-top-right: 0%; ; text-align: left }
+    #tinytable_vyx97fcxrv0fgxc38dhn td.tinytable_css_v7w9p7mho9fzbmjlmvxq, #tinytable_vyx97fcxrv0fgxc38dhn th.tinytable_css_v7w9p7mho9fzbmjlmvxq { text-align: left }
+    #tinytable_vyx97fcxrv0fgxc38dhn td.tinytable_css_7b00dn47oaeoch11j9l1, #tinytable_vyx97fcxrv0fgxc38dhn th.tinytable_css_7b00dn47oaeoch11j9l1 {  position: relative; --border-bottom: 1; --border-left: 0; --border-right: 0; --border-top: 1; --line-color-bottom: black; --line-color-left: black; --line-color-right: black; --line-color-top: black; --line-width-bottom: 0.05em; --line-width-left: 0.1em; --line-width-right: 0.1em; --line-width-top: 0.1em; --trim-bottom-left: 0%; --trim-bottom-right: 0%; --trim-left-bottom: 0%; --trim-left-top: 0%; --trim-right-bottom: 0%; --trim-right-top: 0%; --trim-top-left: 0%; --trim-top-right: 0%; ; text-align: left }
+    </style>
+    <div class="container">
+      <table class="tinytable" id="tinytable_vyx97fcxrv0fgxc38dhn" style="width: auto; margin-left: auto; margin-right: auto;" data-quarto-disable-processing="true">
+        
+        <thead>
+              <tr>
+                <th scope="col" data-row="0" data-col="1"> </th>
+                <th scope="col" data-row="0" data-col="2">Pooled OLS</th>
+                <th scope="col" data-row="0" data-col="3">Fixed Effects</th>
+                <th scope="col" data-row="0" data-col="4">Random Effects</th>
+              </tr>
+        </thead>
+        <tfoot><tr><td colspan="4">+ p &lt; 0.1, * p &lt; 0.05, ** p &lt; 0.01, *** p &lt; 0.001</td></tr></tfoot>
+        <tbody>
+                <tr>
+                  <td data-row="1" data-col="1">(Intercept)</td>
+                  <td data-row="1" data-col="2">1.224***</td>
+                  <td data-row="1" data-col="3"></td>
+                  <td data-row="1" data-col="4">0.932***</td>
+                </tr>
+                <tr>
+                  <td data-row="2" data-col="1"></td>
+                  <td data-row="2" data-col="2">(0.043)</td>
+                  <td data-row="2" data-col="3"></td>
+                  <td data-row="2" data-col="4">(0.079)</td>
+                </tr>
+                <tr>
+                  <td data-row="3" data-col="1">log_gfcf_pc</td>
+                  <td data-row="3" data-col="2">0.027***</td>
+                  <td data-row="3" data-col="3">0.008</td>
+                  <td data-row="3" data-col="4">0.025***</td>
+                </tr>
+                <tr>
+                  <td data-row="4" data-col="1"></td>
+                  <td data-row="4" data-col="2">(0.007)</td>
+                  <td data-row="4" data-col="3">(0.005)</td>
+                  <td data-row="4" data-col="4">(0.006)</td>
+                </tr>
+                <tr>
+                  <td data-row="5" data-col="1">log_pop</td>
+                  <td data-row="5" data-col="2">-0.949***</td>
+                  <td data-row="5" data-col="3">-0.821***</td>
+                  <td data-row="5" data-col="4">-0.921***</td>
+                </tr>
+                <tr>
+                  <td data-row="6" data-col="1"></td>
+                  <td data-row="6" data-col="2">(0.008)</td>
+                  <td data-row="6" data-col="3">(0.011)</td>
+                  <td data-row="6" data-col="4">(0.010)</td>
+                </tr>
+                <tr>
+                  <td data-row="7" data-col="1">log_trade</td>
+                  <td data-row="7" data-col="2">-0.013**</td>
+                  <td data-row="7" data-col="3">0.012*</td>
+                  <td data-row="7" data-col="4">0.024***</td>
+                </tr>
+                <tr>
+                  <td data-row="8" data-col="1"></td>
+                  <td data-row="8" data-col="2">(0.004)</td>
+                  <td data-row="8" data-col="3">(0.006)</td>
+                  <td data-row="8" data-col="4">(0.006)</td>
+                </tr>
+                <tr>
+                  <td data-row="9" data-col="1">log_agri</td>
+                  <td data-row="9" data-col="2">0.003</td>
+                  <td data-row="9" data-col="3">0.018***</td>
+                  <td data-row="9" data-col="4">0.002</td>
+                </tr>
+                <tr>
+                  <td data-row="10" data-col="1"></td>
+                  <td data-row="10" data-col="2">(0.003)</td>
+                  <td data-row="10" data-col="3">(0.004)</td>
+                  <td data-row="10" data-col="4">(0.005)</td>
+                </tr>
+                <tr>
+                  <td data-row="11" data-col="1">log_ser</td>
+                  <td data-row="11" data-col="2">0.724***</td>
+                  <td data-row="11" data-col="3">0.671***</td>
+                  <td data-row="11" data-col="4">0.677***</td>
+                </tr>
+                <tr>
+                  <td data-row="12" data-col="1"></td>
+                  <td data-row="12" data-col="2">(0.004)</td>
+                  <td data-row="12" data-col="3">(0.007)</td>
+                  <td data-row="12" data-col="4">(0.007)</td>
+                </tr>
+                <tr>
+                  <td data-row="13" data-col="1">log_ind</td>
+                  <td data-row="13" data-col="2">0.213***</td>
+                  <td data-row="13" data-col="3">0.285***</td>
+                  <td data-row="13" data-col="4">0.250***</td>
+                </tr>
+                <tr>
+                  <td data-row="14" data-col="1"></td>
+                  <td data-row="14" data-col="2">(0.005)</td>
+                  <td data-row="14" data-col="3">(0.007)</td>
+                  <td data-row="14" data-col="4">(0.007)</td>
+                </tr>
+                <tr>
+                  <td data-row="15" data-col="1">Num.Obs.</td>
+                  <td data-row="15" data-col="2">456</td>
+                  <td data-row="15" data-col="3">456</td>
+                  <td data-row="15" data-col="4">456</td>
+                </tr>
+                <tr>
+                  <td data-row="16" data-col="1">R2</td>
+                  <td data-row="16" data-col="2">0.999</td>
+                  <td data-row="16" data-col="3">0.995</td>
+                  <td data-row="16" data-col="4">0.994</td>
+                </tr>
+                <tr>
+                  <td data-row="17" data-col="1">R2 Adj.</td>
+                  <td data-row="17" data-col="2">0.999</td>
+                  <td data-row="17" data-col="3">0.995</td>
+                  <td data-row="17" data-col="4">0.994</td>
+                </tr>
+                <tr>
+                  <td data-row="18" data-col="1">AIC</td>
+                  <td data-row="18" data-col="2">-2156.2</td>
+                  <td data-row="18" data-col="3">-2759.7</td>
+                  <td data-row="18" data-col="4">-2584.9</td>
+                </tr>
+                <tr>
+                  <td data-row="19" data-col="1">BIC</td>
+                  <td data-row="19" data-col="2">-2123.2</td>
+                  <td data-row="19" data-col="3">-2730.8</td>
+                  <td data-row="19" data-col="4">-2551.9</td>
+                </tr>
+                <tr>
+                  <td data-row="20" data-col="1">RMSE</td>
+                  <td data-row="20" data-col="2">0.02</td>
+                  <td data-row="20" data-col="3">0.01</td>
+                  <td data-row="20" data-col="4">0.01</td>
+                </tr>
+        </tbody>
+      </table>
+    </div>
+<!-- hack to avoid NA insertion in last line -->
+</div>
+</div>
+</section>
+<section id="re-vs-ols" class="level2">
+<h2 class="anchored" data-anchor-id="re-vs-ols">RE vs OLS</h2>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># RE vs OLS</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plmtest</span>(pooled_ols, <span class="at">type =</span> <span class="st">"bp"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+    Lagrange Multiplier Test - (Breusch-Pagan)
+
+data:  log_gdp_pc ~ log_gfcf_pc + log_pop + log_trade + log_agri + log_ser +  ...
+chisq = 1443.6, df = 1, p-value &lt; 2.2e-16
+alternative hypothesis: significant effects</code></pre>
+</div>
+</div>
+<p>H0 is rejected, so RE is preferred over OLS.</p>
+</section>
+<section id="fe-vs-re" class="level2">
+<h2 class="anchored" data-anchor-id="fe-vs-re">FE vs RE</h2>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># FE vs RE</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="fu">phtest</span>(fe, re)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+    Hausman Test
+
+data:  log_gdp_pc ~ log_gfcf_pc + log_pop + log_trade + log_agri + log_ser +  ...
+chisq = 223.25, df = 6, p-value &lt; 2.2e-16
+alternative hypothesis: one model is inconsistent</code></pre>
+</div>
+</div>
+<p>H0 is rejected, so FE is preferred over RE.</p>
+</section>
+<section id="robust-hausman-test" class="level2">
+<h2 class="anchored" data-anchor-id="robust-hausman-test">Robust hausman test</h2>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># alternative hausman test</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Robust Hausman Test (accounting for heteroskedasticity/serial correlation)</span></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="fu">phtest</span>(fe, re, <span class="at">vcov =</span> vcovHC)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+    Hausman Test
+
+data:  log_gdp_pc ~ log_gfcf_pc + log_pop + log_trade + log_agri + log_ser +  ...
+chisq = 223.25, df = 6, p-value &lt; 2.2e-16
+alternative hypothesis: one model is inconsistent</code></pre>
+</div>
+</div>
+</section>
+<section id="munlak-test" class="level2">
+<h2 class="anchored" data-anchor-id="munlak-test">Munlak test</h2>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. Criar médias das variáveis que variam no tempo</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>wdi_means <span class="ot">&lt;-</span> wdi <span class="sc">%&gt;%</span></span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">group_by</span>(country) <span class="sc">%&gt;%</span></span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>(</span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>        <span class="at">mean_log_gfcf_pc =</span> <span class="fu">mean</span>(log_gfcf_pc),</span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>        <span class="at">mean_log_pop =</span> <span class="fu">mean</span>(log_pop),</span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a>        <span class="at">mean_log_trade =</span> <span class="fu">mean</span>(log_trade),</span>
+<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a>        <span class="at">mean_log_agri =</span> <span class="fu">mean</span>(log_agri),</span>
+<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a>        <span class="at">mean_log_ser =</span> <span class="fu">mean</span>(log_ser),</span>
+<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a>        <span class="at">mean_log_ind =</span> <span class="fu">mean</span>(log_ind)</span>
+<span id="cb17-11"><a href="#cb17-11" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb17-12"><a href="#cb17-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-13"><a href="#cb17-13" aria-hidden="true" tabindex="-1"></a><span class="co"># 2. Estimar modelo RE com estas médias adicionadas (Correlated Random Effects)</span></span>
+<span id="cb17-14"><a href="#cb17-14" aria-hidden="true" tabindex="-1"></a>cre_model <span class="ot">&lt;-</span> <span class="fu">plm</span>(</span>
+<span id="cb17-15"><a href="#cb17-15" aria-hidden="true" tabindex="-1"></a>    log_gdp_pc <span class="sc">~</span> log_gfcf_pc <span class="sc">+</span> log_pop <span class="sc">+</span> log_trade <span class="sc">+</span> log_agri <span class="sc">+</span> log_ser <span class="sc">+</span> log_ind <span class="sc">+</span></span>
+<span id="cb17-16"><a href="#cb17-16" aria-hidden="true" tabindex="-1"></a>        mean_log_gfcf_pc <span class="sc">+</span> mean_log_pop <span class="sc">+</span> mean_log_trade <span class="sc">+</span> mean_log_agri <span class="sc">+</span> mean_log_ser <span class="sc">+</span> mean_log_ind,</span>
+<span id="cb17-17"><a href="#cb17-17" aria-hidden="true" tabindex="-1"></a>    <span class="at">data =</span> wdi_means,</span>
+<span id="cb17-18"><a href="#cb17-18" aria-hidden="true" tabindex="-1"></a>    <span class="at">index =</span> <span class="fu">c</span>(<span class="st">"country"</span>, <span class="st">"time"</span>),</span>
+<span id="cb17-19"><a href="#cb17-19" aria-hidden="true" tabindex="-1"></a>    <span class="at">model =</span> <span class="st">"random"</span></span>
+<span id="cb17-20"><a href="#cb17-20" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb17-21"><a href="#cb17-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-22"><a href="#cb17-22" aria-hidden="true" tabindex="-1"></a><span class="co"># 3. Testar se as médias são conjuntamente zero (Teste de Wald)</span></span>
+<span id="cb17-23"><a href="#cb17-23" aria-hidden="true" tabindex="-1"></a><span class="co"># Se p-value &lt; 0.05, rejeita-se RE (prefere-se FE)</span></span>
+<span id="cb17-24"><a href="#cb17-24" aria-hidden="true" tabindex="-1"></a><span class="fu">linearHypothesis</span>(cre_model, <span class="fu">matchCoefs</span>(cre_model, <span class="st">"mean_"</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Linear hypothesis test:
+mean_log_gfcf_pc = 0
+mean_log_pop = 0
+mean_log_trade = 0
+mean_log_agri = 0
+mean_log_ser = 0
+mean_log_ind = 0
+
+Model 1: restricted model
+Model 2: log_gdp_pc ~ log_gfcf_pc + log_pop + log_trade + log_agri + log_ser + 
+    log_ind + mean_log_gfcf_pc + mean_log_pop + mean_log_trade + 
+    mean_log_agri + mean_log_ser + mean_log_ind
+
+  Res.Df Df  Chisq Pr(&gt;Chisq)    
+1    449                         
+2    443  6 186.62  &lt; 2.2e-16 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
+</div>
+</div>
+<p><span class="math display">\[
+H_0: \text{the is no correlation between the individual effects and the explanatory variables}
+\]</span></p>
+<p><span class="math display">\[
+H_a: \text{the is a correlation between the individual effects and the explanatory variables}
+\]</span></p>
+<p>The null hypothesis is rejected, so FE is preferred over RE.</p>
+</section>
+<section id="angrist-and-neweys-version-of-chamberlain-test-for-fixed-effects" class="level2">
+<h2 class="anchored" data-anchor-id="angrist-and-neweys-version-of-chamberlain-test-for-fixed-effects">Angrist and Newey’s version of Chamberlain test for fixed effects</h2>
+<p><span class="math display">\[
+H_0: \text{the restrictions in the fixed effects model are valid}
+\]</span></p>
+<p><span class="math display">\[
+H_a: \text{the restrictions in the fixed effects model are not valid}
+\]</span></p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>plm<span class="sc">::</span><span class="fu">aneweytest</span>(log_gdp_pc <span class="sc">~</span> log_gfcf_pc <span class="sc">+</span> log_pop <span class="sc">+</span> log_trade <span class="sc">+</span> log_agri <span class="sc">+</span> log_ser <span class="sc">+</span> log_ind, <span class="at">data =</span> pwdi, <span class="at">index =</span> <span class="fu">c</span>(<span class="st">"country"</span>, <span class="st">"time"</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+    Angrist and Newey's test of within model
+
+data:  log_gdp_pc ~ log_gfcf_pc + log_pop + log_trade + log_agri + log_ser +     log_ind
+chisq = -2902, df = 3306, p-value = 1
+alternative hypothesis: within specification does not apply</code></pre>
+</div>
+</div>
+<p>The null hypothesis is not rejected, so strict exogeneity is valid.</p>
+</section>
+<section id="specification-tests" class="level2">
+<h2 class="anchored" data-anchor-id="specification-tests">Specification tests</h2>
+<p>Wooldridge test for serial correlation in panel models</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">pbgtest</span>(fe)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+    Breusch-Godfrey/Wooldridge test for serial correlation in panel models
+
+data:  log_gdp_pc ~ log_gfcf_pc + log_pop + log_trade + log_agri + log_ser +  ...
+chisq = 258.52, df = 24, p-value &lt; 2.2e-16
+alternative hypothesis: serial correlation in idiosyncratic errors</code></pre>
+</div>
+</div>
+<p>Modified BNF–Durbin–Watson Test and Baltagi–Wu’s LBI Test for Panel Models</p>
+<p>H0: No serial correlation</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="fu">pbnftest</span>(fe)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+    Bhargava/Franzini/Narendranathan Panel Durbin-Watson Test
+
+data:  log_gdp_pc ~ log_gfcf_pc + log_pop + log_trade + log_agri + log_ser +  ...
+DW = 0.49024
+alternative hypothesis: serial correlation in idiosyncratic errors</code></pre>
+</div>
+</div>
+<p>Durbin–Watson Test for Panel Models</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="fu">pdwtest</span>(fe)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+    Durbin-Watson test for serial correlation in panel models
+
+data:  log_gdp_pc ~ log_gfcf_pc + log_pop + log_trade + log_agri + log_ser +  ...
+DW = 0.55739, p-value &lt; 2.2e-16
+alternative hypothesis: serial correlation in idiosyncratic errors</code></pre>
+</div>
+</div>
+<p>H0: No serial correlation</p>
+<p>Heteroskedasticity test</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="fu">bptest</span>(fe)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+    studentized Breusch-Pagan test
+
+data:  fe
+BP = 61.031, df = 6, p-value = 2.778e-11</code></pre>
+</div>
+</div>
+<p>H0: Homoskedasticity</p>
+</section>
+</section>
+<section id="estimate-robust-standard-errors" class="level1">
+<h1>Estimate Robust standard errors</h1>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="fu">coeftest</span>(fe, <span class="at">vcov =</span> <span class="cf">function</span>(x) plm<span class="sc">::</span><span class="fu">vcovHC</span>(x, <span class="at">method =</span> <span class="st">"arellano"</span>, <span class="at">type =</span> <span class="st">"HC1"</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+t test of coefficients:
+
+              Estimate Std. Error  t value Pr(&gt;|t|)    
+log_gfcf_pc  0.0080881  0.0091136   0.8875  0.37532    
+log_pop     -0.8208460  0.0298243 -27.5227  &lt; 2e-16 ***
+log_trade    0.0123994  0.0081266   1.5258  0.12779    
+log_agri     0.0176554  0.0097446   1.8118  0.07071 .  
+log_ser      0.6714460  0.0192720  34.8405  &lt; 2e-16 ***
+log_ind      0.2845460  0.0218733  13.0089  &lt; 2e-16 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
+</div>
+</div>
+<p>Compare with the original summary of the Fixed Effects model:</p>
+<div class="cell">
+<div class="cell-output-display">
+<!-- preamble start -->
+
+    <script src="https://cdn.jsdelivr.net/gh/vincentarelbundock/tinytable@main/inst/tinytable.js"></script>
+
+    <script>
+      // Create table-specific functions using external factory
+      const tableFns_m9946me0lpea7e6m8dya = TinyTable.createTableFunctions("tinytable_m9946me0lpea7e6m8dya");
+      // tinytable span after
+      window.addEventListener('load', function () {
+          var cellsToStyle = [
+            // tinytable style arrays after
+          { positions: [ { i: '19', j: 2 }, { i: '19', j: 3 } ], css_id: 'tinytable_css_nkqw5heyyriheoxqve0q',}, 
+          { positions: [ { i: '12', j: 2 }, { i: '12', j: 3 } ], css_id: 'tinytable_css_1gccsajgyl4cmyapg09d',}, 
+          { positions: [ { i: '1', j: 2 }, { i: '2', j: 2 }, { i: '3', j: 2 }, { i: '4', j: 2 }, { i: '5', j: 2 }, { i: '6', j: 2 }, { i: '7', j: 2 }, { i: '8', j: 2 }, { i: '9', j: 2 }, { i: '10', j: 2 }, { i: '11', j: 2 }, { i: '13', j: 2 }, { i: '14', j: 2 }, { i: '15', j: 2 }, { i: '16', j: 2 }, { i: '17', j: 2 }, { i: '18', j: 2 }, { i: '1', j: 3 }, { i: '2', j: 3 }, { i: '3', j: 3 }, { i: '4', j: 3 }, { i: '5', j: 3 }, { i: '6', j: 3 }, { i: '7', j: 3 }, { i: '8', j: 3 }, { i: '9', j: 3 }, { i: '10', j: 3 }, { i: '11', j: 3 }, { i: '13', j: 3 }, { i: '14', j: 3 }, { i: '15', j: 3 }, { i: '16', j: 3 }, { i: '17', j: 3 }, { i: '18', j: 3 } ], css_id: 'tinytable_css_dx25wuh6fbonm7chcvt0',}, 
+          { positions: [ { i: '0', j: 2 }, { i: '0', j: 3 } ], css_id: 'tinytable_css_5dcoyurvw5ilh5gjcdxy',}, 
+          { positions: [ { i: '19', j: 1 } ], css_id: 'tinytable_css_8e93cff49spjlckk0lp1',}, 
+          { positions: [ { i: '12', j: 1 } ], css_id: 'tinytable_css_y1kcwn1pjrlz1d4awmvq',}, 
+          { positions: [ { i: '1', j: 1 }, { i: '2', j: 1 }, { i: '3', j: 1 }, { i: '4', j: 1 }, { i: '5', j: 1 }, { i: '6', j: 1 }, { i: '7', j: 1 }, { i: '8', j: 1 }, { i: '9', j: 1 }, { i: '10', j: 1 }, { i: '11', j: 1 }, { i: '13', j: 1 }, { i: '14', j: 1 }, { i: '15', j: 1 }, { i: '16', j: 1 }, { i: '17', j: 1 }, { i: '18', j: 1 } ], css_id: 'tinytable_css_s2d6v5hhwjawgyt9s71j',}, 
+          { positions: [ { i: '0', j: 1 } ], css_id: 'tinytable_css_ouzat4xz2zohxhga0cpn',}, 
+          ];
+
+          // Loop over the arrays to style the cells
+          cellsToStyle.forEach(function (group) {
+              group.positions.forEach(function (cell) {
+                  tableFns_m9946me0lpea7e6m8dya.styleCell(cell.i, cell.j, group.css_id);
+              });
+          });
+      });
+    </script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/vincentarelbundock/tinytable@main/inst/tinytable.css">
+    <style>
+    /* tinytable css entries after */
+    #tinytable_m9946me0lpea7e6m8dya td.tinytable_css_nkqw5heyyriheoxqve0q, #tinytable_m9946me0lpea7e6m8dya th.tinytable_css_nkqw5heyyriheoxqve0q {  position: relative; --border-bottom: 1; --border-left: 0; --border-right: 0; --border-top: 0; --line-color-bottom: black; --line-color-left: black; --line-color-right: black; --line-color-top: black; --line-width-bottom: 0.1em; --line-width-left: 0.1em; --line-width-right: 0.1em; --line-width-top: 0.1em; --trim-bottom-left: 0%; --trim-bottom-right: 0%; --trim-left-bottom: 0%; --trim-left-top: 0%; --trim-right-bottom: 0%; --trim-right-top: 0%; --trim-top-left: 0%; --trim-top-right: 0%; ; text-align: center }
+    #tinytable_m9946me0lpea7e6m8dya td.tinytable_css_1gccsajgyl4cmyapg09d, #tinytable_m9946me0lpea7e6m8dya th.tinytable_css_1gccsajgyl4cmyapg09d {  position: relative; --border-bottom: 1; --border-left: 0; --border-right: 0; --border-top: 0; --line-color-bottom: black; --line-color-left: black; --line-color-right: black; --line-color-top: black; --line-width-bottom: 0.05em; --line-width-left: 0.1em; --line-width-right: 0.1em; --line-width-top: 0.1em; --trim-bottom-left: 0%; --trim-bottom-right: 0%; --trim-left-bottom: 0%; --trim-left-top: 0%; --trim-right-bottom: 0%; --trim-right-top: 0%; --trim-top-left: 0%; --trim-top-right: 0%; ; text-align: center }
+    #tinytable_m9946me0lpea7e6m8dya td.tinytable_css_dx25wuh6fbonm7chcvt0, #tinytable_m9946me0lpea7e6m8dya th.tinytable_css_dx25wuh6fbonm7chcvt0 { text-align: center }
+    #tinytable_m9946me0lpea7e6m8dya td.tinytable_css_5dcoyurvw5ilh5gjcdxy, #tinytable_m9946me0lpea7e6m8dya th.tinytable_css_5dcoyurvw5ilh5gjcdxy {  position: relative; --border-bottom: 1; --border-left: 0; --border-right: 0; --border-top: 1; --line-color-bottom: black; --line-color-left: black; --line-color-right: black; --line-color-top: black; --line-width-bottom: 0.05em; --line-width-left: 0.1em; --line-width-right: 0.1em; --line-width-top: 0.1em; --trim-bottom-left: 0%; --trim-bottom-right: 0%; --trim-left-bottom: 0%; --trim-left-top: 0%; --trim-right-bottom: 0%; --trim-right-top: 0%; --trim-top-left: 0%; --trim-top-right: 0%; ; text-align: center }
+    #tinytable_m9946me0lpea7e6m8dya td.tinytable_css_8e93cff49spjlckk0lp1, #tinytable_m9946me0lpea7e6m8dya th.tinytable_css_8e93cff49spjlckk0lp1 {  position: relative; --border-bottom: 1; --border-left: 0; --border-right: 0; --border-top: 0; --line-color-bottom: black; --line-color-left: black; --line-color-right: black; --line-color-top: black; --line-width-bottom: 0.1em; --line-width-left: 0.1em; --line-width-right: 0.1em; --line-width-top: 0.1em; --trim-bottom-left: 0%; --trim-bottom-right: 0%; --trim-left-bottom: 0%; --trim-left-top: 0%; --trim-right-bottom: 0%; --trim-right-top: 0%; --trim-top-left: 0%; --trim-top-right: 0%; ; text-align: left }
+    #tinytable_m9946me0lpea7e6m8dya td.tinytable_css_y1kcwn1pjrlz1d4awmvq, #tinytable_m9946me0lpea7e6m8dya th.tinytable_css_y1kcwn1pjrlz1d4awmvq {  position: relative; --border-bottom: 1; --border-left: 0; --border-right: 0; --border-top: 0; --line-color-bottom: black; --line-color-left: black; --line-color-right: black; --line-color-top: black; --line-width-bottom: 0.05em; --line-width-left: 0.1em; --line-width-right: 0.1em; --line-width-top: 0.1em; --trim-bottom-left: 0%; --trim-bottom-right: 0%; --trim-left-bottom: 0%; --trim-left-top: 0%; --trim-right-bottom: 0%; --trim-right-top: 0%; --trim-top-left: 0%; --trim-top-right: 0%; ; text-align: left }
+    #tinytable_m9946me0lpea7e6m8dya td.tinytable_css_s2d6v5hhwjawgyt9s71j, #tinytable_m9946me0lpea7e6m8dya th.tinytable_css_s2d6v5hhwjawgyt9s71j { text-align: left }
+    #tinytable_m9946me0lpea7e6m8dya td.tinytable_css_ouzat4xz2zohxhga0cpn, #tinytable_m9946me0lpea7e6m8dya th.tinytable_css_ouzat4xz2zohxhga0cpn {  position: relative; --border-bottom: 1; --border-left: 0; --border-right: 0; --border-top: 1; --line-color-bottom: black; --line-color-left: black; --line-color-right: black; --line-color-top: black; --line-width-bottom: 0.05em; --line-width-left: 0.1em; --line-width-right: 0.1em; --line-width-top: 0.1em; --trim-bottom-left: 0%; --trim-bottom-right: 0%; --trim-left-bottom: 0%; --trim-left-top: 0%; --trim-right-bottom: 0%; --trim-right-top: 0%; --trim-top-left: 0%; --trim-top-right: 0%; ; text-align: left }
+    </style>
+    <div class="container">
+      <table class="tinytable" id="tinytable_m9946me0lpea7e6m8dya" style="width: auto; margin-left: auto; margin-right: auto;" data-quarto-disable-processing="true">
+        
+        <thead>
+              <tr>
+                <th scope="col" data-row="0" data-col="1"> </th>
+                <th scope="col" data-row="0" data-col="2">FE (Standard SE)</th>
+                <th scope="col" data-row="0" data-col="3">FE (Robust SE)</th>
+              </tr>
+        </thead>
+        <tfoot><tr><td colspan="3">+ p &lt; 0.1, * p &lt; 0.05, ** p &lt; 0.01, *** p &lt; 0.001</td></tr></tfoot>
+        <tbody>
+                <tr>
+                  <td data-row="1" data-col="1">log_gfcf_pc</td>
+                  <td data-row="1" data-col="2">0.008</td>
+                  <td data-row="1" data-col="3">0.008</td>
+                </tr>
+                <tr>
+                  <td data-row="2" data-col="1"></td>
+                  <td data-row="2" data-col="2">(0.005)</td>
+                  <td data-row="2" data-col="3">(0.009)</td>
+                </tr>
+                <tr>
+                  <td data-row="3" data-col="1">log_pop</td>
+                  <td data-row="3" data-col="2">-0.821***</td>
+                  <td data-row="3" data-col="3">-0.821***</td>
+                </tr>
+                <tr>
+                  <td data-row="4" data-col="1"></td>
+                  <td data-row="4" data-col="2">(0.011)</td>
+                  <td data-row="4" data-col="3">(0.030)</td>
+                </tr>
+                <tr>
+                  <td data-row="5" data-col="1">log_trade</td>
+                  <td data-row="5" data-col="2">0.012*</td>
+                  <td data-row="5" data-col="3">0.012</td>
+                </tr>
+                <tr>
+                  <td data-row="6" data-col="1"></td>
+                  <td data-row="6" data-col="2">(0.006)</td>
+                  <td data-row="6" data-col="3">(0.008)</td>
+                </tr>
+                <tr>
+                  <td data-row="7" data-col="1">log_agri</td>
+                  <td data-row="7" data-col="2">0.018***</td>
+                  <td data-row="7" data-col="3">0.018+</td>
+                </tr>
+                <tr>
+                  <td data-row="8" data-col="1"></td>
+                  <td data-row="8" data-col="2">(0.004)</td>
+                  <td data-row="8" data-col="3">(0.010)</td>
+                </tr>
+                <tr>
+                  <td data-row="9" data-col="1">log_ser</td>
+                  <td data-row="9" data-col="2">0.671***</td>
+                  <td data-row="9" data-col="3">0.671***</td>
+                </tr>
+                <tr>
+                  <td data-row="10" data-col="1"></td>
+                  <td data-row="10" data-col="2">(0.007)</td>
+                  <td data-row="10" data-col="3">(0.019)</td>
+                </tr>
+                <tr>
+                  <td data-row="11" data-col="1">log_ind</td>
+                  <td data-row="11" data-col="2">0.285***</td>
+                  <td data-row="11" data-col="3">0.285***</td>
+                </tr>
+                <tr>
+                  <td data-row="12" data-col="1"></td>
+                  <td data-row="12" data-col="2">(0.007)</td>
+                  <td data-row="12" data-col="3">(0.022)</td>
+                </tr>
+                <tr>
+                  <td data-row="13" data-col="1">Num.Obs.</td>
+                  <td data-row="13" data-col="2">456</td>
+                  <td data-row="13" data-col="3">456</td>
+                </tr>
+                <tr>
+                  <td data-row="14" data-col="1">R2</td>
+                  <td data-row="14" data-col="2">0.995</td>
+                  <td data-row="14" data-col="3">0.995</td>
+                </tr>
+                <tr>
+                  <td data-row="15" data-col="1">R2 Adj.</td>
+                  <td data-row="15" data-col="2">0.995</td>
+                  <td data-row="15" data-col="3">0.995</td>
+                </tr>
+                <tr>
+                  <td data-row="16" data-col="1">AIC</td>
+                  <td data-row="16" data-col="2">-2759.7</td>
+                  <td data-row="16" data-col="3">-2759.7</td>
+                </tr>
+                <tr>
+                  <td data-row="17" data-col="1">BIC</td>
+                  <td data-row="17" data-col="2">-2730.8</td>
+                  <td data-row="17" data-col="3">-2730.8</td>
+                </tr>
+                <tr>
+                  <td data-row="18" data-col="1">RMSE</td>
+                  <td data-row="18" data-col="2">0.01</td>
+                  <td data-row="18" data-col="3">0.01</td>
+                </tr>
+                <tr>
+                  <td data-row="19" data-col="1">Std.Errors</td>
+                  <td data-row="19" data-col="2"></td>
+                  <td data-row="19" data-col="3">Custom</td>
+                </tr>
+        </tbody>
+      </table>
+    </div>
+<!-- hack to avoid NA insertion in last line -->
+</div>
+</div>
+<p>Test conteporaneous correlation CD test</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="co">#|</span></span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a><span class="fu">pcdtest</span>(fe, <span class="at">test =</span> <span class="st">"cd"</span>)</span>
+<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a><span class="fu">pcdtest</span>(fe, <span class="at">test =</span> <span class="st">"lm"</span>)</span>
+<span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a><span class="fu">pcdtest</span>(fe, <span class="at">test =</span> <span class="st">"sclm"</span>)</span>
+<span id="cb31-5"><a href="#cb31-5" aria-hidden="true" tabindex="-1"></a><span class="fu">pcdtest</span>(fe, <span class="at">test =</span> <span class="st">"bcsclm"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>all results</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="cxtacwhkcf" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#cxtacwhkcf table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#cxtacwhkcf thead, #cxtacwhkcf tbody, #cxtacwhkcf tfoot, #cxtacwhkcf tr, #cxtacwhkcf td, #cxtacwhkcf th {
+  border-style: none;
+}
+
+#cxtacwhkcf p {
+  margin: 0;
+  padding: 0;
+}
+
+#cxtacwhkcf .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#cxtacwhkcf .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#cxtacwhkcf .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#cxtacwhkcf .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#cxtacwhkcf .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#cxtacwhkcf .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#cxtacwhkcf .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#cxtacwhkcf .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#cxtacwhkcf .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#cxtacwhkcf .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#cxtacwhkcf .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#cxtacwhkcf .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#cxtacwhkcf .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#cxtacwhkcf .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#cxtacwhkcf .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#cxtacwhkcf .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#cxtacwhkcf .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#cxtacwhkcf .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#cxtacwhkcf .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#cxtacwhkcf .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#cxtacwhkcf .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#cxtacwhkcf .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#cxtacwhkcf .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#cxtacwhkcf .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#cxtacwhkcf .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#cxtacwhkcf .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#cxtacwhkcf .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#cxtacwhkcf .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#cxtacwhkcf .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#cxtacwhkcf .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#cxtacwhkcf .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#cxtacwhkcf .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#cxtacwhkcf .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#cxtacwhkcf .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#cxtacwhkcf .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#cxtacwhkcf .gt_left {
+  text-align: left;
+}
+
+#cxtacwhkcf .gt_center {
+  text-align: center;
+}
+
+#cxtacwhkcf .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#cxtacwhkcf .gt_font_normal {
+  font-weight: normal;
+}
+
+#cxtacwhkcf .gt_font_bold {
+  font-weight: bold;
+}
+
+#cxtacwhkcf .gt_font_italic {
+  font-style: italic;
+}
+
+#cxtacwhkcf .gt_super {
+  font-size: 65%;
+}
+
+#cxtacwhkcf .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#cxtacwhkcf .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#cxtacwhkcf .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#cxtacwhkcf .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#cxtacwhkcf .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#cxtacwhkcf .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#cxtacwhkcf .gt_indent_5 {
+  text-indent: 25px;
+}
+
+#cxtacwhkcf .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+
+#cxtacwhkcf div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
+}
+</style>
+
+<table class="gt_table caption-top table table-sm table-striped small" data-quarto-bootstrap="false">
+<thead>
+<tr class="gt_heading header">
+<td colspan="3" class="gt_heading gt_title gt_font_normal gt_bottom_border">Cross-Section Dependence Tests on FE model</td>
+</tr>
+<tr class="gt_col_headings even">
+<th id="Test" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">Test</th>
+<th id="Statistic" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Statistic</th>
+<th id="P_Value" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">P-Value</th>
+</tr>
+</thead>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_left" headers="Test">cd</td>
+<td class="gt_row gt_right" headers="Statistic">0.0630</td>
+<td class="gt_row gt_right" headers="P_Value">0.9498</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="Test">lm</td>
+<td class="gt_row gt_right" headers="Statistic">948.4901</td>
+<td class="gt_row gt_right" headers="P_Value">0.0000</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="Test">sclm</td>
+<td class="gt_row gt_right" headers="Statistic">42.0418</td>
+<td class="gt_row gt_right" headers="P_Value">0.0000</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="Test">bcsclm</td>
+<td class="gt_row gt_right" headers="Statistic">41.6288</td>
+<td class="gt_row gt_right" headers="P_Value">0.0000</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</section>
+<section id="driscoll-kraay-standard-errors-with-pooled-ols" class="level1">
+<h1>Driscoll-Kraay standard errors with pooled OLS</h1>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Driscoll-Kraay standard errors (Robust to cross-sectional and temporal dependence)</span></span>
+<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a><span class="co"># vcovSCC is the function for Spatial Correlation Consistent covariance matrix</span></span>
+<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a><span class="fu">coeftest</span>(pooled_ols, <span class="at">vcov =</span> <span class="cf">function</span>(x) <span class="fu">vcovSCC</span>(x, <span class="at">type =</span> <span class="st">"HC1"</span>, <span class="at">maxlag =</span> <span class="dv">4</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+t test of coefficients:
+
+              Estimate Std. Error  t value  Pr(&gt;|t|)    
+(Intercept)  1.2236551  0.0452382  27.0491 &lt; 2.2e-16 ***
+log_gfcf_pc  0.0271243  0.0146992   1.8453  0.065654 .  
+log_pop     -0.9485278  0.0173332 -54.7233 &lt; 2.2e-16 ***
+log_trade   -0.0130651  0.0042263  -3.0914  0.002116 ** 
+log_agri     0.0032372  0.0031472   1.0286  0.304218    
+log_ser      0.7240940  0.0069188 104.6555 &lt; 2.2e-16 ***
+log_ind      0.2133069  0.0098386  21.6807 &lt; 2.2e-16 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
+</div>
+</div>
+</section>
+<section id="driscoll-kraay-standard-errors-with-fe" class="level1">
+<h1>Driscoll-Kraay standard errors with fe</h1>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Driscoll-Kraay standard errors (Robust to cross-sectional and temporal dependence)</span></span>
+<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a><span class="co"># vcovSCC is the function for Spatial Correlation Consistent covariance matrix</span></span>
+<span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a><span class="fu">coeftest</span>(fe, <span class="at">vcov =</span> <span class="cf">function</span>(x) <span class="fu">vcovSCC</span>(x, <span class="at">type =</span> <span class="st">"HC1"</span>, <span class="at">maxlag =</span> <span class="dv">4</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+t test of coefficients:
+
+              Estimate Std. Error  t value Pr(&gt;|t|)    
+log_gfcf_pc  0.0080881  0.0076085   1.0630  0.28836    
+log_pop     -0.8208460  0.0117761 -69.7046  &lt; 2e-16 ***
+log_trade    0.0123994  0.0048556   2.5537  0.01100 *  
+log_agri     0.0176554  0.0073672   2.3965  0.01698 *  
+log_ser      0.6714460  0.0077571  86.5591  &lt; 2e-16 ***
+log_ind      0.2845460  0.0117514  24.2138  &lt; 2e-16 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
+</div>
+</div>
+<p>Compare pooled OLS, FE, RE, FE_robust, DK_pooled_ols and DK_fe</p>
+<div class="cell">
+<div class="cell-output-display">
+<!-- preamble start -->
+
+    <script src="https://cdn.jsdelivr.net/gh/vincentarelbundock/tinytable@main/inst/tinytable.js"></script>
+
+    <script>
+      // Create table-specific functions using external factory
+      const tableFns_k7x83mkxisjt53464jeq = TinyTable.createTableFunctions("tinytable_k7x83mkxisjt53464jeq");
+      // tinytable span after
+      window.addEventListener('load', function () {
+          var cellsToStyle = [
+            // tinytable style arrays after
+          { positions: [ { i: '21', j: 2 }, { i: '21', j: 3 }, { i: '21', j: 4 }, { i: '21', j: 5 }, { i: '21', j: 6 }, { i: '21', j: 7 } ], css_id: 'tinytable_css_ctaapu01a3hfwr05dyfc',}, 
+          { positions: [ { i: '14', j: 2 }, { i: '14', j: 3 }, { i: '14', j: 4 }, { i: '14', j: 5 }, { i: '14', j: 6 }, { i: '14', j: 7 } ], css_id: 'tinytable_css_3tdb70e3wgu7ofwrdreu',}, 
+          { positions: [ { i: '1', j: 2 }, { i: '2', j: 2 }, { i: '3', j: 2 }, { i: '4', j: 2 }, { i: '5', j: 2 }, { i: '6', j: 2 }, { i: '7', j: 2 }, { i: '8', j: 2 }, { i: '9', j: 2 }, { i: '10', j: 2 }, { i: '11', j: 2 }, { i: '12', j: 2 }, { i: '13', j: 2 }, { i: '15', j: 2 }, { i: '16', j: 2 }, { i: '17', j: 2 }, { i: '18', j: 2 }, { i: '19', j: 2 }, { i: '20', j: 2 }, { i: '1', j: 3 }, { i: '2', j: 3 }, { i: '3', j: 3 }, { i: '4', j: 3 }, { i: '5', j: 3 }, { i: '6', j: 3 }, { i: '7', j: 3 }, { i: '8', j: 3 }, { i: '9', j: 3 }, { i: '10', j: 3 }, { i: '11', j: 3 }, { i: '12', j: 3 }, { i: '13', j: 3 }, { i: '15', j: 3 }, { i: '16', j: 3 }, { i: '17', j: 3 }, { i: '18', j: 3 }, { i: '19', j: 3 }, { i: '20', j: 3 }, { i: '1', j: 4 }, { i: '2', j: 4 }, { i: '3', j: 4 }, { i: '4', j: 4 }, { i: '5', j: 4 }, { i: '6', j: 4 }, { i: '7', j: 4 }, { i: '8', j: 4 }, { i: '9', j: 4 }, { i: '10', j: 4 }, { i: '11', j: 4 }, { i: '12', j: 4 }, { i: '13', j: 4 }, { i: '15', j: 4 }, { i: '16', j: 4 }, { i: '17', j: 4 }, { i: '18', j: 4 }, { i: '19', j: 4 }, { i: '20', j: 4 }, { i: '1', j: 5 }, { i: '2', j: 5 }, { i: '3', j: 5 }, { i: '4', j: 5 }, { i: '5', j: 5 }, { i: '6', j: 5 }, { i: '7', j: 5 }, { i: '8', j: 5 }, { i: '9', j: 5 }, { i: '10', j: 5 }, { i: '11', j: 5 }, { i: '12', j: 5 }, { i: '13', j: 5 }, { i: '15', j: 5 }, { i: '16', j: 5 }, { i: '17', j: 5 }, { i: '18', j: 5 }, { i: '19', j: 5 }, { i: '20', j: 5 }, { i: '1', j: 6 }, { i: '2', j: 6 }, { i: '3', j: 6 }, { i: '4', j: 6 }, { i: '5', j: 6 }, { i: '6', j: 6 }, { i: '7', j: 6 }, { i: '8', j: 6 }, { i: '9', j: 6 }, { i: '10', j: 6 }, { i: '11', j: 6 }, { i: '12', j: 6 }, { i: '13', j: 6 }, { i: '15', j: 6 }, { i: '16', j: 6 }, { i: '17', j: 6 }, { i: '18', j: 6 }, { i: '19', j: 6 }, { i: '20', j: 6 }, { i: '1', j: 7 }, { i: '2', j: 7 }, { i: '3', j: 7 }, { i: '4', j: 7 }, { i: '5', j: 7 }, { i: '6', j: 7 }, { i: '7', j: 7 }, { i: '8', j: 7 }, { i: '9', j: 7 }, { i: '10', j: 7 }, { i: '11', j: 7 }, { i: '12', j: 7 }, { i: '13', j: 7 }, { i: '15', j: 7 }, { i: '16', j: 7 }, { i: '17', j: 7 }, { i: '18', j: 7 }, { i: '19', j: 7 }, { i: '20', j: 7 } ], css_id: 'tinytable_css_scg3kx80dc47u1gnclo6',}, 
+          { positions: [ { i: '0', j: 2 }, { i: '0', j: 3 }, { i: '0', j: 4 }, { i: '0', j: 5 }, { i: '0', j: 6 }, { i: '0', j: 7 } ], css_id: 'tinytable_css_5l35ylcvf6xvbk3pmfge',}, 
+          { positions: [ { i: '21', j: 1 } ], css_id: 'tinytable_css_q000grmsfglcqgwemw85',}, 
+          { positions: [ { i: '14', j: 1 } ], css_id: 'tinytable_css_kca4776l9pjslmrr23mr',}, 
+          { positions: [ { i: '1', j: 1 }, { i: '2', j: 1 }, { i: '3', j: 1 }, { i: '4', j: 1 }, { i: '5', j: 1 }, { i: '6', j: 1 }, { i: '7', j: 1 }, { i: '8', j: 1 }, { i: '9', j: 1 }, { i: '10', j: 1 }, { i: '11', j: 1 }, { i: '12', j: 1 }, { i: '13', j: 1 }, { i: '15', j: 1 }, { i: '16', j: 1 }, { i: '17', j: 1 }, { i: '18', j: 1 }, { i: '19', j: 1 }, { i: '20', j: 1 } ], css_id: 'tinytable_css_px0mp14m3zszw95sa0xb',}, 
+          { positions: [ { i: '0', j: 1 } ], css_id: 'tinytable_css_ao45odnust1zy2g4ia9w',}, 
+          ];
+
+          // Loop over the arrays to style the cells
+          cellsToStyle.forEach(function (group) {
+              group.positions.forEach(function (cell) {
+                  tableFns_k7x83mkxisjt53464jeq.styleCell(cell.i, cell.j, group.css_id);
+              });
+          });
+      });
+    </script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/vincentarelbundock/tinytable@main/inst/tinytable.css">
+    <style>
+    /* tinytable css entries after */
+    #tinytable_k7x83mkxisjt53464jeq td.tinytable_css_ctaapu01a3hfwr05dyfc, #tinytable_k7x83mkxisjt53464jeq th.tinytable_css_ctaapu01a3hfwr05dyfc {  position: relative; --border-bottom: 1; --border-left: 0; --border-right: 0; --border-top: 0; --line-color-bottom: black; --line-color-left: black; --line-color-right: black; --line-color-top: black; --line-width-bottom: 0.1em; --line-width-left: 0.1em; --line-width-right: 0.1em; --line-width-top: 0.1em; --trim-bottom-left: 0%; --trim-bottom-right: 0%; --trim-left-bottom: 0%; --trim-left-top: 0%; --trim-right-bottom: 0%; --trim-right-top: 0%; --trim-top-left: 0%; --trim-top-right: 0%; ; text-align: center }
+    #tinytable_k7x83mkxisjt53464jeq td.tinytable_css_3tdb70e3wgu7ofwrdreu, #tinytable_k7x83mkxisjt53464jeq th.tinytable_css_3tdb70e3wgu7ofwrdreu {  position: relative; --border-bottom: 1; --border-left: 0; --border-right: 0; --border-top: 0; --line-color-bottom: black; --line-color-left: black; --line-color-right: black; --line-color-top: black; --line-width-bottom: 0.05em; --line-width-left: 0.1em; --line-width-right: 0.1em; --line-width-top: 0.1em; --trim-bottom-left: 0%; --trim-bottom-right: 0%; --trim-left-bottom: 0%; --trim-left-top: 0%; --trim-right-bottom: 0%; --trim-right-top: 0%; --trim-top-left: 0%; --trim-top-right: 0%; ; text-align: center }
+    #tinytable_k7x83mkxisjt53464jeq td.tinytable_css_scg3kx80dc47u1gnclo6, #tinytable_k7x83mkxisjt53464jeq th.tinytable_css_scg3kx80dc47u1gnclo6 { text-align: center }
+    #tinytable_k7x83mkxisjt53464jeq td.tinytable_css_5l35ylcvf6xvbk3pmfge, #tinytable_k7x83mkxisjt53464jeq th.tinytable_css_5l35ylcvf6xvbk3pmfge {  position: relative; --border-bottom: 1; --border-left: 0; --border-right: 0; --border-top: 1; --line-color-bottom: black; --line-color-left: black; --line-color-right: black; --line-color-top: black; --line-width-bottom: 0.05em; --line-width-left: 0.1em; --line-width-right: 0.1em; --line-width-top: 0.1em; --trim-bottom-left: 0%; --trim-bottom-right: 0%; --trim-left-bottom: 0%; --trim-left-top: 0%; --trim-right-bottom: 0%; --trim-right-top: 0%; --trim-top-left: 0%; --trim-top-right: 0%; ; text-align: center }
+    #tinytable_k7x83mkxisjt53464jeq td.tinytable_css_q000grmsfglcqgwemw85, #tinytable_k7x83mkxisjt53464jeq th.tinytable_css_q000grmsfglcqgwemw85 {  position: relative; --border-bottom: 1; --border-left: 0; --border-right: 0; --border-top: 0; --line-color-bottom: black; --line-color-left: black; --line-color-right: black; --line-color-top: black; --line-width-bottom: 0.1em; --line-width-left: 0.1em; --line-width-right: 0.1em; --line-width-top: 0.1em; --trim-bottom-left: 0%; --trim-bottom-right: 0%; --trim-left-bottom: 0%; --trim-left-top: 0%; --trim-right-bottom: 0%; --trim-right-top: 0%; --trim-top-left: 0%; --trim-top-right: 0%; ; text-align: left }
+    #tinytable_k7x83mkxisjt53464jeq td.tinytable_css_kca4776l9pjslmrr23mr, #tinytable_k7x83mkxisjt53464jeq th.tinytable_css_kca4776l9pjslmrr23mr {  position: relative; --border-bottom: 1; --border-left: 0; --border-right: 0; --border-top: 0; --line-color-bottom: black; --line-color-left: black; --line-color-right: black; --line-color-top: black; --line-width-bottom: 0.05em; --line-width-left: 0.1em; --line-width-right: 0.1em; --line-width-top: 0.1em; --trim-bottom-left: 0%; --trim-bottom-right: 0%; --trim-left-bottom: 0%; --trim-left-top: 0%; --trim-right-bottom: 0%; --trim-right-top: 0%; --trim-top-left: 0%; --trim-top-right: 0%; ; text-align: left }
+    #tinytable_k7x83mkxisjt53464jeq td.tinytable_css_px0mp14m3zszw95sa0xb, #tinytable_k7x83mkxisjt53464jeq th.tinytable_css_px0mp14m3zszw95sa0xb { text-align: left }
+    #tinytable_k7x83mkxisjt53464jeq td.tinytable_css_ao45odnust1zy2g4ia9w, #tinytable_k7x83mkxisjt53464jeq th.tinytable_css_ao45odnust1zy2g4ia9w {  position: relative; --border-bottom: 1; --border-left: 0; --border-right: 0; --border-top: 1; --line-color-bottom: black; --line-color-left: black; --line-color-right: black; --line-color-top: black; --line-width-bottom: 0.05em; --line-width-left: 0.1em; --line-width-right: 0.1em; --line-width-top: 0.1em; --trim-bottom-left: 0%; --trim-bottom-right: 0%; --trim-left-bottom: 0%; --trim-left-top: 0%; --trim-right-bottom: 0%; --trim-right-top: 0%; --trim-top-left: 0%; --trim-top-right: 0%; ; text-align: left }
+    </style>
+    <div class="container">
+      <table class="tinytable" id="tinytable_k7x83mkxisjt53464jeq" style="width: auto; margin-left: auto; margin-right: auto;" data-quarto-disable-processing="true">
+        
+        <thead>
+              <tr>
+                <th scope="col" data-row="0" data-col="1"> </th>
+                <th scope="col" data-row="0" data-col="2">Pooled OLS</th>
+                <th scope="col" data-row="0" data-col="3">Fixed Effects</th>
+                <th scope="col" data-row="0" data-col="4">Random Effects</th>
+                <th scope="col" data-row="0" data-col="5">FE (Robust SE)</th>
+                <th scope="col" data-row="0" data-col="6">DK (Pooled OLS)</th>
+                <th scope="col" data-row="0" data-col="7">DK (FE)</th>
+              </tr>
+        </thead>
+        <tfoot><tr><td colspan="7">+ p &lt; 0.1, * p &lt; 0.05, ** p &lt; 0.01, *** p &lt; 0.001</td></tr></tfoot>
+        <tbody>
+                <tr>
+                  <td data-row="1" data-col="1">(Intercept)</td>
+                  <td data-row="1" data-col="2">1.224***</td>
+                  <td data-row="1" data-col="3"></td>
+                  <td data-row="1" data-col="4">0.932***</td>
+                  <td data-row="1" data-col="5"></td>
+                  <td data-row="1" data-col="6">1.224***</td>
+                  <td data-row="1" data-col="7"></td>
+                </tr>
+                <tr>
+                  <td data-row="2" data-col="1"></td>
+                  <td data-row="2" data-col="2">(0.043)</td>
+                  <td data-row="2" data-col="3"></td>
+                  <td data-row="2" data-col="4">(0.079)</td>
+                  <td data-row="2" data-col="5"></td>
+                  <td data-row="2" data-col="6">(0.045)</td>
+                  <td data-row="2" data-col="7"></td>
+                </tr>
+                <tr>
+                  <td data-row="3" data-col="1">log_gfcf_pc</td>
+                  <td data-row="3" data-col="2">0.027***</td>
+                  <td data-row="3" data-col="3">0.008</td>
+                  <td data-row="3" data-col="4">0.025***</td>
+                  <td data-row="3" data-col="5">0.008</td>
+                  <td data-row="3" data-col="6">0.027+</td>
+                  <td data-row="3" data-col="7">0.008</td>
+                </tr>
+                <tr>
+                  <td data-row="4" data-col="1"></td>
+                  <td data-row="4" data-col="2">(0.007)</td>
+                  <td data-row="4" data-col="3">(0.005)</td>
+                  <td data-row="4" data-col="4">(0.006)</td>
+                  <td data-row="4" data-col="5">(0.009)</td>
+                  <td data-row="4" data-col="6">(0.015)</td>
+                  <td data-row="4" data-col="7">(0.008)</td>
+                </tr>
+                <tr>
+                  <td data-row="5" data-col="1">log_pop</td>
+                  <td data-row="5" data-col="2">-0.949***</td>
+                  <td data-row="5" data-col="3">-0.821***</td>
+                  <td data-row="5" data-col="4">-0.921***</td>
+                  <td data-row="5" data-col="5">-0.821***</td>
+                  <td data-row="5" data-col="6">-0.949***</td>
+                  <td data-row="5" data-col="7">-0.821***</td>
+                </tr>
+                <tr>
+                  <td data-row="6" data-col="1"></td>
+                  <td data-row="6" data-col="2">(0.008)</td>
+                  <td data-row="6" data-col="3">(0.011)</td>
+                  <td data-row="6" data-col="4">(0.010)</td>
+                  <td data-row="6" data-col="5">(0.030)</td>
+                  <td data-row="6" data-col="6">(0.017)</td>
+                  <td data-row="6" data-col="7">(0.012)</td>
+                </tr>
+                <tr>
+                  <td data-row="7" data-col="1">log_trade</td>
+                  <td data-row="7" data-col="2">-0.013**</td>
+                  <td data-row="7" data-col="3">0.012*</td>
+                  <td data-row="7" data-col="4">0.024***</td>
+                  <td data-row="7" data-col="5">0.012</td>
+                  <td data-row="7" data-col="6">-0.013**</td>
+                  <td data-row="7" data-col="7">0.012*</td>
+                </tr>
+                <tr>
+                  <td data-row="8" data-col="1"></td>
+                  <td data-row="8" data-col="2">(0.004)</td>
+                  <td data-row="8" data-col="3">(0.006)</td>
+                  <td data-row="8" data-col="4">(0.006)</td>
+                  <td data-row="8" data-col="5">(0.008)</td>
+                  <td data-row="8" data-col="6">(0.004)</td>
+                  <td data-row="8" data-col="7">(0.005)</td>
+                </tr>
+                <tr>
+                  <td data-row="9" data-col="1">log_agri</td>
+                  <td data-row="9" data-col="2">0.003</td>
+                  <td data-row="9" data-col="3">0.018***</td>
+                  <td data-row="9" data-col="4">0.002</td>
+                  <td data-row="9" data-col="5">0.018+</td>
+                  <td data-row="9" data-col="6">0.003</td>
+                  <td data-row="9" data-col="7">0.018*</td>
+                </tr>
+                <tr>
+                  <td data-row="10" data-col="1"></td>
+                  <td data-row="10" data-col="2">(0.003)</td>
+                  <td data-row="10" data-col="3">(0.004)</td>
+                  <td data-row="10" data-col="4">(0.005)</td>
+                  <td data-row="10" data-col="5">(0.010)</td>
+                  <td data-row="10" data-col="6">(0.003)</td>
+                  <td data-row="10" data-col="7">(0.007)</td>
+                </tr>
+                <tr>
+                  <td data-row="11" data-col="1">log_ser</td>
+                  <td data-row="11" data-col="2">0.724***</td>
+                  <td data-row="11" data-col="3">0.671***</td>
+                  <td data-row="11" data-col="4">0.677***</td>
+                  <td data-row="11" data-col="5">0.671***</td>
+                  <td data-row="11" data-col="6">0.724***</td>
+                  <td data-row="11" data-col="7">0.671***</td>
+                </tr>
+                <tr>
+                  <td data-row="12" data-col="1"></td>
+                  <td data-row="12" data-col="2">(0.004)</td>
+                  <td data-row="12" data-col="3">(0.007)</td>
+                  <td data-row="12" data-col="4">(0.007)</td>
+                  <td data-row="12" data-col="5">(0.019)</td>
+                  <td data-row="12" data-col="6">(0.007)</td>
+                  <td data-row="12" data-col="7">(0.008)</td>
+                </tr>
+                <tr>
+                  <td data-row="13" data-col="1">log_ind</td>
+                  <td data-row="13" data-col="2">0.213***</td>
+                  <td data-row="13" data-col="3">0.285***</td>
+                  <td data-row="13" data-col="4">0.250***</td>
+                  <td data-row="13" data-col="5">0.285***</td>
+                  <td data-row="13" data-col="6">0.213***</td>
+                  <td data-row="13" data-col="7">0.285***</td>
+                </tr>
+                <tr>
+                  <td data-row="14" data-col="1"></td>
+                  <td data-row="14" data-col="2">(0.005)</td>
+                  <td data-row="14" data-col="3">(0.007)</td>
+                  <td data-row="14" data-col="4">(0.007)</td>
+                  <td data-row="14" data-col="5">(0.022)</td>
+                  <td data-row="14" data-col="6">(0.010)</td>
+                  <td data-row="14" data-col="7">(0.012)</td>
+                </tr>
+                <tr>
+                  <td data-row="15" data-col="1">Num.Obs.</td>
+                  <td data-row="15" data-col="2">456</td>
+                  <td data-row="15" data-col="3">456</td>
+                  <td data-row="15" data-col="4">456</td>
+                  <td data-row="15" data-col="5">456</td>
+                  <td data-row="15" data-col="6">456</td>
+                  <td data-row="15" data-col="7">456</td>
+                </tr>
+                <tr>
+                  <td data-row="16" data-col="1">R2</td>
+                  <td data-row="16" data-col="2">0.999</td>
+                  <td data-row="16" data-col="3">0.995</td>
+                  <td data-row="16" data-col="4">0.994</td>
+                  <td data-row="16" data-col="5">0.995</td>
+                  <td data-row="16" data-col="6">0.999</td>
+                  <td data-row="16" data-col="7">0.995</td>
+                </tr>
+                <tr>
+                  <td data-row="17" data-col="1">R2 Adj.</td>
+                  <td data-row="17" data-col="2">0.999</td>
+                  <td data-row="17" data-col="3">0.995</td>
+                  <td data-row="17" data-col="4">0.994</td>
+                  <td data-row="17" data-col="5">0.995</td>
+                  <td data-row="17" data-col="6">0.999</td>
+                  <td data-row="17" data-col="7">0.995</td>
+                </tr>
+                <tr>
+                  <td data-row="18" data-col="1">AIC</td>
+                  <td data-row="18" data-col="2">-2156.2</td>
+                  <td data-row="18" data-col="3">-2759.7</td>
+                  <td data-row="18" data-col="4">-2584.9</td>
+                  <td data-row="18" data-col="5">-2759.7</td>
+                  <td data-row="18" data-col="6">-2156.2</td>
+                  <td data-row="18" data-col="7">-2759.7</td>
+                </tr>
+                <tr>
+                  <td data-row="19" data-col="1">BIC</td>
+                  <td data-row="19" data-col="2">-2123.2</td>
+                  <td data-row="19" data-col="3">-2730.8</td>
+                  <td data-row="19" data-col="4">-2551.9</td>
+                  <td data-row="19" data-col="5">-2730.8</td>
+                  <td data-row="19" data-col="6">-2123.2</td>
+                  <td data-row="19" data-col="7">-2730.8</td>
+                </tr>
+                <tr>
+                  <td data-row="20" data-col="1">RMSE</td>
+                  <td data-row="20" data-col="2">0.02</td>
+                  <td data-row="20" data-col="3">0.01</td>
+                  <td data-row="20" data-col="4">0.01</td>
+                  <td data-row="20" data-col="5">0.01</td>
+                  <td data-row="20" data-col="6">0.02</td>
+                  <td data-row="20" data-col="7">0.01</td>
+                </tr>
+                <tr>
+                  <td data-row="21" data-col="1">Std.Errors</td>
+                  <td data-row="21" data-col="2"></td>
+                  <td data-row="21" data-col="3"></td>
+                  <td data-row="21" data-col="4"></td>
+                  <td data-row="21" data-col="5">Custom</td>
+                  <td data-row="21" data-col="6">Custom</td>
+                  <td data-row="21" data-col="7">Custom</td>
+                </tr>
+        </tbody>
+      </table>
+    </div>
+<!-- hack to avoid NA insertion in last line -->
+</div>
+</div>
+</section>
+<section id="dynamic-fixed-effects-dfe" class="level1">
+<h1>Dynamic Fixed Effects (DFE)</h1>
+<p>The Dynamic Fixed Effects (DFE) estimator assumes homogeneity of slope coefficients (both short-run and long-run) across cross-sections, allowing only the intercepts to vary. It is estimated using the standard Fixed Effects (Within) estimator on a dynamic specification (including lags of the dependent variable).</p>
+<p>p-ARDL:</p>
+<p><span class="math display">\[
+\Delta \ln(gdp_{pc})_{it} = \alpha_i + \sum_{k=1}^{K} \delta_{k}^* \Delta X_{ki,t} + \phi \left( \ln(gdp_{pc})_{i,t-1} - \sum_{k=1}^{K} \theta_k X_{ki,t-1} \right) + \epsilon_{it}
+\]</span></p>
+<p>Where: * <span class="math inline">\(\Delta \ln(gdp_{pc})_{it}\)</span> represents the dependent variable. * <span class="math inline">\(\alpha_i\)</span> are the country-specific fixed effects. * <span class="math inline">\(\delta_{k}^*\)</span> are the short-run coefficients for current and lagged changes in the independent variables <span class="math inline">\(X_k\)</span> (e.g., <span class="math inline">\(ln_{gfcf_pc}\)</span>, <span class="math inline">\(ln_{pop}\)</span>, etc.). * <span class="math inline">\(\phi\)</span> is the error correction term coefficient, indicating the speed of adjustment back to long-run equilibrium (expected to be negative). * <span class="math inline">\(\left( \ln(gdp_{pc})_{i,t-1} - \sum_{k=1}^{K} \theta_k X_{ki,t-1} \right)\)</span> is the Error Correction Term (ECT), representing the deviation from the long-run equilibrium in the previous period. * <span class="math inline">\(\theta_k\)</span> are the long-run coefficients for the independent variables <span class="math inline">\(X_k\)</span>. * <span class="math inline">\(\epsilon_{it}\)</span> is the error term.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb36"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Assuming 'country' and 'time' are your panel identifiers</span></span>
+<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Create first differences for the ARDL specification</span></span>
+<span id="cb36-3"><a href="#cb36-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Note: We use the variables created earlier: log_gdp_pc, log_gfcf_pc, log_pop, etc.</span></span>
+<span id="cb36-4"><a href="#cb36-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-5"><a href="#cb36-5" aria-hidden="true" tabindex="-1"></a>pwdi<span class="sc">$</span>d_log_gdp_pc <span class="ot">&lt;-</span> <span class="fu">diff</span>(pwdi<span class="sc">$</span>log_gdp_pc, <span class="at">lag =</span> <span class="dv">1</span>)</span>
+<span id="cb36-6"><a href="#cb36-6" aria-hidden="true" tabindex="-1"></a>pwdi<span class="sc">$</span>d_log_gfcf_pc <span class="ot">&lt;-</span> <span class="fu">diff</span>(pwdi<span class="sc">$</span>log_gfcf_pc, <span class="at">lag =</span> <span class="dv">1</span>)</span>
+<span id="cb36-7"><a href="#cb36-7" aria-hidden="true" tabindex="-1"></a>pwdi<span class="sc">$</span>d_log_pop <span class="ot">&lt;-</span> <span class="fu">diff</span>(pwdi<span class="sc">$</span>log_pop, <span class="at">lag =</span> <span class="dv">1</span>)</span>
+<span id="cb36-8"><a href="#cb36-8" aria-hidden="true" tabindex="-1"></a>pwdi<span class="sc">$</span>d_log_trade <span class="ot">&lt;-</span> <span class="fu">diff</span>(pwdi<span class="sc">$</span>log_trade, <span class="at">lag =</span> <span class="dv">1</span>)</span>
+<span id="cb36-9"><a href="#cb36-9" aria-hidden="true" tabindex="-1"></a>pwdi<span class="sc">$</span>d_log_agri <span class="ot">&lt;-</span> <span class="fu">diff</span>(pwdi<span class="sc">$</span>log_agri, <span class="at">lag =</span> <span class="dv">1</span>)</span>
+<span id="cb36-10"><a href="#cb36-10" aria-hidden="true" tabindex="-1"></a>pwdi<span class="sc">$</span>d_log_ser <span class="ot">&lt;-</span> <span class="fu">diff</span>(pwdi<span class="sc">$</span>log_ser, <span class="at">lag =</span> <span class="dv">1</span>)</span>
+<span id="cb36-11"><a href="#cb36-11" aria-hidden="true" tabindex="-1"></a>pwdi<span class="sc">$</span>d_log_ind <span class="ot">&lt;-</span> <span class="fu">diff</span>(pwdi<span class="sc">$</span>log_ind, <span class="at">lag =</span> <span class="dv">1</span>)</span>
+<span id="cb36-12"><a href="#cb36-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-13"><a href="#cb36-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Estimate DFE (Dynamic Fixed Effects)</span></span>
+<span id="cb36-14"><a href="#cb36-14" aria-hidden="true" tabindex="-1"></a><span class="co"># The equation includes the lagged dependent variable in levels, lagged independent variables in levels (ECT),</span></span>
+<span id="cb36-15"><a href="#cb36-15" aria-hidden="true" tabindex="-1"></a><span class="co"># and short-run dynamics (differenced variables).</span></span>
+<span id="cb36-16"><a href="#cb36-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-17"><a href="#cb36-17" aria-hidden="true" tabindex="-1"></a>dfe_model <span class="ot">&lt;-</span> <span class="fu">plm</span>(</span>
+<span id="cb36-18"><a href="#cb36-18" aria-hidden="true" tabindex="-1"></a>    d_log_gdp_pc <span class="sc">~</span> d_log_gfcf_pc <span class="sc">+</span> d_log_pop <span class="sc">+</span> d_log_trade <span class="sc">+</span></span>
+<span id="cb36-19"><a href="#cb36-19" aria-hidden="true" tabindex="-1"></a>        <span class="fu">lag</span>(log_gdp_pc, <span class="dv">1</span>) <span class="sc">+</span> <span class="fu">lag</span>(log_gfcf_pc, <span class="dv">1</span>) <span class="sc">+</span> <span class="fu">lag</span>(log_pop, <span class="dv">1</span>) <span class="sc">+</span> <span class="fu">lag</span>(log_trade, <span class="dv">1</span>),</span>
+<span id="cb36-20"><a href="#cb36-20" aria-hidden="true" tabindex="-1"></a>    <span class="at">data =</span> pwdi,</span>
+<span id="cb36-21"><a href="#cb36-21" aria-hidden="true" tabindex="-1"></a>    <span class="at">model =</span> <span class="st">"within"</span></span>
+<span id="cb36-22"><a href="#cb36-22" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb36-23"><a href="#cb36-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-24"><a href="#cb36-24" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(dfe_model)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Oneway (individual) effect Within Model
+
+Call:
+plm(formula = d_log_gdp_pc ~ d_log_gfcf_pc + d_log_pop + d_log_trade + 
+    lag(log_gdp_pc, 1) + lag(log_gfcf_pc, 1) + lag(log_pop, 1) + 
+    lag(log_trade, 1), data = pwdi, model = "within")
+
+Balanced Panel: n = 19, T = 23, N = 437
+
+Residuals:
+     Min.   1st Qu.    Median   3rd Qu.      Max. 
+-0.134446 -0.009121  0.001769  0.010796  0.197558 
+
+Coefficients:
+                     Estimate Std. Error t-value  Pr(&gt;|t|)    
+d_log_gfcf_pc        0.189784   0.013095 14.4928 &lt; 2.2e-16 ***
+d_log_pop           -0.956076   0.293759 -3.2546  0.001229 ** 
+d_log_trade          0.175182   0.019152  9.1472 &lt; 2.2e-16 ***
+lag(log_gdp_pc, 1)  -0.197891   0.020883 -9.4762 &lt; 2.2e-16 ***
+lag(log_gfcf_pc, 1)  0.098548   0.011176  8.8175 &lt; 2.2e-16 ***
+lag(log_pop, 1)     -0.071673   0.023855 -3.0045  0.002823 ** 
+lag(log_trade, 1)    0.080564   0.013764  5.8533 9.863e-09 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Total Sum of Squares:    0.58226
+Residual Sum of Squares: 0.26446
+R-Squared:      0.5458
+Adj. R-Squared: 0.51817
+F-statistic: 70.5559 on 7 and 411 DF, p-value: &lt; 2.22e-16</code></pre>
+</div>
+</div>
+<section id="dfe-with-driscoll-kraay-standard-errors" class="level2">
+<h2 class="anchored" data-anchor-id="dfe-with-driscoll-kraay-standard-errors">DFE with Driscoll-Kraay Standard Errors</h2>
+<p>Since DFE is just a FE model with lags, we can also apply Driscoll-Kraay standard errors to it.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb38"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a>dfe_model <span class="ot">&lt;-</span> <span class="fu">plm</span>(</span>
+<span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a>    d_log_gdp_pc <span class="sc">~</span> d_log_gfcf_pc <span class="sc">+</span> d_log_pop <span class="sc">+</span> d_log_trade <span class="sc">+</span> d_log_agri <span class="sc">+</span> d_log_ser <span class="sc">+</span> d_log_ind <span class="sc">+</span></span>
+<span id="cb38-3"><a href="#cb38-3" aria-hidden="true" tabindex="-1"></a>        <span class="fu">lag</span>(log_gdp_pc, <span class="dv">1</span>) <span class="sc">+</span> <span class="fu">lag</span>(log_gfcf_pc, <span class="dv">1</span>) <span class="sc">+</span> <span class="fu">lag</span>(log_pop, <span class="dv">1</span>) <span class="sc">+</span> <span class="fu">lag</span>(log_trade, <span class="dv">1</span>) <span class="sc">+</span></span>
+<span id="cb38-4"><a href="#cb38-4" aria-hidden="true" tabindex="-1"></a>        <span class="fu">lag</span>(log_agri, <span class="dv">1</span>) <span class="sc">+</span> <span class="fu">lag</span>(log_ser, <span class="dv">1</span>) <span class="sc">+</span> <span class="fu">lag</span>(log_ind, <span class="dv">1</span>),</span>
+<span id="cb38-5"><a href="#cb38-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">data =</span> pwdi,</span>
+<span id="cb38-6"><a href="#cb38-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">model =</span> <span class="st">"within"</span></span>
+<span id="cb38-7"><a href="#cb38-7" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>With Driscoll-Kraay standard errors</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb39"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="fu">coeftest</span>(dfe_model, <span class="at">vcov =</span> <span class="cf">function</span>(x) <span class="fu">vcovSCC</span>(x, <span class="at">type =</span> <span class="st">"HC1"</span>, <span class="at">maxlag =</span> <span class="dv">4</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>Compare DFE and DFE with Driscoll-Kraay Standard Errors</p>
+<div class="cell">
+<div class="cell-output-display">
+<!-- preamble start -->
+
+    <script src="https://cdn.jsdelivr.net/gh/vincentarelbundock/tinytable@main/inst/tinytable.js"></script>
+
+    <script>
+      // Create table-specific functions using external factory
+      const tableFns_my1f1gepedk6u76mc14j = TinyTable.createTableFunctions("tinytable_my1f1gepedk6u76mc14j");
+      // tinytable span after
+      window.addEventListener('load', function () {
+          var cellsToStyle = [
+            // tinytable style arrays after
+          { positions: [ { i: '33', j: 2 }, { i: '33', j: 3 } ], css_id: 'tinytable_css_tj3em1kglqgsgw9luib5',}, 
+          { positions: [ { i: '26', j: 2 }, { i: '26', j: 3 } ], css_id: 'tinytable_css_v7l35v6p2nev9in1et1p',}, 
+          { positions: [ { i: '1', j: 2 }, { i: '2', j: 2 }, { i: '3', j: 2 }, { i: '4', j: 2 }, { i: '5', j: 2 }, { i: '6', j: 2 }, { i: '7', j: 2 }, { i: '8', j: 2 }, { i: '9', j: 2 }, { i: '10', j: 2 }, { i: '11', j: 2 }, { i: '12', j: 2 }, { i: '13', j: 2 }, { i: '14', j: 2 }, { i: '15', j: 2 }, { i: '16', j: 2 }, { i: '17', j: 2 }, { i: '18', j: 2 }, { i: '19', j: 2 }, { i: '20', j: 2 }, { i: '21', j: 2 }, { i: '22', j: 2 }, { i: '23', j: 2 }, { i: '24', j: 2 }, { i: '25', j: 2 }, { i: '27', j: 2 }, { i: '28', j: 2 }, { i: '29', j: 2 }, { i: '30', j: 2 }, { i: '31', j: 2 }, { i: '32', j: 2 }, { i: '1', j: 3 }, { i: '2', j: 3 }, { i: '3', j: 3 }, { i: '4', j: 3 }, { i: '5', j: 3 }, { i: '6', j: 3 }, { i: '7', j: 3 }, { i: '8', j: 3 }, { i: '9', j: 3 }, { i: '10', j: 3 }, { i: '11', j: 3 }, { i: '12', j: 3 }, { i: '13', j: 3 }, { i: '14', j: 3 }, { i: '15', j: 3 }, { i: '16', j: 3 }, { i: '17', j: 3 }, { i: '18', j: 3 }, { i: '19', j: 3 }, { i: '20', j: 3 }, { i: '21', j: 3 }, { i: '22', j: 3 }, { i: '23', j: 3 }, { i: '24', j: 3 }, { i: '25', j: 3 }, { i: '27', j: 3 }, { i: '28', j: 3 }, { i: '29', j: 3 }, { i: '30', j: 3 }, { i: '31', j: 3 }, { i: '32', j: 3 } ], css_id: 'tinytable_css_76fcbng88mr4rt2duwqw',}, 
+          { positions: [ { i: '0', j: 2 }, { i: '0', j: 3 } ], css_id: 'tinytable_css_u8ak2c76hrkejo5jeozo',}, 
+          { positions: [ { i: '33', j: 1 } ], css_id: 'tinytable_css_jnyvs1cjaa8lu17w903j',}, 
+          { positions: [ { i: '26', j: 1 } ], css_id: 'tinytable_css_6e7badw7jp42rka62ikt',}, 
+          { positions: [ { i: '1', j: 1 }, { i: '2', j: 1 }, { i: '3', j: 1 }, { i: '4', j: 1 }, { i: '5', j: 1 }, { i: '6', j: 1 }, { i: '7', j: 1 }, { i: '8', j: 1 }, { i: '9', j: 1 }, { i: '10', j: 1 }, { i: '11', j: 1 }, { i: '12', j: 1 }, { i: '13', j: 1 }, { i: '14', j: 1 }, { i: '15', j: 1 }, { i: '16', j: 1 }, { i: '17', j: 1 }, { i: '18', j: 1 }, { i: '19', j: 1 }, { i: '20', j: 1 }, { i: '21', j: 1 }, { i: '22', j: 1 }, { i: '23', j: 1 }, { i: '24', j: 1 }, { i: '25', j: 1 }, { i: '27', j: 1 }, { i: '28', j: 1 }, { i: '29', j: 1 }, { i: '30', j: 1 }, { i: '31', j: 1 }, { i: '32', j: 1 } ], css_id: 'tinytable_css_qo9edh2db0m7msv2tlsf',}, 
+          { positions: [ { i: '0', j: 1 } ], css_id: 'tinytable_css_h8za7y6tw0ixzi0wh5xs',}, 
+          ];
+
+          // Loop over the arrays to style the cells
+          cellsToStyle.forEach(function (group) {
+              group.positions.forEach(function (cell) {
+                  tableFns_my1f1gepedk6u76mc14j.styleCell(cell.i, cell.j, group.css_id);
+              });
+          });
+      });
+    </script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/vincentarelbundock/tinytable@main/inst/tinytable.css">
+    <style>
+    /* tinytable css entries after */
+    #tinytable_my1f1gepedk6u76mc14j td.tinytable_css_tj3em1kglqgsgw9luib5, #tinytable_my1f1gepedk6u76mc14j th.tinytable_css_tj3em1kglqgsgw9luib5 {  position: relative; --border-bottom: 1; --border-left: 0; --border-right: 0; --border-top: 0; --line-color-bottom: black; --line-color-left: black; --line-color-right: black; --line-color-top: black; --line-width-bottom: 0.1em; --line-width-left: 0.1em; --line-width-right: 0.1em; --line-width-top: 0.1em; --trim-bottom-left: 0%; --trim-bottom-right: 0%; --trim-left-bottom: 0%; --trim-left-top: 0%; --trim-right-bottom: 0%; --trim-right-top: 0%; --trim-top-left: 0%; --trim-top-right: 0%; ; text-align: center }
+    #tinytable_my1f1gepedk6u76mc14j td.tinytable_css_v7l35v6p2nev9in1et1p, #tinytable_my1f1gepedk6u76mc14j th.tinytable_css_v7l35v6p2nev9in1et1p {  position: relative; --border-bottom: 1; --border-left: 0; --border-right: 0; --border-top: 0; --line-color-bottom: black; --line-color-left: black; --line-color-right: black; --line-color-top: black; --line-width-bottom: 0.05em; --line-width-left: 0.1em; --line-width-right: 0.1em; --line-width-top: 0.1em; --trim-bottom-left: 0%; --trim-bottom-right: 0%; --trim-left-bottom: 0%; --trim-left-top: 0%; --trim-right-bottom: 0%; --trim-right-top: 0%; --trim-top-left: 0%; --trim-top-right: 0%; ; text-align: center }
+    #tinytable_my1f1gepedk6u76mc14j td.tinytable_css_76fcbng88mr4rt2duwqw, #tinytable_my1f1gepedk6u76mc14j th.tinytable_css_76fcbng88mr4rt2duwqw { text-align: center }
+    #tinytable_my1f1gepedk6u76mc14j td.tinytable_css_u8ak2c76hrkejo5jeozo, #tinytable_my1f1gepedk6u76mc14j th.tinytable_css_u8ak2c76hrkejo5jeozo {  position: relative; --border-bottom: 1; --border-left: 0; --border-right: 0; --border-top: 1; --line-color-bottom: black; --line-color-left: black; --line-color-right: black; --line-color-top: black; --line-width-bottom: 0.05em; --line-width-left: 0.1em; --line-width-right: 0.1em; --line-width-top: 0.1em; --trim-bottom-left: 0%; --trim-bottom-right: 0%; --trim-left-bottom: 0%; --trim-left-top: 0%; --trim-right-bottom: 0%; --trim-right-top: 0%; --trim-top-left: 0%; --trim-top-right: 0%; ; text-align: center }
+    #tinytable_my1f1gepedk6u76mc14j td.tinytable_css_jnyvs1cjaa8lu17w903j, #tinytable_my1f1gepedk6u76mc14j th.tinytable_css_jnyvs1cjaa8lu17w903j {  position: relative; --border-bottom: 1; --border-left: 0; --border-right: 0; --border-top: 0; --line-color-bottom: black; --line-color-left: black; --line-color-right: black; --line-color-top: black; --line-width-bottom: 0.1em; --line-width-left: 0.1em; --line-width-right: 0.1em; --line-width-top: 0.1em; --trim-bottom-left: 0%; --trim-bottom-right: 0%; --trim-left-bottom: 0%; --trim-left-top: 0%; --trim-right-bottom: 0%; --trim-right-top: 0%; --trim-top-left: 0%; --trim-top-right: 0%; ; text-align: left }
+    #tinytable_my1f1gepedk6u76mc14j td.tinytable_css_6e7badw7jp42rka62ikt, #tinytable_my1f1gepedk6u76mc14j th.tinytable_css_6e7badw7jp42rka62ikt {  position: relative; --border-bottom: 1; --border-left: 0; --border-right: 0; --border-top: 0; --line-color-bottom: black; --line-color-left: black; --line-color-right: black; --line-color-top: black; --line-width-bottom: 0.05em; --line-width-left: 0.1em; --line-width-right: 0.1em; --line-width-top: 0.1em; --trim-bottom-left: 0%; --trim-bottom-right: 0%; --trim-left-bottom: 0%; --trim-left-top: 0%; --trim-right-bottom: 0%; --trim-right-top: 0%; --trim-top-left: 0%; --trim-top-right: 0%; ; text-align: left }
+    #tinytable_my1f1gepedk6u76mc14j td.tinytable_css_qo9edh2db0m7msv2tlsf, #tinytable_my1f1gepedk6u76mc14j th.tinytable_css_qo9edh2db0m7msv2tlsf { text-align: left }
+    #tinytable_my1f1gepedk6u76mc14j td.tinytable_css_h8za7y6tw0ixzi0wh5xs, #tinytable_my1f1gepedk6u76mc14j th.tinytable_css_h8za7y6tw0ixzi0wh5xs {  position: relative; --border-bottom: 1; --border-left: 0; --border-right: 0; --border-top: 1; --line-color-bottom: black; --line-color-left: black; --line-color-right: black; --line-color-top: black; --line-width-bottom: 0.05em; --line-width-left: 0.1em; --line-width-right: 0.1em; --line-width-top: 0.1em; --trim-bottom-left: 0%; --trim-bottom-right: 0%; --trim-left-bottom: 0%; --trim-left-top: 0%; --trim-right-bottom: 0%; --trim-right-top: 0%; --trim-top-left: 0%; --trim-top-right: 0%; ; text-align: left }
+    </style>
+    <div class="container">
+      <table class="tinytable" id="tinytable_my1f1gepedk6u76mc14j" style="width: auto; margin-left: auto; margin-right: auto;" data-quarto-disable-processing="true">
+        
+        <thead>
+              <tr>
+                <th scope="col" data-row="0" data-col="1"> </th>
+                <th scope="col" data-row="0" data-col="2">DFE (Standard SE)</th>
+                <th scope="col" data-row="0" data-col="3">DFE (Driscoll-Kraay SE)</th>
+              </tr>
+        </thead>
+        <tfoot><tr><td colspan="3">+ p &lt; 0.1, * p &lt; 0.05, ** p &lt; 0.01, *** p &lt; 0.001</td></tr></tfoot>
+        <tbody>
+                <tr>
+                  <td data-row="1" data-col="1">d_log_gfcf_pc</td>
+                  <td data-row="1" data-col="2">0.011*</td>
+                  <td data-row="1" data-col="3">0.011</td>
+                </tr>
+                <tr>
+                  <td data-row="2" data-col="1"></td>
+                  <td data-row="2" data-col="2">(0.005)</td>
+                  <td data-row="2" data-col="3">(0.015)</td>
+                </tr>
+                <tr>
+                  <td data-row="3" data-col="1">d_log_pop</td>
+                  <td data-row="3" data-col="2">-1.058***</td>
+                  <td data-row="3" data-col="3">-1.058***</td>
+                </tr>
+                <tr>
+                  <td data-row="4" data-col="1"></td>
+                  <td data-row="4" data-col="2">(0.092)</td>
+                  <td data-row="4" data-col="3">(0.082)</td>
+                </tr>
+                <tr>
+                  <td data-row="5" data-col="1">d_log_trade</td>
+                  <td data-row="5" data-col="2">0.018**</td>
+                  <td data-row="5" data-col="3">0.018***</td>
+                </tr>
+                <tr>
+                  <td data-row="6" data-col="1"></td>
+                  <td data-row="6" data-col="2">(0.007)</td>
+                  <td data-row="6" data-col="3">(0.005)</td>
+                </tr>
+                <tr>
+                  <td data-row="7" data-col="1">d_log_agri</td>
+                  <td data-row="7" data-col="2">0.024***</td>
+                  <td data-row="7" data-col="3">0.024***</td>
+                </tr>
+                <tr>
+                  <td data-row="8" data-col="1"></td>
+                  <td data-row="8" data-col="2">(0.004)</td>
+                  <td data-row="8" data-col="3">(0.003)</td>
+                </tr>
+                <tr>
+                  <td data-row="9" data-col="1">d_log_ser</td>
+                  <td data-row="9" data-col="2">0.642***</td>
+                  <td data-row="9" data-col="3">0.642***</td>
+                </tr>
+                <tr>
+                  <td data-row="10" data-col="1"></td>
+                  <td data-row="10" data-col="2">(0.015)</td>
+                  <td data-row="10" data-col="3">(0.056)</td>
+                </tr>
+                <tr>
+                  <td data-row="11" data-col="1">d_log_ind</td>
+                  <td data-row="11" data-col="2">0.273***</td>
+                  <td data-row="11" data-col="3">0.273***</td>
+                </tr>
+                <tr>
+                  <td data-row="12" data-col="1"></td>
+                  <td data-row="12" data-col="2">(0.008)</td>
+                  <td data-row="12" data-col="3">(0.014)</td>
+                </tr>
+                <tr>
+                  <td data-row="13" data-col="1">lag(log_gdp_pc, 1)</td>
+                  <td data-row="13" data-col="2">-0.219***</td>
+                  <td data-row="13" data-col="3">-0.219***</td>
+                </tr>
+                <tr>
+                  <td data-row="14" data-col="1"></td>
+                  <td data-row="14" data-col="2">(0.033)</td>
+                  <td data-row="14" data-col="3">(0.040)</td>
+                </tr>
+                <tr>
+                  <td data-row="15" data-col="1">lag(log_gfcf_pc, 1)</td>
+                  <td data-row="15" data-col="2">0.009*</td>
+                  <td data-row="15" data-col="3">0.009+</td>
+                </tr>
+                <tr>
+                  <td data-row="16" data-col="1"></td>
+                  <td data-row="16" data-col="2">(0.004)</td>
+                  <td data-row="16" data-col="3">(0.005)</td>
+                </tr>
+                <tr>
+                  <td data-row="17" data-col="1">lag(log_pop, 1)</td>
+                  <td data-row="17" data-col="2">-0.183***</td>
+                  <td data-row="17" data-col="3">-0.183***</td>
+                </tr>
+                <tr>
+                  <td data-row="18" data-col="1"></td>
+                  <td data-row="18" data-col="2">(0.028)</td>
+                  <td data-row="18" data-col="3">(0.038)</td>
+                </tr>
+                <tr>
+                  <td data-row="19" data-col="1">lag(log_trade, 1)</td>
+                  <td data-row="19" data-col="2">0.006</td>
+                  <td data-row="19" data-col="3">0.006</td>
+                </tr>
+                <tr>
+                  <td data-row="20" data-col="1"></td>
+                  <td data-row="20" data-col="2">(0.005)</td>
+                  <td data-row="20" data-col="3">(0.004)</td>
+                </tr>
+                <tr>
+                  <td data-row="21" data-col="1">lag(log_agri, 1)</td>
+                  <td data-row="21" data-col="2">0.000</td>
+                  <td data-row="21" data-col="3">0.000</td>
+                </tr>
+                <tr>
+                  <td data-row="22" data-col="1"></td>
+                  <td data-row="22" data-col="2">(0.003)</td>
+                  <td data-row="22" data-col="3">(0.005)</td>
+                </tr>
+                <tr>
+                  <td data-row="23" data-col="1">lag(log_ser, 1)</td>
+                  <td data-row="23" data-col="2">0.143***</td>
+                  <td data-row="23" data-col="3">0.143***</td>
+                </tr>
+                <tr>
+                  <td data-row="24" data-col="1"></td>
+                  <td data-row="24" data-col="2">(0.023)</td>
+                  <td data-row="24" data-col="3">(0.031)</td>
+                </tr>
+                <tr>
+                  <td data-row="25" data-col="1">lag(log_ind, 1)</td>
+                  <td data-row="25" data-col="2">0.055***</td>
+                  <td data-row="25" data-col="3">0.055***</td>
+                </tr>
+                <tr>
+                  <td data-row="26" data-col="1"></td>
+                  <td data-row="26" data-col="2">(0.011)</td>
+                  <td data-row="26" data-col="3">(0.010)</td>
+                </tr>
+                <tr>
+                  <td data-row="27" data-col="1">Num.Obs.</td>
+                  <td data-row="27" data-col="2">437</td>
+                  <td data-row="27" data-col="3">437</td>
+                </tr>
+                <tr>
+                  <td data-row="28" data-col="1">R2</td>
+                  <td data-row="28" data-col="2">0.958</td>
+                  <td data-row="28" data-col="3">0.958</td>
+                </tr>
+                <tr>
+                  <td data-row="29" data-col="1">R2 Adj.</td>
+                  <td data-row="29" data-col="2">0.955</td>
+                  <td data-row="29" data-col="3">0.955</td>
+                </tr>
+                <tr>
+                  <td data-row="30" data-col="1">AIC</td>
+                  <td data-row="30" data-col="2">-3009.5</td>
+                  <td data-row="30" data-col="3">-3009.5</td>
+                </tr>
+                <tr>
+                  <td data-row="31" data-col="1">BIC</td>
+                  <td data-row="31" data-col="2">-2952.4</td>
+                  <td data-row="31" data-col="3">-2952.4</td>
+                </tr>
+                <tr>
+                  <td data-row="32" data-col="1">RMSE</td>
+                  <td data-row="32" data-col="2">0.01</td>
+                  <td data-row="32" data-col="3">0.01</td>
+                </tr>
+                <tr>
+                  <td data-row="33" data-col="1">Std.Errors</td>
+                  <td data-row="33" data-col="2"></td>
+                  <td data-row="33" data-col="3">Custom</td>
+                </tr>
+        </tbody>
+      </table>
+    </div>
+<!-- hack to avoid NA insertion in last line -->
+</div>
+</div>
+</section>
+</section>
+<section id="estimate-pmg-mg-and-dfe-with-ardl-approach" class="level1">
+<h1>Estimate PMG, MG and DFE with ARDL approach</h1>
+<p>Estimate MG with ARDL approach</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb40"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a>mg_ardl <span class="ot">&lt;-</span> plm<span class="sc">::</span><span class="fu">pmg</span>(</span>
+<span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a>    d_log_gdp_pc <span class="sc">~</span> d_log_gfcf_pc <span class="sc">+</span> d_log_pop <span class="sc">+</span> d_log_trade <span class="sc">+</span> d_log_agri <span class="sc">+</span> d_log_ser <span class="sc">+</span> d_log_ind <span class="sc">+</span></span>
+<span id="cb40-3"><a href="#cb40-3" aria-hidden="true" tabindex="-1"></a>        <span class="fu">lag</span>(log_gdp_pc, <span class="dv">1</span>) <span class="sc">+</span> <span class="fu">lag</span>(log_gfcf_pc, <span class="dv">1</span>) <span class="sc">+</span> <span class="fu">lag</span>(log_pop, <span class="dv">1</span>) <span class="sc">+</span> <span class="fu">lag</span>(log_trade, <span class="dv">1</span>) <span class="sc">+</span></span>
+<span id="cb40-4"><a href="#cb40-4" aria-hidden="true" tabindex="-1"></a>        <span class="fu">lag</span>(log_agri, <span class="dv">1</span>) <span class="sc">+</span> <span class="fu">lag</span>(log_ser, <span class="dv">1</span>) <span class="sc">+</span> <span class="fu">lag</span>(log_ind, <span class="dv">1</span>),</span>
+<span id="cb40-5"><a href="#cb40-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">data =</span> pwdi,</span>
+<span id="cb40-6"><a href="#cb40-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">model =</span> <span class="st">"mg"</span></span>
+<span id="cb40-7"><a href="#cb40-7" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb40-8"><a href="#cb40-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb40-9"><a href="#cb40-9" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(mg_ardl)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Mean Groups model
+
+Call:
+plm::pmg(formula = d_log_gdp_pc ~ d_log_gfcf_pc + d_log_pop + 
+    d_log_trade + d_log_agri + d_log_ser + d_log_ind + lag(log_gdp_pc, 
+    1) + lag(log_gfcf_pc, 1) + lag(log_pop, 1) + lag(log_trade, 
+    1) + lag(log_agri, 1) + lag(log_ser, 1) + lag(log_ind, 1), 
+    data = pwdi, model = "mg")
+
+Balanced Panel: n = 19, T = 23, N = 437
+
+Residuals:
+         Min.       1st Qu.        Median       3rd Qu.          Max. 
+-1.493143e-02 -8.142293e-04 -1.171651e-05  8.164548e-04  1.208933e-02 
+
+Coefficients:
+                      Estimate Std. Error z-value  Pr(&gt;|z|)    
+(Intercept)          0.1256456  1.3170092  0.0954 0.9239953    
+d_log_gfcf_pc        0.0208987  0.0058028  3.6015 0.0003164 ***
+d_log_pop           -0.9334954  0.3326574 -2.8062 0.0050133 ** 
+d_log_trade          0.0191482  0.0147598  1.2973 0.1945224    
+d_log_agri           0.0168880  0.0065756  2.5683 0.0102203 *  
+d_log_ser            0.7166012  0.0310313 23.0928 &lt; 2.2e-16 ***
+d_log_ind            0.2293600  0.0150424 15.2476 &lt; 2.2e-16 ***
+lag(log_gdp_pc, 1)  -0.6095323  0.1232756 -4.9445 7.635e-07 ***
+lag(log_gfcf_pc, 1)  0.0155056  0.0083517  1.8566 0.0633717 .  
+lag(log_pop, 1)     -0.5341448  0.1678793 -3.1817 0.0014640 ** 
+lag(log_trade, 1)    0.0043643  0.0123834  0.3524 0.7245150    
+lag(log_agri, 1)     0.0083925  0.0069046  1.2155 0.2241804    
+lag(log_ser, 1)      0.4260041  0.0957153  4.4507 8.557e-06 ***
+lag(log_ind, 1)      0.1328690  0.0336444  3.9492 7.841e-05 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+Total Sum of Squares: 0.67553
+Residual Sum of Squares: 0.0026971
+Multiple R-squared: 0.99601</code></pre>
+</div>
+</div>
+<p>Estimate PMG with ARDL approach</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb42"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a>pmg_ardl <span class="ot">&lt;-</span> plm<span class="sc">::</span><span class="fu">pmg</span>(</span>
+<span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a>    d_log_gdp_pc <span class="sc">~</span> d_log_gfcf_pc <span class="sc">+</span> d_log_pop <span class="sc">+</span> d_log_trade <span class="sc">+</span> d_log_agri <span class="sc">+</span> d_log_ser <span class="sc">+</span> d_log_ind <span class="sc">+</span></span>
+<span id="cb42-3"><a href="#cb42-3" aria-hidden="true" tabindex="-1"></a>        <span class="fu">lag</span>(log_gdp_pc, <span class="dv">1</span>) <span class="sc">+</span> <span class="fu">lag</span>(log_gfcf_pc, <span class="dv">1</span>) <span class="sc">+</span> <span class="fu">lag</span>(log_pop, <span class="dv">1</span>) <span class="sc">+</span> <span class="fu">lag</span>(log_trade, <span class="dv">1</span>) <span class="sc">+</span></span>
+<span id="cb42-4"><a href="#cb42-4" aria-hidden="true" tabindex="-1"></a>        <span class="fu">lag</span>(log_agri, <span class="dv">1</span>) <span class="sc">+</span> <span class="fu">lag</span>(log_ser, <span class="dv">1</span>) <span class="sc">+</span> <span class="fu">lag</span>(log_ind, <span class="dv">1</span>),</span>
+<span id="cb42-5"><a href="#cb42-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">data =</span> pwdi,</span>
+<span id="cb42-6"><a href="#cb42-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">model =</span> <span class="st">"dmg"</span></span>
+<span id="cb42-7"><a href="#cb42-7" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb42-8"><a href="#cb42-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-9"><a href="#cb42-9" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(pmg_ardl)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Demeaned Mean Groups model
+
+Call:
+plm::pmg(formula = d_log_gdp_pc ~ d_log_gfcf_pc + d_log_pop + 
+    d_log_trade + d_log_agri + d_log_ser + d_log_ind + lag(log_gdp_pc, 
+    1) + lag(log_gfcf_pc, 1) + lag(log_pop, 1) + lag(log_trade, 
+    1) + lag(log_agri, 1) + lag(log_ser, 1) + lag(log_ind, 1), 
+    data = pwdi, model = "dmg")
+
+Balanced Panel: n = 19, T = 23, N = 437
+
+Residuals:
+         Min.       1st Qu.        Median       3rd Qu.          Max. 
+-8.470837e-03 -1.231322e-03 -7.210542e-06  1.049648e-03  8.380866e-03 
+
+Coefficients:
+                      Estimate Std. Error  z-value  Pr(&gt;|z|)    
+(Intercept)         -0.0037750  0.0757517  -0.0498 0.9602542    
+d_log_gfcf_pc        0.0266821  0.0075770   3.5215 0.0004292 ***
+d_log_pop           -1.2016685  0.1539727  -7.8044 5.977e-15 ***
+d_log_trade         -0.0100350  0.0135431  -0.7410 0.4587123    
+d_log_agri           0.0103553  0.0072357   1.4311 0.1523890    
+d_log_ser            0.6552233  0.0371147  17.6540 &lt; 2.2e-16 ***
+d_log_ind            0.2272087  0.0188632  12.0451 &lt; 2.2e-16 ***
+lag(log_gdp_pc, 1)  -0.9802899  0.0940522 -10.4228 &lt; 2.2e-16 ***
+lag(log_gfcf_pc, 1)  0.0266635  0.0111512   2.3911 0.0167986 *  
+lag(log_pop, 1)     -0.9614459  0.1088444  -8.8332 &lt; 2.2e-16 ***
+lag(log_trade, 1)    0.0070833  0.0180010   0.3935 0.6939516    
+lag(log_agri, 1)     0.0056633  0.0097285   0.5821 0.5604740    
+lag(log_ser, 1)      0.6255138  0.0700713   8.9268 &lt; 2.2e-16 ***
+lag(log_ind, 1)      0.2283754  0.0367908   6.2074 5.386e-10 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+Total Sum of Squares: 0.67553
+Residual Sum of Squares: 0.0022389
+Multiple R-squared: 0.99669</code></pre>
+</div>
+</div>
+<p>Compare <code>mg_ardl</code>, <code>pmg_ardl</code> and <code>dfe_model</code></p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="dnjzvlbnpr" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#dnjzvlbnpr table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#dnjzvlbnpr thead, #dnjzvlbnpr tbody, #dnjzvlbnpr tfoot, #dnjzvlbnpr tr, #dnjzvlbnpr td, #dnjzvlbnpr th {
+  border-style: none;
+}
+
+#dnjzvlbnpr p {
+  margin: 0;
+  padding: 0;
+}
+
+#dnjzvlbnpr .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#dnjzvlbnpr .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#dnjzvlbnpr .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#dnjzvlbnpr .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#dnjzvlbnpr .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#dnjzvlbnpr .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#dnjzvlbnpr .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#dnjzvlbnpr .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#dnjzvlbnpr .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#dnjzvlbnpr .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#dnjzvlbnpr .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#dnjzvlbnpr .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#dnjzvlbnpr .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#dnjzvlbnpr .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#dnjzvlbnpr .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#dnjzvlbnpr .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#dnjzvlbnpr .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#dnjzvlbnpr .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#dnjzvlbnpr .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#dnjzvlbnpr .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#dnjzvlbnpr .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#dnjzvlbnpr .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#dnjzvlbnpr .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#dnjzvlbnpr .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#dnjzvlbnpr .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#dnjzvlbnpr .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#dnjzvlbnpr .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#dnjzvlbnpr .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#dnjzvlbnpr .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#dnjzvlbnpr .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#dnjzvlbnpr .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#dnjzvlbnpr .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#dnjzvlbnpr .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#dnjzvlbnpr .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#dnjzvlbnpr .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#dnjzvlbnpr .gt_left {
+  text-align: left;
+}
+
+#dnjzvlbnpr .gt_center {
+  text-align: center;
+}
+
+#dnjzvlbnpr .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#dnjzvlbnpr .gt_font_normal {
+  font-weight: normal;
+}
+
+#dnjzvlbnpr .gt_font_bold {
+  font-weight: bold;
+}
+
+#dnjzvlbnpr .gt_font_italic {
+  font-style: italic;
+}
+
+#dnjzvlbnpr .gt_super {
+  font-size: 65%;
+}
+
+#dnjzvlbnpr .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#dnjzvlbnpr .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#dnjzvlbnpr .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#dnjzvlbnpr .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#dnjzvlbnpr .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#dnjzvlbnpr .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#dnjzvlbnpr .gt_indent_5 {
+  text-indent: 25px;
+}
+
+#dnjzvlbnpr .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+
+#dnjzvlbnpr div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
+}
+</style>
+
+<table class="gt_table caption-top table table-sm table-striped small" data-quarto-bootstrap="false">
+<colgroup>
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 10%">
+</colgroup>
+<thead>
+<tr class="gt_col_headings gt_spanner_row header">
+<th rowspan="2" id="label" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col"><strong>Characteristic</strong></th>
+<th colspan="3" id="level 1; estimate_1" class="gt_center gt_columns_top_border gt_column_spanner_outer" data-quarto-table-cell-role="th" scope="colgroup"><div class="gt_column_spanner">
+<strong>MG (ARDL)</strong>
+</div></th>
+<th colspan="3" id="level 1; estimate_2" class="gt_center gt_columns_top_border gt_column_spanner_outer" data-quarto-table-cell-role="th" scope="colgroup"><div class="gt_column_spanner">
+<strong>PMG (ARDL)</strong>
+</div></th>
+<th colspan="3" id="level 1; estimate_3" class="gt_center gt_columns_top_border gt_column_spanner_outer" data-quarto-table-cell-role="th" scope="colgroup"><div class="gt_column_spanner">
+<strong>DFE</strong>
+</div></th>
+</tr>
+<tr class="gt_col_headings even">
+<th id="estimate_1" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col"><strong>Beta</strong></th>
+<th id="conf.low_1" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col"><strong>95% CI</strong></th>
+<th id="p.value_1" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col"><strong>p-value</strong></th>
+<th id="estimate_2" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col"><strong>Beta</strong></th>
+<th id="conf.low_2" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col"><strong>95% CI</strong></th>
+<th id="p.value_2" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col"><strong>p-value</strong></th>
+<th id="estimate_3" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col"><strong>Beta</strong></th>
+<th id="conf.low_3" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col"><strong>95% CI</strong></th>
+<th id="p.value_3" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col"><strong>p-value</strong></th>
+</tr>
+</thead>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_left" headers="label">d_log_gfcf_pc</td>
+<td class="gt_row gt_center" headers="estimate_1">0.02</td>
+<td class="gt_row gt_center" headers="conf.low_1">0.01, 0.03</td>
+<td class="gt_row gt_center" headers="p.value_1">&lt;0.001</td>
+<td class="gt_row gt_center" headers="estimate_2">0.03</td>
+<td class="gt_row gt_center" headers="conf.low_2">0.01, 0.04</td>
+<td class="gt_row gt_center" headers="p.value_2">&lt;0.001</td>
+<td class="gt_row gt_center" headers="estimate_3">0.01</td>
+<td class="gt_row gt_center" headers="conf.low_3">0.00, 0.02</td>
+<td class="gt_row gt_center" headers="p.value_3">0.022</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="label">d_log_pop</td>
+<td class="gt_row gt_center" headers="estimate_1">-0.93</td>
+<td class="gt_row gt_center" headers="conf.low_1">-1.6, -0.28</td>
+<td class="gt_row gt_center" headers="p.value_1">0.005</td>
+<td class="gt_row gt_center" headers="estimate_2">-1.2</td>
+<td class="gt_row gt_center" headers="conf.low_2">-1.5, -0.90</td>
+<td class="gt_row gt_center" headers="p.value_2">&lt;0.001</td>
+<td class="gt_row gt_center" headers="estimate_3">-1.1</td>
+<td class="gt_row gt_center" headers="conf.low_3">-1.2, -0.88</td>
+<td class="gt_row gt_center" headers="p.value_3">&lt;0.001</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="label">d_log_trade</td>
+<td class="gt_row gt_center" headers="estimate_1">0.02</td>
+<td class="gt_row gt_center" headers="conf.low_1">-0.01, 0.05</td>
+<td class="gt_row gt_center" headers="p.value_1">0.2</td>
+<td class="gt_row gt_center" headers="estimate_2">-0.01</td>
+<td class="gt_row gt_center" headers="conf.low_2">-0.04, 0.02</td>
+<td class="gt_row gt_center" headers="p.value_2">0.5</td>
+<td class="gt_row gt_center" headers="estimate_3">0.02</td>
+<td class="gt_row gt_center" headers="conf.low_3">0.01, 0.03</td>
+<td class="gt_row gt_center" headers="p.value_3">0.006</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="label">d_log_agri</td>
+<td class="gt_row gt_center" headers="estimate_1">0.02</td>
+<td class="gt_row gt_center" headers="conf.low_1">0.00, 0.03</td>
+<td class="gt_row gt_center" headers="p.value_1">0.011</td>
+<td class="gt_row gt_center" headers="estimate_2">0.01</td>
+<td class="gt_row gt_center" headers="conf.low_2">0.00, 0.02</td>
+<td class="gt_row gt_center" headers="p.value_2">0.2</td>
+<td class="gt_row gt_center" headers="estimate_3">0.02</td>
+<td class="gt_row gt_center" headers="conf.low_3">0.02, 0.03</td>
+<td class="gt_row gt_center" headers="p.value_3">&lt;0.001</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="label">d_log_ser</td>
+<td class="gt_row gt_center" headers="estimate_1">0.72</td>
+<td class="gt_row gt_center" headers="conf.low_1">0.66, 0.78</td>
+<td class="gt_row gt_center" headers="p.value_1">&lt;0.001</td>
+<td class="gt_row gt_center" headers="estimate_2">0.66</td>
+<td class="gt_row gt_center" headers="conf.low_2">0.58, 0.73</td>
+<td class="gt_row gt_center" headers="p.value_2">&lt;0.001</td>
+<td class="gt_row gt_center" headers="estimate_3">0.64</td>
+<td class="gt_row gt_center" headers="conf.low_3">0.61, 0.67</td>
+<td class="gt_row gt_center" headers="p.value_3">&lt;0.001</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="label">d_log_ind</td>
+<td class="gt_row gt_center" headers="estimate_1">0.23</td>
+<td class="gt_row gt_center" headers="conf.low_1">0.20, 0.26</td>
+<td class="gt_row gt_center" headers="p.value_1">&lt;0.001</td>
+<td class="gt_row gt_center" headers="estimate_2">0.23</td>
+<td class="gt_row gt_center" headers="conf.low_2">0.19, 0.26</td>
+<td class="gt_row gt_center" headers="p.value_2">&lt;0.001</td>
+<td class="gt_row gt_center" headers="estimate_3">0.27</td>
+<td class="gt_row gt_center" headers="conf.low_3">0.26, 0.29</td>
+<td class="gt_row gt_center" headers="p.value_3">&lt;0.001</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="label">lag(log_gdp_pc, 1)</td>
+<td class="gt_row gt_center" headers="estimate_1">-0.61</td>
+<td class="gt_row gt_center" headers="conf.low_1">-0.85, -0.37</td>
+<td class="gt_row gt_center" headers="p.value_1">&lt;0.001</td>
+<td class="gt_row gt_center" headers="estimate_2">-0.98</td>
+<td class="gt_row gt_center" headers="conf.low_2">-1.2, -0.80</td>
+<td class="gt_row gt_center" headers="p.value_2">&lt;0.001</td>
+<td class="gt_row gt_center" headers="estimate_3">-0.22</td>
+<td class="gt_row gt_center" headers="conf.low_3">-0.28, -0.15</td>
+<td class="gt_row gt_center" headers="p.value_3">&lt;0.001</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="label">lag(log_gfcf_pc, 1)</td>
+<td class="gt_row gt_center" headers="estimate_1">0.02</td>
+<td class="gt_row gt_center" headers="conf.low_1">0.00, 0.03</td>
+<td class="gt_row gt_center" headers="p.value_1">0.064</td>
+<td class="gt_row gt_center" headers="estimate_2">0.03</td>
+<td class="gt_row gt_center" headers="conf.low_2">0.00, 0.05</td>
+<td class="gt_row gt_center" headers="p.value_2">0.017</td>
+<td class="gt_row gt_center" headers="estimate_3">0.01</td>
+<td class="gt_row gt_center" headers="conf.low_3">0.00, 0.02</td>
+<td class="gt_row gt_center" headers="p.value_3">0.027</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="label">lag(log_pop, 1)</td>
+<td class="gt_row gt_center" headers="estimate_1">-0.53</td>
+<td class="gt_row gt_center" headers="conf.low_1">-0.86, -0.20</td>
+<td class="gt_row gt_center" headers="p.value_1">0.002</td>
+<td class="gt_row gt_center" headers="estimate_2">-0.96</td>
+<td class="gt_row gt_center" headers="conf.low_2">-1.2, -0.75</td>
+<td class="gt_row gt_center" headers="p.value_2">&lt;0.001</td>
+<td class="gt_row gt_center" headers="estimate_3">-0.18</td>
+<td class="gt_row gt_center" headers="conf.low_3">-0.24, -0.13</td>
+<td class="gt_row gt_center" headers="p.value_3">&lt;0.001</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="label">lag(log_trade, 1)</td>
+<td class="gt_row gt_center" headers="estimate_1">0.00</td>
+<td class="gt_row gt_center" headers="conf.low_1">-0.02, 0.03</td>
+<td class="gt_row gt_center" headers="p.value_1">0.7</td>
+<td class="gt_row gt_center" headers="estimate_2">0.01</td>
+<td class="gt_row gt_center" headers="conf.low_2">-0.03, 0.04</td>
+<td class="gt_row gt_center" headers="p.value_2">0.7</td>
+<td class="gt_row gt_center" headers="estimate_3">0.01</td>
+<td class="gt_row gt_center" headers="conf.low_3">0.00, 0.01</td>
+<td class="gt_row gt_center" headers="p.value_3">0.2</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="label">lag(log_agri, 1)</td>
+<td class="gt_row gt_center" headers="estimate_1">0.01</td>
+<td class="gt_row gt_center" headers="conf.low_1">-0.01, 0.02</td>
+<td class="gt_row gt_center" headers="p.value_1">0.2</td>
+<td class="gt_row gt_center" headers="estimate_2">0.01</td>
+<td class="gt_row gt_center" headers="conf.low_2">-0.01, 0.02</td>
+<td class="gt_row gt_center" headers="p.value_2">0.6</td>
+<td class="gt_row gt_center" headers="estimate_3">0.00</td>
+<td class="gt_row gt_center" headers="conf.low_3">-0.01, 0.01</td>
+<td class="gt_row gt_center" headers="p.value_3">&gt;0.9</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="label">lag(log_ser, 1)</td>
+<td class="gt_row gt_center" headers="estimate_1">0.43</td>
+<td class="gt_row gt_center" headers="conf.low_1">0.24, 0.61</td>
+<td class="gt_row gt_center" headers="p.value_1">&lt;0.001</td>
+<td class="gt_row gt_center" headers="estimate_2">0.63</td>
+<td class="gt_row gt_center" headers="conf.low_2">0.49, 0.76</td>
+<td class="gt_row gt_center" headers="p.value_2">&lt;0.001</td>
+<td class="gt_row gt_center" headers="estimate_3">0.14</td>
+<td class="gt_row gt_center" headers="conf.low_3">0.10, 0.19</td>
+<td class="gt_row gt_center" headers="p.value_3">&lt;0.001</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="label">lag(log_ind, 1)</td>
+<td class="gt_row gt_center" headers="estimate_1">0.13</td>
+<td class="gt_row gt_center" headers="conf.low_1">0.07, 0.20</td>
+<td class="gt_row gt_center" headers="p.value_1">&lt;0.001</td>
+<td class="gt_row gt_center" headers="estimate_2">0.23</td>
+<td class="gt_row gt_center" headers="conf.low_2">0.16, 0.30</td>
+<td class="gt_row gt_center" headers="p.value_2">&lt;0.001</td>
+<td class="gt_row gt_center" headers="estimate_3">0.06</td>
+<td class="gt_row gt_center" headers="conf.low_3">0.03, 0.08</td>
+<td class="gt_row gt_center" headers="p.value_3">&lt;0.001</td>
+</tr>
+</tbody><tfoot>
+<tr class="gt_sourcenotes odd">
+<td colspan="10" class="gt_sourcenote">Abbreviation: CI = Confidence Interval</td>
+</tr>
+</tfoot>
+
+</table>
+
+</div>
+</div>
+</div>
+</section>
+<section id="estimate-ccemg" class="level1">
+<h1>Estimate CCEMG</h1>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb44"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(plm)</span>
+<span id="cb44-2"><a href="#cb44-2" aria-hidden="true" tabindex="-1"></a>ccemg_model <span class="ot">&lt;-</span> plm<span class="sc">::</span><span class="fu">pcce</span>(</span>
+<span id="cb44-3"><a href="#cb44-3" aria-hidden="true" tabindex="-1"></a>    d_log_gdp_pc <span class="sc">~</span> d_log_gfcf_pc <span class="sc">+</span> d_log_pop <span class="sc">+</span> d_log_trade <span class="sc">+</span> d_log_agri <span class="sc">+</span> d_log_ser <span class="sc">+</span> d_log_ind <span class="sc">+</span></span>
+<span id="cb44-4"><a href="#cb44-4" aria-hidden="true" tabindex="-1"></a>        <span class="fu">lag</span>(log_gdp_pc, <span class="dv">1</span>) <span class="sc">+</span> <span class="fu">lag</span>(log_gfcf_pc, <span class="dv">1</span>) <span class="sc">+</span> <span class="fu">lag</span>(log_pop, <span class="dv">1</span>) <span class="sc">+</span> <span class="fu">lag</span>(log_trade, <span class="dv">1</span>) <span class="sc">+</span></span>
+<span id="cb44-5"><a href="#cb44-5" aria-hidden="true" tabindex="-1"></a>        <span class="fu">lag</span>(log_agri, <span class="dv">1</span>) <span class="sc">+</span> <span class="fu">lag</span>(log_ser, <span class="dv">1</span>) <span class="sc">+</span> <span class="fu">lag</span>(log_ind, <span class="dv">1</span>),</span>
+<span id="cb44-6"><a href="#cb44-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">data =</span> pwdi,</span>
+<span id="cb44-7"><a href="#cb44-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">model =</span> <span class="st">"mg"</span></span>
+<span id="cb44-8"><a href="#cb44-8" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb44-9"><a href="#cb44-9" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(ccemg_model)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Common Correlated Effects Mean Groups model
+
+Call:
+plm::pcce(formula = d_log_gdp_pc ~ d_log_gfcf_pc + d_log_pop + 
+    d_log_trade + d_log_agri + d_log_ser + d_log_ind + lag(log_gdp_pc, 
+    1) + lag(log_gfcf_pc, 1) + lag(log_pop, 1) + lag(log_trade, 
+    1) + lag(log_agri, 1) + lag(log_ser, 1) + lag(log_ind, 1), 
+    data = pwdi, model = "mg")
+
+Balanced Panel: n = 19, T = 23, N = 437
+
+Residuals:
+         Min.       1st Qu.        Median       3rd Qu.          Max. 
+-1.654773e-07 -1.040725e-09 -4.366273e-11  1.115807e-09  1.650625e-07 
+
+Coefficients:
+                      Estimate Std. Error z-value Pr(&gt;|z|)    
+d_log_gfcf_pc        0.0519977  0.0368404  1.4114  0.15812    
+d_log_pop           -0.0890807  0.0459488 -1.9387  0.05254 .  
+d_log_trade          0.0407041  0.0608645  0.6688  0.50365    
+d_log_agri           0.0227397  0.0226323  1.0047  0.31502    
+d_log_ser            0.3146588  0.0539436  5.8331 5.44e-09 ***
+d_log_ind            0.1265938  0.0568262  2.2277  0.02590 *  
+lag(log_gdp_pc, 1)  -0.0719698  0.0581253 -1.2382  0.21565    
+lag(log_gfcf_pc, 1)  0.0296938  0.0282924  1.0495  0.29393    
+lag(log_pop, 1)     -0.0532270  0.0380276 -1.3997  0.16160    
+lag(log_trade, 1)    0.0294482  0.0472847  0.6228  0.53343    
+lag(log_agri, 1)     0.0016603  0.0277478  0.0598  0.95229    
+lag(log_ser, 1)      0.0436173  0.0258451  1.6876  0.09148 .  
+lag(log_ind, 1)      0.0060668  0.0383625  0.1581  0.87434    
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+Total Sum of Squares: 0.67553
+Residual Sum of Squares: 1.0284e-13
+HPY R-squared: 1</code></pre>
+</div>
+</div>
+</section>
+<section id="estimate-augmented-mean-group-amg" class="level1">
+<h1>Estimate augmented Mean Group (AMG)</h1>
+<p>The AMG estimator is not directly available in plm. A common approach is to estimate it manually: 1. Run a pooled first-difference regression with time dummies to extract the common dynamic process. 2. Include this common dynamic process in individual country regressions and average the coefficients.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb46"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 1: Estimate pooled first-difference regression with time dummies</span></span>
+<span id="cb46-2"><a href="#cb46-2" aria-hidden="true" tabindex="-1"></a>time_dummies <span class="ot">&lt;-</span> <span class="fu">model.matrix</span>(<span class="sc">~</span> <span class="fu">factor</span>(pwdi<span class="sc">$</span>time) <span class="sc">-</span> <span class="dv">1</span>)</span>
+<span id="cb46-3"><a href="#cb46-3" aria-hidden="true" tabindex="-1"></a>pooled_fd <span class="ot">&lt;-</span> <span class="fu">plm</span>(</span>
+<span id="cb46-4"><a href="#cb46-4" aria-hidden="true" tabindex="-1"></a>    d_log_gdp_pc <span class="sc">~</span> d_log_gfcf_pc <span class="sc">+</span> d_log_pop <span class="sc">+</span> d_log_trade <span class="sc">+</span> d_log_agri <span class="sc">+</span> d_log_ser <span class="sc">+</span> d_log_ind <span class="sc">+</span></span>
+<span id="cb46-5"><a href="#cb46-5" aria-hidden="true" tabindex="-1"></a>        time_dummies,</span>
+<span id="cb46-6"><a href="#cb46-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">data =</span> pwdi,</span>
+<span id="cb46-7"><a href="#cb46-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">model =</span> <span class="st">"pooling"</span></span>
+<span id="cb46-8"><a href="#cb46-8" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb46-9"><a href="#cb46-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-10"><a href="#cb46-10" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(pooled_fd)</span>
+<span id="cb46-11"><a href="#cb46-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-12"><a href="#cb46-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Extract common dynamic process (time effects)</span></span>
+<span id="cb46-13"><a href="#cb46-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Get the time dummy coefficients</span></span>
+<span id="cb46-14"><a href="#cb46-14" aria-hidden="true" tabindex="-1"></a>time_coefs <span class="ot">&lt;-</span> <span class="fu">coef</span>(pooled_fd)[<span class="fu">grep</span>(<span class="st">"time_dummies"</span>, <span class="fu">names</span>(<span class="fu">coef</span>(pooled_fd)))]</span>
+<span id="cb46-15"><a href="#cb46-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-16"><a href="#cb46-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a mapping from time to the corresponding coefficient</span></span>
+<span id="cb46-17"><a href="#cb46-17" aria-hidden="true" tabindex="-1"></a><span class="co"># First, get unique time periods</span></span>
+<span id="cb46-18"><a href="#cb46-18" aria-hidden="true" tabindex="-1"></a>time_periods <span class="ot">&lt;-</span> <span class="fu">unique</span>(pwdi<span class="sc">$</span>time)</span>
+<span id="cb46-19"><a href="#cb46-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-20"><a href="#cb46-20" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a named vector of time effects (first period is reference = 0)</span></span>
+<span id="cb46-21"><a href="#cb46-21" aria-hidden="true" tabindex="-1"></a>time_effects <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">0</span>, time_coefs)</span>
+<span id="cb46-22"><a href="#cb46-22" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(time_effects) <span class="ot">&lt;-</span> time_periods[<span class="dv">1</span><span class="sc">:</span><span class="fu">length</span>(time_effects)]</span>
+<span id="cb46-23"><a href="#cb46-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-24"><a href="#cb46-24" aria-hidden="true" tabindex="-1"></a><span class="co"># Map the common dynamic process to each observation based on its time period</span></span>
+<span id="cb46-25"><a href="#cb46-25" aria-hidden="true" tabindex="-1"></a>pwdi<span class="sc">$</span>common_dynamic_process <span class="ot">&lt;-</span> time_effects[<span class="fu">as.character</span>(pwdi<span class="sc">$</span>time)]</span>
+<span id="cb46-26"><a href="#cb46-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-27"><a href="#cb46-27" aria-hidden="true" tabindex="-1"></a><span class="co"># Estimate individual country regressions including the common dynamic process</span></span>
+<span id="cb46-28"><a href="#cb46-28" aria-hidden="true" tabindex="-1"></a>individual_models <span class="ot">&lt;-</span> pwdi <span class="sc">%&gt;%</span></span>
+<span id="cb46-29"><a href="#cb46-29" aria-hidden="true" tabindex="-1"></a>    <span class="fu">group_by</span>(country) <span class="sc">%&gt;%</span></span>
+<span id="cb46-30"><a href="#cb46-30" aria-hidden="true" tabindex="-1"></a>    <span class="fu">do</span>(<span class="at">model =</span> <span class="fu">lm</span>(</span>
+<span id="cb46-31"><a href="#cb46-31" aria-hidden="true" tabindex="-1"></a>        d_log_gdp_pc <span class="sc">~</span> d_log_gfcf_pc <span class="sc">+</span> d_log_pop <span class="sc">+</span> d_log_trade <span class="sc">+</span> d_log_agri <span class="sc">+</span> d_log_ser <span class="sc">+</span> d_log_ind <span class="sc">+</span></span>
+<span id="cb46-32"><a href="#cb46-32" aria-hidden="true" tabindex="-1"></a>            <span class="fu">lag</span>(log_gdp_pc, <span class="dv">1</span>) <span class="sc">+</span> <span class="fu">lag</span>(log_gfcf_pc, <span class="dv">1</span>) <span class="sc">+</span> <span class="fu">lag</span>(log_pop, <span class="dv">1</span>) <span class="sc">+</span> <span class="fu">lag</span>(log_trade, <span class="dv">1</span>) <span class="sc">+</span></span>
+<span id="cb46-33"><a href="#cb46-33" aria-hidden="true" tabindex="-1"></a>            <span class="fu">lag</span>(log_agri, <span class="dv">1</span>) <span class="sc">+</span> <span class="fu">lag</span>(log_ser, <span class="dv">1</span>) <span class="sc">+</span> <span class="fu">lag</span>(log_ind, <span class="dv">1</span>) <span class="sc">+</span></span>
+<span id="cb46-34"><a href="#cb46-34" aria-hidden="true" tabindex="-1"></a>            common_dynamic_process,</span>
+<span id="cb46-35"><a href="#cb46-35" aria-hidden="true" tabindex="-1"></a>        <span class="at">data =</span> .</span>
+<span id="cb46-36"><a href="#cb46-36" aria-hidden="true" tabindex="-1"></a>    ))</span>
+<span id="cb46-37"><a href="#cb46-37" aria-hidden="true" tabindex="-1"></a><span class="co"># Average the coefficients across countries to get AMG estimates</span></span>
+<span id="cb46-38"><a href="#cb46-38" aria-hidden="true" tabindex="-1"></a>amg_coefficients <span class="ot">&lt;-</span> <span class="fu">Reduce</span>(<span class="st">"+"</span>, <span class="fu">lapply</span>(individual_models<span class="sc">$</span>model, coef)) <span class="sc">/</span> <span class="fu">nrow</span>(individual_models)</span>
+<span id="cb46-39"><a href="#cb46-39" aria-hidden="true" tabindex="-1"></a>amg_coefficients</span>
+<span id="cb46-40"><a href="#cb46-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-41"><a href="#cb46-41" aria-hidden="true" tabindex="-1"></a><span class="co"># Organize the coefficients into a data frame for better presentation</span></span>
+<span id="cb46-42"><a href="#cb46-42" aria-hidden="true" tabindex="-1"></a>amg_results <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb46-43"><a href="#cb46-43" aria-hidden="true" tabindex="-1"></a>    <span class="at">Term =</span> <span class="fu">names</span>(amg_coefficients),</span>
+<span id="cb46-44"><a href="#cb46-44" aria-hidden="true" tabindex="-1"></a>    <span class="at">Estimate =</span> <span class="fu">as.numeric</span>(amg_coefficients)</span>
+<span id="cb46-45"><a href="#cb46-45" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb46-46"><a href="#cb46-46" aria-hidden="true" tabindex="-1"></a>amg_results</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb47"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 1: Estimate pooled first-difference regression with time dummies</span></span>
+<span id="cb47-2"><a href="#cb47-2" aria-hidden="true" tabindex="-1"></a>pooled_fd <span class="ot">&lt;-</span> <span class="fu">plm</span>(</span>
+<span id="cb47-3"><a href="#cb47-3" aria-hidden="true" tabindex="-1"></a>    d_log_gdp_pc <span class="sc">~</span> d_log_gfcf_pc <span class="sc">+</span> d_log_pop <span class="sc">+</span> d_log_trade <span class="sc">+</span> d_log_agri <span class="sc">+</span> d_log_ser <span class="sc">+</span> d_log_ind <span class="sc">+</span> <span class="fu">factor</span>(time),</span>
+<span id="cb47-4"><a href="#cb47-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">data =</span> pwdi,</span>
+<span id="cb47-5"><a href="#cb47-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">model =</span> <span class="st">"pooling"</span></span>
+<span id="cb47-6"><a href="#cb47-6" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb47-7"><a href="#cb47-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-8"><a href="#cb47-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Extract time effects (common dynamic process)</span></span>
+<span id="cb47-9"><a href="#cb47-9" aria-hidden="true" tabindex="-1"></a>time_coefs <span class="ot">&lt;-</span> <span class="fu">coef</span>(pooled_fd)[<span class="fu">grepl</span>(<span class="st">"^factor</span><span class="sc">\\</span><span class="st">(time</span><span class="sc">\\</span><span class="st">)"</span>, <span class="fu">names</span>(<span class="fu">coef</span>(pooled_fd)))]</span>
+<span id="cb47-10"><a href="#cb47-10" aria-hidden="true" tabindex="-1"></a>time_periods <span class="ot">&lt;-</span> <span class="fu">sort</span>(<span class="fu">unique</span>(<span class="fu">as.numeric</span>(<span class="fu">as.character</span>(pwdi<span class="sc">$</span>time))))</span>
+<span id="cb47-11"><a href="#cb47-11" aria-hidden="true" tabindex="-1"></a>time_effects <span class="ot">&lt;-</span> <span class="fu">setNames</span>(<span class="fu">c</span>(<span class="dv">0</span>, time_coefs), time_periods)</span>
+<span id="cb47-12"><a href="#cb47-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-13"><a href="#cb47-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Add common dynamic process to data</span></span>
+<span id="cb47-14"><a href="#cb47-14" aria-hidden="true" tabindex="-1"></a>pwdi<span class="sc">$</span>common_dynamic_process <span class="ot">&lt;-</span> time_effects[<span class="fu">as.character</span>(pwdi<span class="sc">$</span>time)]</span>
+<span id="cb47-15"><a href="#cb47-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-16"><a href="#cb47-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert to regular data frame for split-apply</span></span>
+<span id="cb47-17"><a href="#cb47-17" aria-hidden="true" tabindex="-1"></a>wdi_df <span class="ot">&lt;-</span> <span class="fu">as.data.frame</span>(pwdi)</span>
+<span id="cb47-18"><a href="#cb47-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-19"><a href="#cb47-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Estimate individual country regressions and extract coefficients</span></span>
+<span id="cb47-20"><a href="#cb47-20" aria-hidden="true" tabindex="-1"></a>country_coefs <span class="ot">&lt;-</span> <span class="fu">lapply</span>(<span class="fu">split</span>(wdi_df, wdi_df<span class="sc">$</span>country), <span class="cf">function</span>(df) {</span>
+<span id="cb47-21"><a href="#cb47-21" aria-hidden="true" tabindex="-1"></a>    <span class="fu">tryCatch</span>({</span>
+<span id="cb47-22"><a href="#cb47-22" aria-hidden="true" tabindex="-1"></a>        <span class="fu">coef</span>(<span class="fu">lm</span>(</span>
+<span id="cb47-23"><a href="#cb47-23" aria-hidden="true" tabindex="-1"></a>            d_log_gdp_pc <span class="sc">~</span> d_log_gfcf_pc <span class="sc">+</span> d_log_pop <span class="sc">+</span> d_log_trade <span class="sc">+</span> d_log_agri <span class="sc">+</span> d_log_ser <span class="sc">+</span> d_log_ind <span class="sc">+</span></span>
+<span id="cb47-24"><a href="#cb47-24" aria-hidden="true" tabindex="-1"></a>                <span class="fu">lag</span>(log_gdp_pc, <span class="dv">1</span>) <span class="sc">+</span> <span class="fu">lag</span>(log_gfcf_pc, <span class="dv">1</span>) <span class="sc">+</span> <span class="fu">lag</span>(log_pop, <span class="dv">1</span>) <span class="sc">+</span> <span class="fu">lag</span>(log_trade, <span class="dv">1</span>) <span class="sc">+</span></span>
+<span id="cb47-25"><a href="#cb47-25" aria-hidden="true" tabindex="-1"></a>                <span class="fu">lag</span>(log_agri, <span class="dv">1</span>) <span class="sc">+</span> <span class="fu">lag</span>(log_ser, <span class="dv">1</span>) <span class="sc">+</span> <span class="fu">lag</span>(log_ind, <span class="dv">1</span>) <span class="sc">+</span> common_dynamic_process,</span>
+<span id="cb47-26"><a href="#cb47-26" aria-hidden="true" tabindex="-1"></a>            <span class="at">data =</span> df, <span class="at">na.action =</span> na.omit</span>
+<span id="cb47-27"><a href="#cb47-27" aria-hidden="true" tabindex="-1"></a>        ))</span>
+<span id="cb47-28"><a href="#cb47-28" aria-hidden="true" tabindex="-1"></a>    }, <span class="at">error =</span> <span class="cf">function</span>(e) <span class="cn">NULL</span>)</span>
+<span id="cb47-29"><a href="#cb47-29" aria-hidden="true" tabindex="-1"></a>})</span>
+<span id="cb47-30"><a href="#cb47-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-31"><a href="#cb47-31" aria-hidden="true" tabindex="-1"></a><span class="co"># Remove failed estimations and average coefficients</span></span>
+<span id="cb47-32"><a href="#cb47-32" aria-hidden="true" tabindex="-1"></a>valid_coefs <span class="ot">&lt;-</span> <span class="fu">Filter</span>(<span class="fu">Negate</span>(is.null), country_coefs)</span>
+<span id="cb47-33"><a href="#cb47-33" aria-hidden="true" tabindex="-1"></a>amg_coefficients <span class="ot">&lt;-</span> <span class="fu">Reduce</span>(<span class="st">`</span><span class="at">+</span><span class="st">`</span>, valid_coefs) <span class="sc">/</span> <span class="fu">length</span>(valid_coefs)</span>
+<span id="cb47-34"><a href="#cb47-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-35"><a href="#cb47-35" aria-hidden="true" tabindex="-1"></a><span class="co"># Present results</span></span>
+<span id="cb47-36"><a href="#cb47-36" aria-hidden="true" tabindex="-1"></a>amg_results <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb47-37"><a href="#cb47-37" aria-hidden="true" tabindex="-1"></a>    <span class="at">Term =</span> <span class="fu">names</span>(amg_coefficients),</span>
+<span id="cb47-38"><a href="#cb47-38" aria-hidden="true" tabindex="-1"></a>    <span class="at">Estimate =</span> <span class="fu">as.numeric</span>(amg_coefficients),</span>
+<span id="cb47-39"><a href="#cb47-39" aria-hidden="true" tabindex="-1"></a>    <span class="at">row.names =</span> <span class="cn">NULL</span></span>
+<span id="cb47-40"><a href="#cb47-40" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb47-41"><a href="#cb47-41" aria-hidden="true" tabindex="-1"></a>amg_results</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
